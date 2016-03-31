@@ -1,0 +1,142 @@
+2016-03-30 09:01:01 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES)
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=loca...', 'my_app', 'secret', Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(921): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(876): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(890): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\BakeShell.php(228): Bake\Shell\Task\ModelTask->listUnskipped()
+#11 [internal function]: Bake\Shell\BakeShell->all()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\Shell.php(444): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(217): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(181): Cake\Console\ShellDispatcher->_dispatch(Array)
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(127): Cake\Console\ShellDispatcher->dispatch(Array)
+#16 C:\xampp\htdocs\coowi_en\bin\cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#17 {main}
+
+
+2016-03-30 09:03:10 Error: [PDOException] SQLSTATE[HY000] [1044] Access denied for user 'myyouwi91'@'%' to database 'coowi_en'
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(921): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(876): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(890): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\BakeShell.php(228): Bake\Shell\Task\ModelTask->listUnskipped()
+#11 [internal function]: Bake\Shell\BakeShell->all()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\Shell.php(444): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(217): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(181): Cake\Console\ShellDispatcher->_dispatch(Array)
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(127): Cake\Console\ShellDispatcher->dispatch(Array)
+#16 C:\xampp\htdocs\coowi_en\bin\cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#17 {main}
+
+
+2016-03-30 09:03:52 Error: [PDOException] SQLSTATE[HY000] [1044] Access denied for user 'myyouwi91'@'%' to database 'coowi_en'
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(921): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(876): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(198): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(124): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(109): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), '*', '*')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(96): Bake\Shell\Task\ModelTask->bake('*')
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\BakeShell.php(250): Bake\Shell\Task\ModelTask->main('*')
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('*', 0)
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\BakeShell.php(253): Cake\Collection\Collection->each(Object(Closure))
+#16 [internal function]: Bake\Shell\BakeShell->all('*')
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\Shell.php(444): call_user_func_array(Array, Array)
+#18 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(217): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(181): Cake\Console\ShellDispatcher->_dispatch(Array)
+#20 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(127): Cake\Console\ShellDispatcher->dispatch(Array)
+#21 C:\xampp\htdocs\coowi_en\bin\cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#22 {main}
+
+
+2016-03-30 09:04:02 Error: [PDOException] SQLSTATE[HY000] [1044] Access denied for user 'myyouwi91'@'%' to database 'coowi_en'
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(921): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(876): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(198): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(124): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(109): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'roles', 'Roles')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(96): Bake\Shell\Task\ModelTask->bake('Roles')
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\BakeShell.php(250): Bake\Shell\Task\ModelTask->main('Roles')
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('roles', 0)
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\BakeShell.php(253): Cake\Collection\Collection->each(Object(Closure))
+#16 [internal function]: Bake\Shell\BakeShell->all('roles')
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\Shell.php(444): call_user_func_array(Array, Array)
+#18 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(217): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(181): Cake\Console\ShellDispatcher->_dispatch(Array)
+#20 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(127): Cake\Console\ShellDispatcher->dispatch(Array)
+#21 C:\xampp\htdocs\coowi_en\bin\cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#22 {main}
+
+
+2016-03-30 09:10:42 Error: [Cake\Database\Exception] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*' at line 1
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', '*', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('*', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('*')
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(505): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(206): Cake\ORM\Table->primaryKey()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(124): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(109): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), '*', '*')
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(96): Bake\Shell\Task\ModelTask->bake('*')
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\BakeShell.php(250): Bake\Shell\Task\ModelTask->main('*')
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('*', 0)
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\BakeShell.php(253): Cake\Collection\Collection->each(Object(Closure))
+#11 [internal function]: Bake\Shell\BakeShell->all('*')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\Shell.php(444): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(217): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(181): Cake\Console\ShellDispatcher->_dispatch(Array)
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(127): Cake\Console\ShellDispatcher->dispatch(Array)
+#16 C:\xampp\htdocs\coowi_en\bin\cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#17 {main}
+
+
+2016-03-30 09:11:34 Error: [Cake\Database\Exception] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', '.', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('.', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('.')
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(505): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(206): Cake\ORM\Table->primaryKey()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(124): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(109): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), '.', '.')
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(96): Bake\Shell\Task\ModelTask->bake('.')
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\BakeShell.php(250): Bake\Shell\Task\ModelTask->main('.')
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('.', 0)
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\bake\src\Shell\BakeShell.php(253): Cake\Collection\Collection->each(Object(Closure))
+#11 [internal function]: Bake\Shell\BakeShell->all('.')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\Shell.php(444): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(217): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(181): Cake\Console\ShellDispatcher->_dispatch(Array)
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(127): Cake\Console\ShellDispatcher->dispatch(Array)
+#16 C:\xampp\htdocs\coowi_en\bin\cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#17 {main}
+
+

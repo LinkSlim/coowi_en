@@ -1,0 +1,320 @@
+2016-03-30 09:19:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Items_tags could not be found.
+Exception Attributes: array (
+  'class' => 'Items_tags',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/items_tags
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-30 09:19:45 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /coowi_en/itemstags
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\ItemsTagsController.php(24): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\ItemsTagsController->index()
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsTagsController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-30 09:36:34 Warning: Warning (4096): Argument 1 passed to App\Controller\UsersController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php on line 386 and defined in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 14]
+Request URL: /coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\UsersController::beforeFilter() - APP/Controller\UsersController.php, line 14
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 491
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-30 09:36:34 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 17]
+Request URL: /coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-30 09:36:34 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 17)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-30 09:38:58 Warning: Warning (4096): Argument 1 passed to App\Controller\UsersController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php on line 386 and defined in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 14]
+Request URL: /coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\UsersController::beforeFilter() - APP/Controller\UsersController.php, line 14
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 491
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-30 09:38:58 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 17]
+Request URL: /coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-30 09:38:59 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 17)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-30 09:42:04 Warning: Warning (4096): Argument 1 passed to App\Controller\UsersController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php on line 386 and defined in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 14]
+Request URL: /coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\UsersController::beforeFilter() - APP/Controller\UsersController.php, line 14
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 491
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-30 09:42:04 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 17]
+Request URL: /coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-30 09:42:04 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 17)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-30 09:45:16 Warning: Warning (4096): Argument 1 passed to App\Controller\UsersController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php on line 386 and defined in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 14]
+Request URL: /coowi_en/users/add
+Referer URL: http://localhost/coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\UsersController::beforeFilter() - APP/Controller\UsersController.php, line 14
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 491
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-30 09:45:16 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 17]
+Request URL: /coowi_en/users/add
+Referer URL: http://localhost/coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-30 09:45:16 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users/add
+Referer URL: http://localhost/coowi_en/users
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 17)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-30 09:45:51 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 19]
+Request URL: /coowi_en/users/add
+Referer URL: http://localhost/coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-30 09:45:52 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users/add
+Referer URL: http://localhost/coowi_en/users
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 19)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-30 09:46:34 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 19]
+Request URL: /coowi_en/users/add
+Referer URL: http://localhost/coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-30 09:46:34 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users/add
+Referer URL: http://localhost/coowi_en/users
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 19)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-30 09:46:36 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 19]
+Request URL: /coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-30 09:46:36 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 19)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-30 09:46:39 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 19]
+Request URL: /coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-30 09:46:39 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 19)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-30 09:48:28 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 19]
+Request URL: /coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-30 09:48:28 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 19)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-30 13:57:54 Error: [PDOException] SQLSTATE[HY000] [2002] Se ha intentado una operación de socket en un host no accesible.
+
+Request URL: /coowi_en/users
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(428): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\UsersTable))
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\UsersTable))
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(166): Cake\ORM\Table->find('all', Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\UsersTable), Array)
+#14 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(32): Cake\Controller\Controller->paginate(Object(App\Model\Table\UsersTable))
+#15 [internal function]: App\Controller\UsersController->index()
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#18 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#19 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-03-31 13:26:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Peticiones could not be found.
+Exception Attributes: array (
+  'class' => 'Peticiones',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/peticiones
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-31 13:43:43 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::login() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /coowi_en/users/login
+Referer URL: http://localhost/coowi_en/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-31 14:08:23 Error: Fatal Error (1): Class 'App\Model\Entity\DefaultPasswordHasher' not found in [C:\xampp\htdocs\coowi_en\src\Model\Entity\User.php, line 51]
+Request URL: /coowi_en/users/add
+Referer URL: http://localhost/coowi_en/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-31 14:08:23 Error: [Cake\Error\FatalErrorException] Class 'App\Model\Entity\DefaultPasswordHasher' not found
+Request URL: /coowi_en/users/add
+Referer URL: http://localhost/coowi_en/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Mode...', 'C:\\xampp\\htdocs...', 51)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
