@@ -44,7 +44,7 @@ class AppController extends Controller {
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
-            'authorize' => ['Controller'], // Para controlar la Autorizacion de accesos a contenidos de otros usuarios.
+            //'authorize' => ['Controller'], // Para controlar la Autorizacion de accesos a contenidos de otros usuarios.
             'authenticate' => [
                 'Form' => [
                     'fields' => [

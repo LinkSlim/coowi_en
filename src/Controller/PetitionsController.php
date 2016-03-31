@@ -113,25 +113,25 @@ class PetitionsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
     
-    public function isAuthorized($user) {
-        // All registered users can add articles
-        if ($this->request->action === 'add') {
-            return true;
-        }
-
-        // The owner of an article can edit and delete it
-        if (in_array($this->request->action, ['edit', 'delete'])) { //Si la accion solicitada es 'edit' o 'delete'
-            $petitionId = (int) $this->request->params['pass'][0];  //Cojo el 'id' de la peticion
-            if ($this->Articles->isOwnedBy($petitionId, $user['id'])) { //Si el usuario es propietario de esa peticion
-                return true;                                            //Entonces está autorizado.
-            }
-        }
-
-        return parent::isAuthorized($user);
-    }
-    
-    public function isOwnedBy($petitionId, $userId) {
-        return $this->exists(['id' => $petitionId, 'user_id' => $userId]);
-    }
+//    public function isAuthorized($user) {
+//        // All registered users can add articles
+//        if ($this->request->action === 'add') {
+//            return true;
+//        }
+//
+//        // The owner of an article can edit and delete it
+//        if (in_array($this->request->action, ['edit', 'delete'])) { //Si la accion solicitada es 'edit' o 'delete'
+//            $petitionId = (int) $this->request->params['pass'][0];  //Cojo el 'id' de la peticion
+//            if ($this->Articles->isOwnedBy($petitionId, $user['id'])) { //Si el usuario es propietario de esa peticion
+//                return true;                                            //Entonces está autorizado.
+//            }
+//        }
+//
+//        return parent::isAuthorized($user);
+//    }
+//    
+//    public function isOwnedBy($petitionId, $userId) {
+//        return $this->exists(['id' => $petitionId, 'user_id' => $userId]);
+//    }
 
 }
