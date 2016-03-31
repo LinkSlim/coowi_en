@@ -112,8 +112,8 @@ class PetitionsController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
-    
-//    public function isAuthorized($user) {
+
+    public function isAuthorized($user) {
 //        // All registered users can add articles
 //        if ($this->request->action === 'add') {
 //            return true;
@@ -128,10 +128,28 @@ class PetitionsController extends AppController
 //        }
 //
 //        return parent::isAuthorized($user);
-//    }
-//    
-//    public function isOwnedBy($petitionId, $userId) {
-//        return $this->exists(['id' => $petitionId, 'user_id' => $userId]);
-//    }
+        $action = $this->request->params['action'];
+
+        // The add and index actions are always allowed.
+        if (in_array($action, ['index', 'add', 'tags'])) {
+            return true;
+        }
+        // All other actions require an id.
+        if (empty($this->request->params['pass'][0])) {
+            return false;
+        }
+
+        // Check that the bookmark belongs to the current user.
+        $id = $this->request->params['pass'][0];
+        $bookmark = $this->Bookmarks->get($id);
+        if ($bookmark->user_id == $user['id']) {
+            return true;
+        }
+        return parent::isAuthorized($user);
+    }
+
+    public function isOwnedBy($petitionId, $userId) {
+        return $this->exists(['id' => $petitionId, 'user_id' => $userId]);
+    }
 
 }
