@@ -44,7 +44,7 @@ class AppController extends Controller {
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
-            //'authorize' => ['Controller'], // Para controlar la Autorizacion de accesos a contenidos de otros usuarios.
+            'authorize' => ['Controller'], // Para controlar la Autorizacion de accesos a contenidos de otros usuarios.
             'authenticate' => [
                 'Form' => [
                     'fields' => [
@@ -58,8 +58,12 @@ class AppController extends Controller {
                 'action' => 'login'
             ]
         ]);
+
+        // Allow the display action so our pages controller
+        // continues to work.
+        $this->Auth->allow(['display']);
     }
-    
+
     public function isAuthorized($user) { //Un usuario esta autorizaco si el usuario tiene un rol establecido y dicho rol es el del 'admin' (aunque aqui lo determinamos usando su id)
         // Admin can access every action
         if (isset($user['rol_id']) && $user['rol_id'] === '2') { 

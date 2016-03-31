@@ -318,3 +318,57 @@ Stack Trace:
 #2 {main}
 
 
+2016-03-31 16:30:30 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "petitions" with primary key [NULL]
+Request URL: /coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(138): Cake\ORM\Table->get(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PetitionsController->isAuthorized(Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(494): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(305): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(258): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(495): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#11 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-31 16:30:59 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "petitions" with primary key [NULL]
+Request URL: /coowi_en/petitions/index
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(138): Cake\ORM\Table->get(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PetitionsController->isAuthorized(Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(494): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(305): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(258): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(495): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#11 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-31 16:34:07 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "petitions" with primary key [NULL]
+Request URL: /coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(138): Cake\ORM\Table->get(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PetitionsController->isAuthorized(Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(494): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(305): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(258): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(495): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#11 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
