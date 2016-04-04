@@ -48,6 +48,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
     </nav>
     <?= $this->Flash->render() ?>
+    <?= $this->Flash->render('auth') ?> <!--Mensaje para avisar al usuario de que no esta autorizado-->
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
     </div>

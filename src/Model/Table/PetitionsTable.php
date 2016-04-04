@@ -98,4 +98,8 @@ class PetitionsTable extends Table
         $rules->add($rules->existsIn(['user_id'], 'Users'));
         return $rules;
     }
+    
+    public function isOwnedBy($petitionId, $userId) { //Para usar con el isAuthorized del tutorial del blog
+        return $this->exists(['id' => $petitionId, 'user_id' => $userId]);
+    }
 }

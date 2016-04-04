@@ -113,43 +113,26 @@ class PetitionsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
+    
+    
     public function isAuthorized($user) {
-//        // All registered users can add articles
-//        if ($this->request->action === 'add') {
-//            return true;
-//        }
-//
-//        // The owner of an article can edit and delete it
-//        if (in_array($this->request->action, ['edit', 'delete'])) { //Si la accion solicitada es 'edit' o 'delete'
-//            $petitionId = (int) $this->request->params['pass'][0];  //Cojo el 'id' de la peticion
-//            if ($this->Articles->isOwnedBy($petitionId, $user['id'])) { //Si el usuario es propietario de esa peticion
-//                return true;                                            //Entonces está autorizado.
-//            }
-//        }
-//
-//        return parent::isAuthorized($user);
-        $action = $this->request->params['action'];
 
-        // The add and index actions are always allowed.
-        if (in_array($action, ['index', 'add', 'tags'])) {
-            return true;
-        }
-        // All other actions require an id.
-        if (empty($this->request->params['pass'][0])) {
-            return false;
-        }
-
-        // Check that the bookmark belongs to the current user.
-        $id = $this->request->params['pass'][0];
-        $bookmark = $this->Bookmarks->get($id);
-        if ($bookmark->user_id == $user['id']) {
-            return true;
-        }
-        return parent::isAuthorized($user);
+        // All registered users can add articles
+    if (($this->request->action === 'add') || ($this->request->action === 'index')) {
+        return true;
     }
 
-    public function isOwnedBy($petitionId, $userId) {
-        return $this->exists(['id' => $petitionId, 'user_id' => $userId]);
+    // The owner of an article can edit and delete it
+    if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
+        $petitionId = (int)$this->request->params['pass'][0];
+        if ($this->Petitions->isOwnedBy($petitionId, $user['id'])) {
+            return true;
+        }
     }
+
+    return parent::isAuthorized($user);
+    }
+
+    
 
 }

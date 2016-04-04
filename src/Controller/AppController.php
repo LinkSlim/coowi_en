@@ -64,7 +64,7 @@ class AppController extends Controller {
         $this->Auth->allow(['display']);
     }
 
-    public function isAuthorized($user) { //Un usuario esta autorizaco si el usuario tiene un rol establecido y dicho rol es el del 'admin' (aunque aqui lo determinamos usando su id)
+    public function isAuthorized($user) { //Un usuario esta autorizaco si el usuario tiene un rol establecido y dicho rol es el del 'admin' (aunque aqui lo determinamos usando su id en vez del nombre del rol)
         // Admin can access every action
         if (isset($user['rol_id']) && $user['rol_id'] === '2') { 
             return true;

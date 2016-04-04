@@ -138,7 +138,7 @@ class UsersController extends AppController
     }
     
     public function beforeFilter(\Cake\Event\Event $event) {
-        $this->Auth->allow(['add']);
+        $this->Auth->allow(['add','index','edit','delete','view']);
     }
 
 }
