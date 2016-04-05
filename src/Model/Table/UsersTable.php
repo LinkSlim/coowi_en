@@ -122,5 +122,5 @@ class UsersTable extends Table
         $rules->add($rules->isUnique(['nif']));
         $rules->add($rules->existsIn(['rol_id'], 'Roles'));
         return $rules;
-    }
+    }   
 }

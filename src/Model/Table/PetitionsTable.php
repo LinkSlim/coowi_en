@@ -99,7 +99,9 @@ class PetitionsTable extends Table
         return $rules;
     }
     
-    public function isOwnedBy($petitionId, $userId) { //Para usar con el isAuthorized del tutorial del blog
+    //Comprobamos que el usuario con ID 'userId' es propietario de la peticion con ID 'petitionId'
+    //si ambos IDs estan en una misma fila de la tabla 'Petition' de la BBDD
+    public function isOwnedBy($petitionId, $userId) { // Es para usar con el isAuthorized del tutorial del blog
         return $this->exists(['id' => $petitionId, 'user_id' => $userId]);
     }
 }

@@ -138,7 +138,40 @@ class UsersController extends AppController
     }
     
     public function beforeFilter(\Cake\Event\Event $event) {
-        $this->Auth->allow(['add','index','edit','delete','view']);
+        parent::beforeFilter($event);
+     
+        if(!$this->Auth->user('rol_id')){ //Si no hay usuario logged, solo se puede crear usuarios (para el Registro)
+            $this->Auth->allow(['add']);
+        }
+        else{
+            if($this->Auth->user('rol_id') == 2){ //Si el usuario logged tiene rol de 'Admin', puede ver lista de usuarios y crear nuevos
+                $this->Auth->allow(['index','add']);
+            }
+            else{ //Si el usuario logged no es 'Admin' solo puede ver lista usuarios (que mas adelante se realizara filtro para que no se muestren todos los usuarios, solo el suyo)
+                $this->Auth->allow(['index']);
+            }
+        }
+        
+            
+        
+        
+    }
+    
+    public function isAuthorized($user) {        
+        // All registered users can not add user
+//        if (($this->request->action === 'add') || ($this->request->action === 'index')) {
+//            return true;
+//        }
+
+        // The user can edit, delete or view his own info
+        if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
+            $userId = (int) $this->request->params['pass'][0];
+            if ($userId == $user['id']) {
+                return true;
+            }
+        }
+
+        return parent::isAuthorized($user);
     }
 
 }
