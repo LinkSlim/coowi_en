@@ -142,13 +142,14 @@ class UsersController extends AppController
      
         if(!$this->Auth->user('rol_id')){ //Si no hay usuario logged, solo se puede crear usuarios (para el Registro)
             $this->Auth->allow(['add']);
+            $this->Auth->deny(['edit','view','delete','index']);
         }
         else{
-            if($this->Auth->user('rol_id') == 2){ //Si el usuario logged tiene rol de 'Admin', puede ver lista de usuarios y crear nuevos
-                $this->Auth->allow(['index','add']);
+            if($this->Auth->user('rol_id') == AppController::ADMIN){ //Si el usuario logged tiene rol de 'Admin', puede ver lista de usuarios y crear nuevos
+                $this->Auth->allow(['index','add','edit','delete','view']);
             }
             else{ //Si el usuario logged no es 'Admin' solo puede ver lista usuarios (que mas adelante se realizara filtro para que no se muestren todos los usuarios, solo el suyo)
-                $this->Auth->allow(['index']);
+                $this->Auth->deny(['add','index']);                
             }
         }
         
@@ -170,6 +171,7 @@ class UsersController extends AppController
                 return true;
             }
         }
+
 
         return parent::isAuthorized($user);
     }

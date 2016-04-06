@@ -28,6 +28,11 @@ use Cake\Event\Event;
  * @link http://book.cakephp.org/3.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+    
+    //Constantes para los roles de usuarios
+    const BASICO = 1;
+    const PRO = 2;
+    const ADMIN = 3;
 
     /**
      * Initialization hook method.
@@ -67,7 +72,7 @@ class AppController extends Controller {
 
     public function isAuthorized($user) { //Un usuario esta autorizaco si el usuario tiene un rol establecido y dicho rol es el del 'admin' (aunque aqui lo determinamos usando su id en vez del nombre del rol)
         // Admin can access every action
-        if (isset($user['rol_id']) && $user['rol_id'] == 2) { 
+        if (isset($user['rol_id']) && $user['rol_id'] == self::ADMIN) { 
             return true;
         }
 
