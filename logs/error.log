@@ -1094,3 +1094,242 @@ Stack Trace:
 #1 {main}
 
 
+2016-04-06 16:25:17 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::users() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /coowi_en/users/users/view/0
+Referer URL: http://localhost/coowi_en/users/edit/0
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-04-06 17:00:01 Error: Fatal Error (1): Call to a member function user() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 18]
+Request URL: /coowi_en/users/logout
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:00:02 Error: [Cake\Error\FatalErrorException] Call to a member function user() on boolean
+Request URL: /coowi_en/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 17:01:01 Error: Fatal Error (1): Call to a member function user() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 18]
+Request URL: /coowi_en/users/logout
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:01:01 Error: [Cake\Error\FatalErrorException] Call to a member function user() on boolean
+Request URL: /coowi_en/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 17:01:07 Error: Fatal Error (1): Call to a member function user() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 18]
+Request URL: /coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:01:07 Error: [Cake\Error\FatalErrorException] Call to a member function user() on boolean
+Request URL: /coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 17:02:04 Error: Fatal Error (1): Call to a member function user() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 18]
+Request URL: /coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:02:04 Error: [Cake\Error\FatalErrorException] Call to a member function user() on boolean
+Request URL: /coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 17:02:14 Error: Fatal Error (1): Call to a member function user() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 18]
+Request URL: /coowi_en/users/logout
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:02:14 Error: [Cake\Error\FatalErrorException] Call to a member function user() on boolean
+Request URL: /coowi_en/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 17:02:48 Error: Fatal Error (1): Call to a member function user() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 18]
+Request URL: /coowi_en/users/login
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:02:48 Error: [Cake\Error\FatalErrorException] Call to a member function user() on boolean
+Request URL: /coowi_en/users/login
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 17:03:59 Error: Fatal Error (1): Call to a member function user() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\AppController.php, line 77]
+Request URL: /coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:03:59 Error: [Cake\Error\FatalErrorException] Call to a member function user() on boolean
+Request URL: /coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 77)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 17:05:46 Error: Fatal Error (1): Class 'App\Controller\AuthComponent' not found in [C:\xampp\htdocs\coowi_en\src\Controller\AppController.php, line 77]
+Request URL: /coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:05:46 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\AuthComponent' not found
+Request URL: /coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\xampp\\htdocs...', 77)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 17:05:56 Error: Fatal Error (1): Class 'App\Controller\AuthComponent' not found in [C:\xampp\htdocs\coowi_en\src\Controller\AppController.php, line 77]
+Request URL: /coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:05:57 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\AuthComponent' not found
+Request URL: /coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\xampp\\htdocs...', 77)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 17:06:53 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\AppController.php, line 110]
+Request URL: /coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:06:53 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 110)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 17:08:21 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\AppController.php, line 110]
+Request URL: /coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:08:21 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 110)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 17:08:26 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\AppController.php, line 110]
+Request URL: /coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:08:26 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 110)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 17:08:28 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\AppController.php, line 110]
+Request URL: /coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-06 17:08:28 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean
+Request URL: /coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 110)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

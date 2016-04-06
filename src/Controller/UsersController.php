@@ -12,13 +12,12 @@ use Cake\Event\Event;
  */
 class UsersController extends AppController
 {
-
-//    public function beforeFilter(Event $event)
-//    {
-//        parent::beforeFilter($event);
-//        $this->Auth->allow(['add']);
+    
+//    public function initialize() {
+//        parent::setLayout();        
 //    }
     
+
     /**
      * Index method
      *
@@ -145,10 +144,10 @@ class UsersController extends AppController
             $this->Auth->deny(['edit','view','delete','index']);
         }
         else{
-            if($this->Auth->user('rol_id') == AppController::ADMIN){ //Si el usuario logged tiene rol de 'Admin', puede ver lista de usuarios y crear nuevos
+            if($this->Auth->user('rol_id') == AppController::ADMIN){ //Si el usuario logged tiene rol de 'Admin', puede hacer de todo
                 $this->Auth->allow(['index','add','edit','delete','view']);
             }
-            else{ //Si el usuario logged no es 'Admin' solo puede ver lista usuarios (que mas adelante se realizara filtro para que no se muestren todos los usuarios, solo el suyo)
+            else{ //Si el usuario logged no es 'Admin' no puede hacer add ni index, solo view, edit y delete de su usuario
                 $this->Auth->deny(['add','index']);                
             }
         }
@@ -171,7 +170,6 @@ class UsersController extends AppController
                 return true;
             }
         }
-
 
         return parent::isAuthorized($user);
     }

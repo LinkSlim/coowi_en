@@ -18,6 +18,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\Network\Session;
 
 /**
  * Application Controller
@@ -45,8 +46,7 @@ class AppController extends Controller {
      */
     public function initialize() {
         parent::initialize();
-
-        $this->viewBuilder()->layout('default_custom');
+                
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
@@ -68,6 +68,18 @@ class AppController extends Controller {
         // Allow the display action so our pages controller
         // continues to work.
         $this->Auth->allow(['display']);
+        
+        
+    }
+    
+    public function setLayout(){
+        //Cambia el Layout en funcion de si hay usuario logeado o no
+        if (is_null($this->request->session()->read('Auth.User.id'))) {
+            $this->viewBuilder()->layout('public');
+        }
+        else {
+            $this->viewBuilder()->layout('private');
+        }
     }
 
     public function isAuthorized($user) { //Un usuario esta autorizaco si el usuario tiene un rol establecido y dicho rol es el del 'admin' (aunque aqui lo determinamos usando su id en vez del nombre del rol)

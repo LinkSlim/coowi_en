@@ -44,6 +44,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div class="top-bar-section">
             <ul class="right">
                 <li><a target="_self" href="http://localhost/coowi_en/users/view/<?= $this->request->session()->read('Auth.User.id') ?>"><?= $this->request->session()->read('Auth.User.name');?></a></li>                
+                <li><a target="_self" href="http://localhost/coowi_en/users/logout">Logout</a></li>                
             </ul>
         </div>
     </nav>
