@@ -14,7 +14,7 @@
         <thead>
             <tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
-                <th><?= $this->Paginator->sort('user_id') ?></th>
+                
                 <th><?= $this->Paginator->sort('title') ?></th>
                 <th><?= $this->Paginator->sort('description') ?></th>
                 <th><?= $this->Paginator->sort('creation_date') ?></th>
@@ -30,7 +30,7 @@
             <?php foreach ($petitions as $petition): ?>
             <tr>
                 <td><?= $this->Number->format($petition->id) ?></td>
-                <td><?= $petition->has('user') ? $this->Html->link($petition->user->name, ['controller' => 'Users', 'action' => 'view', $petition->user->id]) : '' ?></td>
+<!--                <td> //$petition->has('user') ? $this->Html->link($petition->user->name, ['controller' => 'Users', 'action' => 'view', $petition->user->id]) : '' </td>  //Como mostrar el nomrbre de un usuario dado su id, y convertirlo en enlace para entrar en los datos de ese usuario con ese id--> 
                 <td><?= h($petition->title) ?></td>
                 <td><?= h($petition->description) ?></td>
                 <td><?= h($petition->creation_date) ?></td>

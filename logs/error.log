@@ -1367,3 +1367,37 @@ Stack Trace:
 #2 {main}
 
 
+2016-04-07 09:03:12 Error: [PDOException] SQLSTATE[HY000] [2002] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+
+Request URL: /coowi_en/petitions/edit/0
+Referer URL: http://localhost/coowi_en/petitions/view/0
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(428): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\PetitionsTable))
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\PetitionsTable))
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1278): Cake\ORM\Table->find('all')
+#13 C:\xampp\htdocs\coowi_en\src\Model\Table\PetitionsTable.php(105): Cake\ORM\Table->exists(Array)
+#14 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(144): App\Model\Table\PetitionsTable->isOwnedBy(0, 0)
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PetitionsController->isAuthorized(Array)
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(494): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(305): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(258): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(495): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#24 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#25 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#26 {main}
+
+

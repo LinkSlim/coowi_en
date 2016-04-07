@@ -29,8 +29,13 @@ class PetitionsController extends AppController
      */
     public function index()
     {
+//        $this->paginate = [
+//            'contain' => ['Users']
+//        ];
         $this->paginate = [
-            'contain' => ['Users']
+            'conditions' => [
+            'Petitions.user_id' => $this->Auth->user('id'),
+            ]
         ];
         $petitions = $this->paginate($this->Petitions);
 
