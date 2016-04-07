@@ -74,11 +74,18 @@ class AppController extends Controller {
     
     public function setLayout(){
         //Cambia el Layout en funcion de si hay usuario logeado o no
-        if (is_null($this->request->session()->read('Auth.User.id'))) {
-            $this->viewBuilder()->layout('public');
+//        if (is_null($this->request->session()->read('Auth.User.id'))) {
+//            $this->viewBuilder()->layout('public');
+//        }
+//        else {
+//            $this->viewBuilder()->layout('private');
+//        }
+        if($this->Auth->user('id'))
+        {
+          $this->viewBuilder()->layout('private');
         }
-        else {
-            $this->viewBuilder()->layout('private');
+        else{
+          $this->viewBuilder()->layout('public');
         }
     }
 
@@ -108,6 +115,7 @@ class AppController extends Controller {
     
     public function beforeFilter(\Cake\Event\Event $event) {
         $this->Auth->allow(['logout', 'login']);
+        $this->setLayout();
     }
 
 }

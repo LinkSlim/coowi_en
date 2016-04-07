@@ -1333,3 +1333,37 @@ Stack Trace:
 #2 {main}
 
 
+2016-04-07 08:20:50 Error: Fatal Error (1): Call to a member function check() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\AppController.php, line 83]
+Request URL: /coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-07 08:20:51 Error: [Cake\Error\FatalErrorException] Call to a member function check() on boolean
+Request URL: /coowi_en/users
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 83)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-07 08:22:14 Error: Fatal Error (1): Call to a member function check() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\AppController.php, line 83]
+Request URL: /coowi_en/users
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-07 08:22:14 Error: [Cake\Error\FatalErrorException] Call to a member function check() on boolean
+Request URL: /coowi_en/users
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 83)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

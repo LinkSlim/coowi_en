@@ -63,7 +63,7 @@ class UsersController extends AppController
             $user = $this->Users->patchEntity($user, $this->request->data);
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'users', 'action' => 'login']);
             } else {
                 $this->Flash->error(__('The user could not be saved. Please, try again.'));
             }
@@ -123,7 +123,7 @@ class UsersController extends AppController
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
-                return $this->redirect($this->Auth->redirectUrl());
+                return $this->redirect(['controller' => 'petitions', 'action' => 'index']);
             }
             
             //Si el usuario no es identificado
@@ -136,7 +136,7 @@ class UsersController extends AppController
         return $this->redirect($this->Auth->logout());
     }
     
-    public function beforeFilter(\Cake\Event\Event $event) {
+    public function beforeFilter(Event $event) {
         parent::beforeFilter($event);
      
         if(!$this->Auth->user('rol_id')){ //Si no hay usuario logged, solo se puede crear usuarios (para el Registro)

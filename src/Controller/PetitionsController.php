@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Petitions Controller
@@ -10,6 +11,10 @@ use App\Controller\AppController;
  */
 class PetitionsController extends AppController
 {
+    
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+    }
     
 //    public function initialize() {
 //        parent::initialize();
