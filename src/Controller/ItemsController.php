@@ -112,4 +112,22 @@ class ItemsController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+    
+    public function isAuthorized($user) {
+
+        // All registered users can add petitions
+//        if (($this->request->action === 'add') || ($this->request->action === 'index')) {
+//            return true;
+//        }
+
+        // The owner of an item can view, edit and delete it
+        if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
+            $petitionId = (int) $this->request->params['pass'][0];
+            if ($this->Petitions->isOwnedBy($petitionId, $user['id'])) {
+                return true;
+            }
+        }
+
+        return parent::isAuthorized($user);
+    }
 }

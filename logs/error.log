@@ -1401,3 +1401,114 @@ Stack Trace:
 #26 {main}
 
 
+2016-04-08 09:56:56 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\view.ctp, line 85]
+Request URL: /coowi_en/petitions/view/3
+Referer URL: http://localhost/coowi_en/petitions/view/3
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\view.ctp, line 85
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 09:58:54 Error: Fatal Error (1): Call to a member function isOwnedBy() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php, line 126]
+Request URL: /coowi_en/items/edit/3
+Referer URL: http://localhost/coowi_en/petitions/view/3
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-08 09:58:54 Error: [Cake\Error\FatalErrorException] Call to a member function isOwnedBy() on boolean
+Request URL: /coowi_en/items/edit/3
+Referer URL: http://localhost/coowi_en/petitions/view/3
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 126)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-08 09:59:03 Error: Fatal Error (1): Call to a member function isOwnedBy() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php, line 126]
+Request URL: /coowi_en/items/view/3
+Referer URL: http://localhost/coowi_en/petitions/view/3
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-08 09:59:03 Error: [Cake\Error\FatalErrorException] Call to a member function isOwnedBy() on boolean
+Request URL: /coowi_en/items/view/3
+Referer URL: http://localhost/coowi_en/petitions/view/3
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 126)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-08 10:09:16 Error: Fatal Error (1): Call to undefined method App\Model\Entity\Item::hasMany() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\view.ctp, line 85]
+Request URL: /coowi_en/petitions/view/3
+Referer URL: http://localhost/coowi_en/petitions/view/3
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-08 10:09:16 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Model\Entity\Item::hasMany()
+Request URL: /coowi_en/petitions/view/3
+Referer URL: http://localhost/coowi_en/petitions/view/3
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 85)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-08 10:33:00 Error: Fatal Error (1): Call to undefined method App\Model\Entity\Item::hasMany() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\view.ctp, line 85]
+Request URL: /coowi_en/petitions/view/3
+Referer URL: http://localhost/coowi_en/petitions/view/3
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-08 10:33:00 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Model\Entity\Item::hasMany()
+Request URL: /coowi_en/petitions/view/3
+Referer URL: http://localhost/coowi_en/petitions/view/3
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 85)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-08 10:33:02 Error: Fatal Error (1): Call to undefined method App\Model\Entity\Item::hasMany() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\view.ctp, line 85]
+Request URL: /coowi_en/petitions/view/3
+Referer URL: http://localhost/coowi_en/petitions/view/3
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-08 10:33:02 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Model\Entity\Item::hasMany()
+Request URL: /coowi_en/petitions/view/3
+Referer URL: http://localhost/coowi_en/petitions/view/3
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 85)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

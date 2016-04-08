@@ -133,12 +133,12 @@ class PetitionsController extends AppController
     
     public function isAuthorized($user) {
 
-        // All registered users can add articles
+        // All registered users can add petitions
         if (($this->request->action === 'add') || ($this->request->action === 'index')) {
             return true;
         }
 
-        // The owner of an article can edit and delete it
+        // The owner of an petition can view, edit and delete it
         if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
             $petitionId = (int) $this->request->params['pass'][0];
             if ($this->Petitions->isOwnedBy($petitionId, $user['id'])) {

@@ -97,7 +97,7 @@ class AppController extends Controller {
         }
     }
 
-    public function isAuthorized($user) { //Un usuario esta autorizaco si el usuario tiene un rol establecido y dicho rol es el del 'admin' (aunque aqui lo determinamos usando su id en vez del nombre del rol)
+    public function isAuthorized($user) { //Un usuario esta autorizado si tiene un rol establecido y dicho rol es el del 'admin' (aunque aqui lo determinamos usando su id en vez del nombre del rol)
         // Admin can access every action
         if (isset($user['rol_id']) && $user['rol_id'] == self::ADMIN) { 
             return true;

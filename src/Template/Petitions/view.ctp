@@ -58,32 +58,33 @@
     <div class="related">
         <h4><?= __('Related Items') ?></h4>
         <?php if (!empty($petition->items)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th><?= __('Id') ?></th>
-                <th><?= __('Petition Id') ?></th>
-                <th><?= __('Name') ?></th>
-                <th><?= __('Date') ?></th>
-                <th><?= __('Description') ?></th>
-                <th><?= __('State') ?></th>
-                <th class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($petition->items as $items): ?>
-            <tr>
-                <td><?= h($items->id) ?></td>
-                <td><?= h($items->petition_id) ?></td>
-                <td><?= h($items->name) ?></td>
-                <td><?= h($items->date) ?></td>
-                <td><?= h($items->description) ?></td>
-                <td><?= h($items->state) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Items', 'action' => 'view', $items->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Items', 'action' => 'edit', $items->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Items', 'action' => 'delete', $items->id], ['confirm' => __('Are you sure you want to delete # {0}?', $items->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <th><?= __('Id') ?></th>
+                    <th><?= __('Petition Id') ?></th>
+                    <th><?= __('Name') ?></th>
+                    <th><?= __('Date') ?></th>
+                    <th><?= __('Description') ?></th>
+                    <th><?= __('State') ?></th>
+                    <th class="actions"><?= __('Actions') ?></th>
+                </tr>
+                <?php foreach ($petition->items as $items): ?>
+                    <tr>
+                        <td><?= h($items->id) ?></td>
+                        <td><?= h($items->petition_id) ?></td>
+                        <td><?= h($items->name) ?></td>
+                        <td><?= h($items->date) ?></td>
+                        <td><?= h($items->description) ?></td>
+                        <td><?= h($items->state) ?></td>
+                        <td class="actions">
+                            <?= $this->Html->link(__('View'), ['controller' => 'Items', 'action' => 'view', $items->id]) ?>
+                            <?= $this->Html->link(__('Edit'), ['controller' => 'Items', 'action' => 'edit', $items->id]) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['controller' => 'Items', 'action' => 'delete', $items->id], ['confirm' => __('Are you sure you want to delete # {0}?', $items->id)]) ?>
+                        </td>
+                    </tr>
+                    <?= $items->has('offer') ? 'Hola' : 'Adios' ?>
+                <?php endforeach; ?>
+            </table>
         <?php endif; ?>
     </div>
 </div>
