@@ -80,12 +80,20 @@ class AppController extends Controller {
 //        else {
 //            $this->viewBuilder()->layout('private');
 //        }
-        if($this->Auth->user('id'))
-        {
-          $this->viewBuilder()->layout('private');
-        }
-        else{
-          $this->viewBuilder()->layout('public');
+        if ($this->Auth->user('id')) {
+            switch ($this->Auth->user('rol_id')) {
+                case 1:
+                    $this->viewBuilder()->layout('private_basic');
+                    break;
+                case 2:
+                    $this->viewBuilder()->layout('private_pro');
+                    break;
+                case 3:
+                    $this->viewBuilder()->layout('private_admin');
+                    break;
+            }
+        } else {
+            $this->viewBuilder()->layout('public');
         }
     }
 
