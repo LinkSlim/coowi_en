@@ -71,20 +71,21 @@
                 </tr>
                 <?php foreach ($petition->items as $items): ?>
                     <tr>
-                        <td><?= h($items->id) ?></td>
-                        <td><?= h($items->petition_id) ?></td>
-                        <td><?= h($items->user_id) ?></td>
-                        <td><?= h($items->name) ?></td>
-                        <td><?= h($items->date) ?></td>
-                        <td><?= h($items->description) ?></td>
-                        <td><?= h($items->state) ?></td>
+                        <td><b><?= h($items->id) ?></b></td>
+                        <td><b><?= h($items->petition_id) ?></b></td>
+                        <td><b><?= h($items->user_id) ?></b></td>
+                        <td><b><?= h($items->name) ?></b></td>
+                        <td><b><?= h($items->date) ?></b></td>
+                        <td><b><?= h($items->description) ?></b></td>
+                        <td><b><?= h($items->state) ?></b></td>
                         <td class="actions">
                             <?= $this->Html->link(__('View'), ['controller' => 'Items', 'action' => 'view', $items->id]) ?>
                             <?= $this->Html->link(__('Edit'), ['controller' => 'Items', 'action' => 'edit', $items->id]) ?>
                             <?= $this->Form->postLink(__('Delete'), ['controller' => 'Items', 'action' => 'delete', $items->id], ['confirm' => __('Are you sure you want to delete # {0}?', $items->id)]) ?>
                         </td>
                     </tr>                    
-                     <?= $this->element('ofertas', ["item_id" => $items->id]);   ?>
+                    <!--Element es para incrustar un trozo de codigo de otro fichero en este. Los Elementos son reutilizables -->
+                     <?= $this->element('ofertas', ["item_id" => $items->id]);   ?> 
                         
 
                 <?php endforeach; ?>

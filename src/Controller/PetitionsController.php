@@ -20,8 +20,7 @@ class PetitionsController extends AppController
 //    }
 
     public function beforeFilter(Event $event) {
-        parent::beforeFilter($event);
-        $this->loadModel('Offers'); //Cargo el Modelo de Ofertas para poder acceder a los datos de la tabla ofertas usando los metodos de dicho modelo.
+        parent::beforeFilter($event);        
     }
     
 //    public function initialize() {
@@ -60,17 +59,8 @@ class PetitionsController extends AppController
      */
     public function view($id = null)
     {
-        //$this->loadModel('Offers');        
-        $ofertas = $this->Offers->find('all', ['conditions' => ['Offers.item_id' => 2]]);
-        
-        $data = array(
-            'color' => 'pink',
-            'type' => 'sugar',
-            'base_price' => 23.95,
-            'hay' => true,
-            'ofertas' => $ofertas//->count()    
-        );
-        $this->set($data);
+        $this->loadModel('Offers'); //Cargo el Modelo de Ofertas para poder acceder a los datos de la tabla Ofertas usando los metodos de dicho modelo.    
+        //$ofertas = $this->Offers->find('all', ['conditions' => ['Offers.item_id' => 2]]);        
 
         $petition = $this->Petitions->get($id, [
             'contain' => ['Users', 'Items']
@@ -78,6 +68,20 @@ class PetitionsController extends AppController
         
         $this->set('petition', $petition);
         $this->set('_serialize', ['petition']);
+        
+        $array_ofertas = array();
+        foreach ($petition->items as $items){            
+             array_push($array_ofertas, $this->Offers->find('all', ['conditions' => ['Offers.item_id' => $items->id]]));
+        }
+        
+        $data = array(
+            'color' => 'pink',
+            'type' => 'sugar',
+            'base_price' => 23.95,
+            'hay' => true,
+            'ofertasDeItem' => $array_ofertas//->count()    
+        );
+        $this->set($data);
         
         
     }
