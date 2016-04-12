@@ -33,7 +33,7 @@ class AppController extends Controller {
     //Constantes para los roles de usuarios
     const BASICO = 1;
     const PRO = 2;
-    const ADMIN = 3;
+    const ADMIN = 3;  
 
     /**
      * Initialization hook method.
@@ -124,6 +124,6 @@ class AppController extends Controller {
     public function beforeFilter(\Cake\Event\Event $event) {
         $this->Auth->allow(['logout', 'login']);
         $this->setLayout();
-    }
+    }        
 
 }

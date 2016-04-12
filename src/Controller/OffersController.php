@@ -110,4 +110,9 @@ class OffersController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+    
+    public function getOffers($id = null){
+        return $this->Offers->get($id);
+        //return true;
+    }   
 }

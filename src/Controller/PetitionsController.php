@@ -12,8 +12,16 @@ use Cake\Event\Event;
 class PetitionsController extends AppController
 {
     
+    
+
+    
+//    public function initialize(){
+//        $this->loadModel('Offers');
+//    }
+
     public function beforeFilter(Event $event) {
         parent::beforeFilter($event);
+        $this->loadModel('Offers'); //Cargo el Modelo de Ofertas para poder acceder a los datos de la tabla ofertas usando los metodos de dicho modelo.
     }
     
 //    public function initialize() {
@@ -52,12 +60,26 @@ class PetitionsController extends AppController
      */
     public function view($id = null)
     {
+        //$this->loadModel('Offers');        
+        $ofertas = $this->Offers->find('all', ['conditions' => ['Offers.item_id' => 2]]);
+        
+        $data = array(
+            'color' => 'pink',
+            'type' => 'sugar',
+            'base_price' => 23.95,
+            'hay' => true,
+            'ofertas' => $ofertas//->count()    
+        );
+        $this->set($data);
+
         $petition = $this->Petitions->get($id, [
             'contain' => ['Users', 'Items']
         ]);
-
+        
         $this->set('petition', $petition);
         $this->set('_serialize', ['petition']);
+        
+        
     }
 
     /**
@@ -150,5 +172,5 @@ class PetitionsController extends AppController
     }
 
     
-
+    
 }

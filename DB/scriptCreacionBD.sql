@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     30/03/2016 10:57:13                          */
+/* Created on:     11/04/2016 12:34:55                          */
 /*==============================================================*/
 
 
@@ -31,9 +31,10 @@ create table items
 (
    id                   int not null auto_increment,
    petition_id          int not null,
-   name                 varchar(100) binary not null,
-   date                 date not null,
+   user_id              int not null,
+   name                 varchar(100) not null,
    description          varchar(256),
+   date                 date not null,
    state                varchar(100) not null default 'activado',
    primary key (id)
 );
@@ -44,10 +45,10 @@ create table items
 create table items_tags
 (
    id                   int not null auto_increment,
-   tag_id               int not null,
    item_id              int not null,
+   tag_id               int not null,
    primary key (id),
-   unique key ak_unique_item_tag (tag_id, item_id)
+   unique key ak_unique_item_tag (item_id, tag_id)
 );
 
 /*==============================================================*/
@@ -56,9 +57,9 @@ create table items_tags
 create table jobs
 (
    id                   int not null auto_increment,
-   user_id              int,
+   user_id              int not null,
    company              varchar(100) not null,
-   start_date           date not null,
+   start_date           date,
    ending_date          date,
    position             varchar(100),
    primary key (id)
@@ -71,10 +72,11 @@ create table offers
 (
    id                   int not null auto_increment,
    item_id              int not null,
+   user_id              int not null,
    price                decimal not null,
    date                 date not null,
    comment              varchar(256),
-   state                char(100) not null default 'activado',
+   state                varchar(100) not null default 'activado',
    primary key (id)
 );
 
@@ -84,14 +86,14 @@ create table offers
 create table petitions
 (
    id                   int not null auto_increment,
-   user_id              int,
+   user_id              int not null,
    title                varchar(100) not null,
    description          varchar(256) not null,
    creation_date        date not null,
    shell_by_date        date not null,
    location             varchar(100) not null,
    budget               decimal(8,2),
-   photo                varchar(256),
+   photo                varchar(500),
    state                varchar(100) not null default 'activado',
    primary key (id)
 );
@@ -101,7 +103,7 @@ create table petitions
 /*==============================================================*/
 create table rates
 (
-   id                   integer not null auto_increment,
+   id                   int not null auto_increment,
    user1_id             int not null,
    user2_id             int not null,
    comment              varchar(256) not null,
@@ -128,10 +130,10 @@ create table roles
 create table studies
 (
    id                   int not null auto_increment,
-   user_id              int,
-   center               varchar(100) not null,
-   degree               varchar(100) not null,
-   start_date           date not null,
+   user_id              int not null,
+   center               varchar(100),
+   degree               varchar(100),
+   start_date           date,
    ending_date          date,
    primary key (id)
 );
@@ -173,31 +175,37 @@ create table users
 );
 
 alter table items add constraint fk_is_composed foreign key (petition_id)
-      references petitions (id) on delete cascade on update cascade;
+      references petitions (id) on delete restrict on update restrict;
 
-alter table items_tags add constraint fk_identifies1 foreign key (item_id)
-      references items (id) on delete cascade on update cascade;
+alter table items add constraint fk_suggests foreign key (user_id)
+      references users (id) on delete restrict on update restrict;
+
+alter table items_tags add constraint fk_identifies foreign key (item_id)
+      references items (id) on delete restrict on update restrict;
 
 alter table items_tags add constraint fk_identifies2 foreign key (tag_id)
-      references tags (id) on delete cascade on update cascade;
+      references tags (id) on delete restrict on update restrict;
 
 alter table jobs add constraint fk_works foreign key (user_id)
-      references users (id) on delete cascade on update cascade;
+      references users (id) on delete restrict on update restrict;
 
-alter table offers add constraint fk_has foreign key (item_id)
-      references items (id) on delete cascade on update cascade;
+alter table offers add constraint fk_contiene2 foreign key (item_id)
+      references items (id) on delete restrict on update restrict;
+
+alter table offers add constraint fk_offers foreign key (user_id)
+      references users (id) on delete restrict on update restrict;
 
 alter table petitions add constraint fk_makes foreign key (user_id)
-      references users (id) on delete cascade on update cascade;
+      references users (id) on delete restrict on update restrict;
 
-alter table rates add constraint fk_evaluates foreign key (user1_id)
-      references users (id) on delete cascade on update cascade;
+alter table rates add constraint fk_rates foreign key (user1_id)
+      references users (id) on delete restrict on update restrict;
 
-alter table rates add constraint fk_is_evaluated foreign key (user2_id)
-      references users (id) on delete cascade on update cascade;
+alter table rates add constraint fk_rates2 foreign key (user2_id)
+      references users (id) on delete restrict on update restrict;
 
 alter table studies add constraint fk_studies foreign key (user_id)
-      references users (id) on delete cascade on update cascade;
+      references users (id) on delete restrict on update restrict;
 
 alter table users add constraint fk_defines foreign key (rol_id)
       references roles (id) on delete restrict on update restrict;

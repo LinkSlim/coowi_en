@@ -140,3 +140,15 @@ Stack Trace:
 #17 {main}
 
 
+2016-04-11 17:26:23 Error: [Cake\Console\Exception\MissingShellException] Shell class for "--version" could not be found.
+Exception Attributes: array (
+  'class' => '--version',
+)
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(214): Cake\Console\ShellDispatcher->findShell('--version')
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(181): Cake\Console\ShellDispatcher->_dispatch(Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(127): Cake\Console\ShellDispatcher->dispatch(Array)
+#3 C:\xampp\htdocs\coowi_en\bin\cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#4 {main}
+
+

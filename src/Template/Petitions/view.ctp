@@ -62,6 +62,7 @@
                 <tr>
                     <th><?= __('Id') ?></th>
                     <th><?= __('Petition Id') ?></th>
+                    <th><?= __('User Id') ?></th>
                     <th><?= __('Name') ?></th>
                     <th><?= __('Date') ?></th>
                     <th><?= __('Description') ?></th>
@@ -72,6 +73,7 @@
                     <tr>
                         <td><?= h($items->id) ?></td>
                         <td><?= h($items->petition_id) ?></td>
+                        <td><?= h($items->user_id) ?></td>
                         <td><?= h($items->name) ?></td>
                         <td><?= h($items->date) ?></td>
                         <td><?= h($items->description) ?></td>
@@ -81,8 +83,10 @@
                             <?= $this->Html->link(__('Edit'), ['controller' => 'Items', 'action' => 'edit', $items->id]) ?>
                             <?= $this->Form->postLink(__('Delete'), ['controller' => 'Items', 'action' => 'delete', $items->id], ['confirm' => __('Are you sure you want to delete # {0}?', $items->id)]) ?>
                         </td>
-                    </tr>
-                    <?= $items->has('offer') ? 'Hola' : 'Adios' ?>
+                    </tr>                    
+                     <?= $this->element('ofertas', ["item_id" => $items->id]);   ?>
+                        
+
                 <?php endforeach; ?>
             </table>
         <?php endif; ?>
