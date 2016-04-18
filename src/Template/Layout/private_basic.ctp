@@ -41,8 +41,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <h1><a href=""><?= $this->fetch('title') ?></a></h1>
             </li>
         </ul>
-        <div class="top-bar-section">
+        <div class="top-bar-section">            
             <ul class="right">
+                <?php echo $this->element('../Element/search');?>
                 <li><a target="_self" href="http://localhost/coowi_en/petitions/">Mis Peticiones</a></li>                
                 <li><a target="_self" href="http://localhost/coowi_en/users/view/<?= $this->request->session()->read('Auth.User.id') ?>"><?= $this->request->session()->read('Auth.User.name');?></a></li>                
                 <li><a target="_self" href="http://localhost/coowi_en/users/logout">Logout</a></li>                

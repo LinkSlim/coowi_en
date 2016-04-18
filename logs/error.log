@@ -3902,3 +3902,117 @@ Stack Trace:
 #2 {main}
 
 
+2016-04-18 08:00:36 Error: [Cake\Controller\Exception\MissingActionException] Action PetitionsController::search() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PetitionsController',
+  'action' => 'search',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /coowi_en/petitions/search
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#2 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-04-18 09:06:30 Error: [Cake\View\Exception\MissingElementException] .Element\.\Element\search.ctp.ctp
+Request URL: /coowi_en/users/view/1
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Template\Layout\private_pro.ctp(45): Cake\View\View->element('../Element/sear...')
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(992): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(633): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(592): Cake\View\View->renderLayout('', 'private_pro')
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#8 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2016-04-18 09:31:56 Error: [Cake\View\Exception\MissingTemplateException] Template file "Petitions\search.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Petitions\\search.ctp',
+)
+Request URL: /coowi_en/petitions/search?search=
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#4 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-04-18 09:32:37 Error: [Cake\View\Exception\MissingTemplateException] Template file "Petitions\search.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Petitions\\search.ctp',
+)
+Request URL: /coowi_en/petitions/search?search=nintendo
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#4 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-04-18 09:33:32 Error: [Cake\View\Exception\MissingTemplateException] Template file "Petitions\search.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Petitions\\search.ctp',
+)
+Request URL: /coowi_en/petitions/search?search=nintendo
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#4 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-04-18 09:33:39 Error: [Cake\View\Exception\MissingTemplateException] Template file "Petitions\search.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Petitions\\search.ctp',
+)
+Request URL: /coowi_en/petitions/search?tags=nintendo
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#4 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-04-18 10:22:56 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%%'  LIMIT 20 OFFSET 0' at line 1
+Request URL: /coowi_en/tags/search?tags=nintendo
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\TagsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php(152): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\TagsController->search()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TagsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+

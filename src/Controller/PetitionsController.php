@@ -159,8 +159,8 @@ class PetitionsController extends AppController
     
     public function isAuthorized($user) {
 
-        // All registered users can add petitions
-        if (($this->request->action === 'add') || ($this->request->action === 'index')) {
+        // All registered users can add, index and search petitions
+        if (($this->request->action === 'add') || ($this->request->action === 'index') || ($this->request->action === 'search')) {
             return true;
         }
 
@@ -174,7 +174,5 @@ class PetitionsController extends AppController
 
         return parent::isAuthorized($user);
     }
-
-    
     
 }

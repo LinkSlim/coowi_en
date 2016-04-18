@@ -107,4 +107,49 @@ class TagsController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+    
+    
+    public function isAuthorized($user) {
+
+        // All registered users can add, index and search petitions
+        if (($this->request->action === 'search')) {
+            return true;
+        }
+
+        // The owner of an petition can view, edit and delete it
+        if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
+            $petitionId = (int) $this->request->params['pass'][0];
+            if ($this->Petitions->isOwnedBy($petitionId, $user['id'])) {
+                return true;
+            }
+        }
+
+        return parent::isAuthorized($user);
+    }
+    
+    
+    public function search()
+    {
+        $tag = null;
+        $i = 0;
+        $cond = "";
+        $this->autoRender = false;
+        
+        if(!empty($this->request->query('tags'))){
+            $tag = $this->request->query('tags');
+            $tags = explode(' ', trim($tag));
+            $tags = array_diff($tags, array(''));
+            foreach ($tags as $tag) {
+                if ($i > 0) {
+                    $cond = $cond . " OR ";
+                }
+                $cond = $cond . " " . $this->modelClass . ".name" . " LIKE '%" . $tag . "%' ";
+                $i++;
+            }
+        }
+        $conditions = array('conditions'=> $cond);
+        $this->paginate = $conditions;
+        $this->set(strtolower($this->name), $this->paginate());
+        $this->render('index');        
+    }
 }

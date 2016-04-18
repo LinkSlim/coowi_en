@@ -42,7 +42,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </li>
         </ul>
         <div class="top-bar-section">
-            <ul class="right">
+            <ul class="right">                
                 <li><a target="_self" href="http://localhost/coowi_en/users/">Gestion Usuarios</a></li>                
                 <li><a target="_self" href="http://localhost/coowi_en/tags/">Gestion Etiquetas</a></li>                
                 <li><a target="_self" href=#>Gestion Comentarios</a></li>
