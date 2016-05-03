@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
+
 /**
  * Tags Controller
  *
@@ -32,7 +33,7 @@ class TagsController extends AppController
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function view($id = null)
-    {
+    {              
         $tag = $this->Tags->get($id, [
             'contain' => ['Items']
         ]);
@@ -112,7 +113,7 @@ class TagsController extends AppController
     public function isAuthorized($user) {
 
         // All registered users can add, index and search petitions
-        if (($this->request->action === 'search')) {
+        if (($this->request->action === 'searchPetitions')) {
             return true;
         }
 
@@ -128,15 +129,15 @@ class TagsController extends AppController
     }
     
     
-    public function search()
+    public function searchPetitions()
     {
         $tag = null;
         $i = 0;
         $cond = "";
         $this->autoRender = false;
         
-        if(!empty($this->request->query('tags'))){
-            $tag = $this->request->query('tags');
+        if(!empty($this->request->query('inputTags'))){
+            $tag = $this->request->query('inputTags');
             $tags = explode(' ', trim($tag));
             $tags = array_diff($tags, array(''));
             foreach ($tags as $tag) {
@@ -149,7 +150,16 @@ class TagsController extends AppController
         }
         $conditions = array('conditions'=> $cond);
         $this->paginate = $conditions;
+        
+        
+        $this->loadModel("Petitions");
+        $array_petitions = array();
+        array_push($array_petitions, $this->Petitions->getPetitionsByTags());
+        $data = array('peticionesConTags' => $array_petitions);
+        $this->set($data);
+        
+        
         $this->set(strtolower($this->name), $this->paginate());
-        $this->render('index');        
+        $this->render('results');        
     }
 }

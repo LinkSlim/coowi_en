@@ -12,25 +12,27 @@
         <thead>
             <tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
-                <th><?= $this->Paginator->sort('name') ?></th>
+                <th><?= $this->Paginator->sort('title') ?></th>
                 <th><?= $this->Paginator->sort('date') ?></th>
                 <th><?= $this->Paginator->sort('state') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($tags as $tag): ?>
+            <?php foreach ($peticionesConTags as $peticion): ?>
+            <?php foreach ($peticion as $peti): ?>
             <tr>
-                <td><?= $this->Number->format($tag->id) ?></td>
-                <td><?= h($tag->name) ?></td>
-                <td><?= h($tag->date) ?></td>
-                <td><?= h($tag->state) ?></td>
+                <td><?= $this->Number->format($peti->id) ?></td>
+                <td><?= h($peti->title) ?></td>
+                <td><?= h($peti->creation_date) ?></td>
+                <td><?= h($peti->state) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $tag->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $tag->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $tag->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tag->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $peti->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $peti->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $peti->id], ['confirm' => __('Are you sure you want to delete # {0}?', $peti->id)]) ?>
                 </td>
             </tr>
+            <?php endforeach; ?>
             <?php endforeach; ?>
         </tbody>
     </table>

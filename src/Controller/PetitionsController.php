@@ -12,13 +12,6 @@ use Cake\Event\Event;
 class PetitionsController extends AppController
 {
     
-    
-
-    
-//    public function initialize(){
-//        $this->loadModel('Offers');
-//    }
-
     public function beforeFilter(Event $event) {
         parent::beforeFilter($event);        
     }
@@ -160,7 +153,7 @@ class PetitionsController extends AppController
     public function isAuthorized($user) {
 
         // All registered users can add, index and search petitions
-        if (($this->request->action === 'add') || ($this->request->action === 'index') || ($this->request->action === 'search')) {
+        if (($this->request->action === 'add') || ($this->request->action === 'index') || ($this->request->action === 'searchPetitions')) {
             return true;
         }
 
@@ -175,4 +168,63 @@ class PetitionsController extends AppController
         return parent::isAuthorized($user);
     }
     
+    
+    public function searchPetitions()
+    {
+        $tag = null;
+        $i = 0;
+        $cond = "";
+        $this->autoRender = false;
+        
+        $this->loadModel("Tags");
+        $this->loadModel("Items");
+        $this->loadModel("Items_tags");
+        
+        //Separo los tags introducidos por el usuario y los meto en la consulta
+        if(!empty($this->request->query('inputTags'))){
+            $tag = $this->request->query('inputTags');
+            $tags = explode(' ', trim($tag));
+            $tags = array_diff($tags, array('')); //Array con los tags introducidos por el usuario en el buscador
+//             foreach ($tags as $tag) {
+//                 if ($i > 0) {
+//                     $cond = $cond . " OR ";
+//                 }
+//                 $cond = $cond . " " . "tags.name" . " LIKE '%" . $tag . "%' ";
+//                 $i++;
+//             }
+        }
+        
+        //TODO adaptar para hacer busqueda con varias tags
+        $query = $this->Petitions->find('all')->innerJoin(
+        		['Items' => 'items'],//nombre tabla con la que hace JOIN
+        		[
+        				'Petitions.id = Items.petition_id'	//Condiciones JOIN
+        		])->innerJoin(
+        				['Items_tags' => 'items_tags'],
+        				[
+        						'Items.id = Items_tags.item_id'
+        				]
+        				)->innerJoin(
+        						['Tags' => 'tags'],
+        						[
+        								'Items_tags.tag_id = Tags.id',	//Condiciones JOIN (se pueden poner varias separandolas por comas)
+        								'Tags.name LIKE '."'%$tags[0]%'"
+        						]
+        						);
+        
+        // In a controller or table method.
+        foreach ($query as $petition) {
+        	//echo $petition->title;
+        }
+        
+        
+        $array_petitions = array();
+        array_push($array_petitions, $query);
+        $data = array('peticionesConTags' => $array_petitions);
+        $this->set($data);
+        
+        
+        $this->set(strtolower($this->name), $this->paginate());
+        $this->render('results');          
+    }
 }

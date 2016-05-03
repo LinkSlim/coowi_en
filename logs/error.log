@@ -4016,3 +4016,1747 @@ Stack Trace:
 #16 {main}
 
 
+2016-04-18 13:11:06 Error: Fatal Error (1): Call to a member function isOwnedBy() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php, line 122]
+Request URL: /coowi_en/tags/view/1
+Referer URL: http://localhost/coowi_en/tags/search?tags=viaje
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-18 13:11:06 Error: [Cake\Error\FatalErrorException] Call to a member function isOwnedBy() on boolean
+Request URL: /coowi_en/tags/view/1
+Referer URL: http://localhost/coowi_en/tags/search?tags=viaje
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 122)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-18 13:18:38 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Tags\index.ctp, line 22]
+Request URL: /coowi_en/tags/search?tags=relax
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Tags\index.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\TagsController::search() - APP/Controller\TagsController.php, line 153
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-18 13:18:56 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Tags\index.ctp, line 22]
+Request URL: /coowi_en/tags/search?inputTags=relax
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Tags\index.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\TagsController::search() - APP/Controller\TagsController.php, line 153
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-18 13:19:10 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Tags\index.ctp, line 22]
+Request URL: /coowi_en/tags/search?inputTags=relax
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Tags\index.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\TagsController::search() - APP/Controller\TagsController.php, line 153
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-18 13:28:26 Warning: Warning (2): strtolower() expects parameter 1 to be string, object given in [C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php, line 152]
+Request URL: /coowi_en/tags/search?inputTags=relax
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+strtolower - [internal], line ??
+App\Controller\TagsController::search() - APP/Controller\TagsController.php, line 152
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-18 13:28:27 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Tags\index.ctp, line 22]
+Request URL: /coowi_en/tags/search?inputTags=relax
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Tags\index.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\TagsController::search() - APP/Controller\TagsController.php, line 153
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-18 13:40:08 Error: Fatal Error (1): Call to undefined method App\Controller\TagsController::query() in [C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php, line 152]
+Request URL: /coowi_en/tags/search?inputTags=relax
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-18 13:40:08 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\TagsController::query()
+Request URL: /coowi_en/tags/search?inputTags=relax
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 152)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-18 15:03:41 Error: [BadMethodCallException] Unknown finder method "SELECT   petitions.title
+	FROM petitions INNER JOIN items
+    		ON  petitions.id = items.petition_id
+    	INNER JOIN items_tags
+            ON items.id = items_tags.item_id
+   WHERE items_tags.tag_id = "1"
+GROUP BY petitions.title
+ORDER BY petitions.title"
+Request URL: /coowi_en/tags/search?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(947): Cake\ORM\Table->callFinder('SELECT   petiti...', Object(Cake\ORM\Query), Array)
+#1 C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php(161): Cake\ORM\Table->find('SELECT   petiti...')
+#2 [internal function]: App\Controller\TagsController->search()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TagsController))
+#6 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-04-20 07:43:40 Error: [BadMethodCallException] Unknown method "getPetitionsByTags"
+Request URL: /coowi_en/tags/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php(156): Cake\ORM\Table->__call('getPetitionsByT...', Array)
+#1 C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php(156): App\Model\Table\PetitionsTable->getPetitionsByTags()
+#2 [internal function]: App\Controller\TagsController->searchPetitions()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TagsController))
+#6 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-04-20 07:47:00 Error: [BadMethodCallException] Unknown method "getPetitionsByTags"
+Request URL: /coowi_en/tags/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php(157): Cake\ORM\Table->__call('getPetitionsByT...', Array)
+#1 C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php(157): App\Model\Table\PetitionsTable->getPetitionsByTags()
+#2 [internal function]: App\Controller\TagsController->searchPetitions()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TagsController))
+#6 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-04-20 08:21:41 Error: [BadMethodCallException] Unknown method "getPetitionsByTags"
+Request URL: /coowi_en/tags/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php(157): Cake\ORM\Table->__call('getPetitionsByT...', Array)
+#1 C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php(157): App\Model\Table\TagsTable->getPetitionsByTags()
+#2 [internal function]: App\Controller\TagsController->searchPetitions()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TagsController))
+#6 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-04-20 08:32:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Petitions.name' in 'where clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(202): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-04-20 08:52:01 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%viaje%'  LIMIT 20 OFFSET 0' at line 1
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(202): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-04-20 08:52:46 Warning: Warning (4096): Object of class App\Model\Table\TagsTable could not be converted to string in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 189]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 189
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-20 08:52:47 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%viaje%'  LIMIT 20 OFFSET 0' at line 1
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(204): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-04-20 08:53:12 Warning: Warning (4096): Object of class App\Model\Table\TagsTable could not be converted to string in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 189]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 189
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-20 08:53:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Tags.name' in 'where clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(204): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-04-20 08:53:40 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Tags.name' in 'where clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(204): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-04-20 08:53:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tags.name' in 'where clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(204): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-04-29 16:38:25 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 217]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-29 16:38:25 Error: [Cake\Error\FatalErrorException] Call to a member function find() on null
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 217)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-29 16:38:34 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 217]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viajes
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-29 16:38:34 Error: [Cake\Error\FatalErrorException] Call to a member function find() on null
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viajes
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 217)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-29 16:38:46 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 217]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viajes
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-04-29 16:38:46 Error: [Cake\Error\FatalErrorException] Call to a member function find() on null
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viajes
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 217)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-29 16:39:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tags.name' in 'where clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viajes
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(244): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-04-29 16:48:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tags.name' in 'where clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viajes+gatos
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(244): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-04-29 16:50:52 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'jajaja LIMIT 20 OFFSET 0' at line 1
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viajes+gatos
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(246): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-04-30 08:43:26 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/src/Template/Users/index.ctp
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 08:44:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/Users/index.ctp
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 08:44:15 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/Users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 08:51:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/src/Controller/UsersController.php?debug_host=192.168.1.137%2C127.0.0.1&start_debug=1&debug_port=10137&original_url=http%3A%2F%2Flocalhost%2FCoowi_en%2Fsrc%2FController%2FUsersController.php&ZRayDisable=1&send_sess_end=1&debug_stop=1&debug_start_session=1&debug_no_cache=1462006310825&debug_session_id=1001
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 08:52:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/src/Controller/UsersController.php?debug_host=192.168.1.137%2C127.0.0.1&start_debug=1&debug_port=10137&original_url=http%3A%2F%2Flocalhost%2FCoowi_en%2Fsrc%2FController%2FUsersController.php&ZRayDisable=1&send_sess_end=1&debug_stop=1&debug_start_session=1&debug_no_cache=1462006374959&debug_session_id=1002
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 08:53:36 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/users/login?debug_host=192.168.1.137%2C127.0.0.1&start_debug=1&debug_port=10137&original_url=http%3A%2F%2Flocalhost%2FCoowi_en%2Fusers%2Flogin&ZRayDisable=1&send_sess_end=1&debug_stop=1&debug_start_session=1&debug_no_cache=1462006416023&debug_session_id=1003
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 08:58:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 08:59:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 09:00:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/users/login?debug_host=192.168.1.137%2C127.0.0.1&start_debug=1&debug_port=10137&original_url=http%3A%2F%2Flocalhost%2FCoowi_en%2Fusers%2Flogin&ZRayDisable=1&send_sess_end=1&debug_stop=1&debug_start_session=1&debug_no_cache=1462006847768&debug_session_id=1002
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 09:00:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/users/login?debug_host=192.168.1.137%2C127.0.0.1&start_debug=1&debug_port=10137&original_url=http%3A%2F%2Flocalhost%2FCoowi_en%2Fusers%2Flogin&ZRayDisable=1&send_sess_end=1&debug_stop=1&debug_start_session=1&debug_no_cache=1462006847768&debug_session_id=1002
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 09:00:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/users/login?debug_host=192.168.1.137%2C127.0.0.1&start_debug=1&debug_port=10137&original_url=http%3A%2F%2Flocalhost%2FCoowi_en%2Fusers%2Flogin&ZRayDisable=1&send_sess_end=1&debug_stop=1&debug_start_session=1&debug_no_cache=1462006847768&debug_session_id=1002
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 09:39:36 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Phpinfo.php could not be found.
+Exception Attributes: array (
+  'class' => 'Phpinfo.php',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/phpinfo.php
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 09:51:33 Error: [PDOException] SQLSTATE[HY000] [2002] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+
+Request URL: /coowi_en/petitions
+Referer URL: http://localhost/coowi_en/Users/login?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14620098389011
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(428): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\PetitionsTable))
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\PetitionsTable))
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(166): Cake\ORM\Table->find('all', Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#14 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(40): Cake\Controller\Controller->paginate(Object(App\Model\Table\PetitionsTable))
+#15 [internal function]: App\Controller\PetitionsController->index()
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#18 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#19 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-04-30 09:58:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/src/Controller/UsersController.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14620103079611
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 09:58:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/Users/login?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14620103079611
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 09:59:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/Users/login/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14620103079611
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 09:59:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/Users/login/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14620103079611
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 09:59:49 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/Users/login?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14620103079611
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 09:59:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/Users/login?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14620103079611
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 10:10:36 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/src/Controller/UsersController.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14620110346191
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 10:12:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/src/Controller/UsersController.php?XDEBUG_SESSION_STOP_NO_EXEC=ECLIPSE_DBGP&KEY=14620110346191
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 10:12:29 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/users/login?XDEBUG_SESSION_STOP_NO_EXEC=ECLIPSE_DBGP&KEY=14620110346191
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 10:12:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/users/login?XDEBUG_SESSION_STOP_NO_EXEC=ECLIPSE_DBGP&KEY=14620110346191
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 10:52:09 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14620135277323
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 10:52:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14620135725894
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 11:04:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Coowi_en could not be found.
+Exception Attributes: array (
+  'class' => 'Coowi_en',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/Coowi_en/src/Controller/UsersController.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=146201428647810
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-30 11:13:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tags.name' in 'where clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(247): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-03 15:05:15 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tags.name' in 'where clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(247): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-03 15:10:21 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 248
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 15:17:00 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tags\results.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tags\\results.ctp',
+)
+Request URL: /coowi_en/tags/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('results')
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('results', NULL)
+#2 C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php(163): Cake\Controller\Controller->render('results')
+#3 [internal function]: App\Controller\TagsController->searchPetitions()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TagsController))
+#7 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-05-03 15:18:23 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tags\results.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tags\\results.ctp',
+)
+Request URL: /coowi_en/tags/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('results')
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('results', NULL)
+#2 C:\xampp\htdocs\coowi_en\src\Controller\TagsController.php(163): Cake\Controller\Controller->render('results')
+#3 [internal function]: App\Controller\TagsController->searchPetitions()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TagsController))
+#7 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-05-03 15:19:21 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tags.name' in 'where clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(234): Cake\Controller\Controller->paginate()
+#11 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-03 15:39:08 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 235
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 15:41:04 Error: [InvalidArgumentException] Cannot convert value to string
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(37): Cake\Database\Type\StringType->toDatabase(Array, Object(Cake\Database\Driver\Mysql))
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(70): Cake\Database\Statement\StatementDecorator->cast(Array, 'string')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(105): Cake\Database\Statement\PDOStatement->bindValue('c3', Array, NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c3', Array, NULL)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(290): Cake\Database\Log\LoggingStatement->bindValue('c3', Array, NULL)
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\ValueBinder.php(125): Cake\Database\Statement\StatementDecorator->bind(Array, Array)
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(269): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#13 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(234): Cake\Controller\Controller->paginate()
+#14 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#18 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2016-05-03 15:46:21 Warning: Warning (2): PDO::query() [<a href='http://php.net/pdo.query'>pdo.query</a>]: MySQL server has gone away in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php, line 90]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDO::query() - [internal], line ??
+Cake\Database\Driver\Mysql::isConnected() - CORE\src\Database\Driver\PDODriverTrait.php, line 90
+Cake\Database\Driver::__debugInfo() - CORE\src\Database\Driver.php, line 351
+Cake\Error\Debugger::_object() - CORE\src\Error\Debugger.php, line 546
+Cake\Error\Debugger::_export() - CORE\src\Error\Debugger.php, line 474
+Cake\Error\Debugger::exportVar() - CORE\src\Error\Debugger.php, line 440
+include - CORE\src\Template\Element\exception_stack_trace.ctp, line 37
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::_renderElement() - CORE\src\View\View.php, line 1329
+Cake\View\View::element() - CORE\src\View\View.php, line 493
+include - CORE\src\Template\Layout\dev_error.ctp, line 221
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 633
+Cake\View\View::render() - CORE\src\View\View.php, line 592
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Error\ExceptionRenderer::_outputMessage() - CORE\src\Error\ExceptionRenderer.php, line 320
+Cake\Error\ExceptionRenderer::_outputMessage() - CORE\src\Error\ExceptionRenderer.php, line 327
+Cake\Error\ExceptionRenderer::render() - CORE\src\Error\ExceptionRenderer.php, line 192
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 144
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 179
+Cake\Error\BaseErrorHandler::wrapAndHandleException() - CORE\src\Error\BaseErrorHandler.php, line 163
+[main] - [internal], line ??
+
+
+
+2016-05-03 15:46:22 Warning: Warning (2): PDO::query() [<a href='http://php.net/pdo.query'>pdo.query</a>]: Error reading result set's header in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php, line 90]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDO::query() - [internal], line ??
+Cake\Database\Driver\Mysql::isConnected() - CORE\src\Database\Driver\PDODriverTrait.php, line 90
+Cake\Database\Driver::__debugInfo() - CORE\src\Database\Driver.php, line 351
+Cake\Error\Debugger::_object() - CORE\src\Error\Debugger.php, line 546
+Cake\Error\Debugger::_export() - CORE\src\Error\Debugger.php, line 474
+Cake\Error\Debugger::exportVar() - CORE\src\Error\Debugger.php, line 440
+include - CORE\src\Template\Element\exception_stack_trace.ctp, line 37
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::_renderElement() - CORE\src\View\View.php, line 1329
+Cake\View\View::element() - CORE\src\View\View.php, line 493
+include - CORE\src\Template\Layout\dev_error.ctp, line 221
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 633
+Cake\View\View::render() - CORE\src\View\View.php, line 592
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Error\ExceptionRenderer::_outputMessage() - CORE\src\Error\ExceptionRenderer.php, line 320
+Cake\Error\ExceptionRenderer::_outputMessage() - CORE\src\Error\ExceptionRenderer.php, line 327
+Cake\Error\ExceptionRenderer::render() - CORE\src\Error\ExceptionRenderer.php, line 192
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 144
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 179
+Cake\Error\BaseErrorHandler::wrapAndHandleException() - CORE\src\Error\BaseErrorHandler.php, line 163
+[main] - [internal], line ??
+
+
+
+2016-05-03 15:46:22 Error: [InvalidArgumentException] Cannot convert value to string
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(37): Cake\Database\Type\StringType->toDatabase(Array, Object(Cake\Database\Driver\Mysql))
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(70): Cake\Database\Statement\StatementDecorator->cast(Array, 'string')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(105): Cake\Database\Statement\PDOStatement->bindValue('c3', Array, NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c3', Array, NULL)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(290): Cake\Database\Log\LoggingStatement->bindValue('c3', Array, NULL)
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\ValueBinder.php(125): Cake\Database\Statement\StatementDecorator->bind(Array, Array)
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(269): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#13 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(234): Cake\Controller\Controller->paginate()
+#14 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#18 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2016-05-03 15:58:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Petitio could not be found.
+Exception Attributes: array (
+  'class' => 'Petitio',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/petitio
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-05-03 16:19:18 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 198]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-03 16:19:19 Error: [Cake\Error\FatalErrorException] Call to a member function find() on null
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 198)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-03 16:22:15 Error: Fatal Error (1): Call to a member function find() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 205]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14622924456212
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-03 16:22:16 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14622924456212
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 205)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-03 16:23:35 Error: Fatal Error (1): Call to a member function find() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 205]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14622925831303
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-03 16:23:36 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14622925831303
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 205)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-03 16:24:20 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 214
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 16:25:11 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 210
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 16:25:56 Warning: Warning (2): array_push() expects parameter 1 to be array, null given in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 205]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+array_push - [internal], line ??
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 205
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 16:25:56 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 210
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 16:27:02 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 210
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 16:27:30 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 210
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 16:31:46 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 210
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 16:45:06 Error: Fatal Error (1): Call to a member function bindModel() on null in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 198]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14622938944284
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-03 16:45:07 Error: [Cake\Error\FatalErrorException] Call to a member function bindModel() on null
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14622938944284
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 198)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-03 16:50:15 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Item.id' in 'where clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14622941655535
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(202): Cake\ORM\Query->getIterator()
+#10 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-03 16:50:42 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Item.id' in 'where clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(202): Cake\ORM\Query->getIterator()
+#10 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-03 16:51:36 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 198]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-03 16:51:37 Error: [Cake\Error\FatalErrorException] Call to a member function find() on null
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 198)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-03 16:52:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Item.id' in 'where clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(202): Cake\ORM\Query->getIterator()
+#10 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-03 16:57:46 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coowien.Items' doesn't exist
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(203): Cake\ORM\Query->getIterator()
+#10 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-03 17:04:39 Error: [InvalidArgumentException] Cannot get an empty property
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\EntityTrait.php(135): Cake\ORM\Entity->get('')
+#1 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(214): Cake\ORM\Entity->__get('')
+#2 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#6 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-05-03 17:11:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Items.petitions_id' in 'on clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(218): Cake\ORM\Query->getIterator()
+#10 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-03 17:12:14 Error: [InvalidArgumentException] Cannot get an empty property
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\EntityTrait.php(135): Cake\ORM\Entity->get('')
+#1 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(220): Cake\ORM\Entity->__get('')
+#2 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#6 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-05-03 17:23:06 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 275
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 17:27:49 Warning: Warning (2): Illegal offset type in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\ViewVarsTrait.php, line 138]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\Controller\Controller::set() - CORE\src\View\ViewVarsTrait.php, line 138
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 271
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 17:27:49 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 275
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 17:28:24 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 275
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 17:29:06 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 275
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 17:29:24 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 275
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 17:30:35 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 22]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\results.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PetitionsController::searchPetitions() - APP/Controller\PetitionsController.php, line 275
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-03 17:32:14 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 24]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-03 17:32:15 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /coowi_en/petitions/search-petitions?inputTags=
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 24)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-03 17:32:15 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 24]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-03 17:32:16 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 24)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-03 17:32:57 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\results.ctp, line 24]
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-03 17:32:57 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 24)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-03 17:44:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Items_tags.items_id' in 'on clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(227): Cake\ORM\Query->getIterator()
+#10 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-03 17:51:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'viaje' in 'on clause'
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(233): Cake\ORM\Query->getIterator()
+#10 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-03 17:52:35 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[0])' at line 1
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(233): Cake\ORM\Query->getIterator()
+#10 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-03 17:54:43 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'viaj'%)' at line 1
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaj
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaj
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(233): Cake\ORM\Query->getIterator()
+#10 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-03 18:03:41 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'viaje'%)' at line 1
+Request URL: /coowi_en/petitions/search-petitions?inputTags=viaje
+Referer URL: http://localhost/coowi_en/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(233): Cake\ORM\Query->getIterator()
+#10 [internal function]: App\Controller\PetitionsController->searchPetitions()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+

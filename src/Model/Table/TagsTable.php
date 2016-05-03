@@ -76,5 +76,5 @@ class TagsTable extends Table
     {
         $rules->add($rules->isUnique(['name']));
         return $rules;
-    }
+    }    
 }
