@@ -18,6 +18,16 @@
         <legend><?= __('Add User') ?></legend>
         <?php
             echo $this->Form->input('rol_id', ['options' => $roles]);
+            $this->Form->input(
+		    'roles', 
+		    [
+		        'type' => 'select',
+		        'multiple' => false,
+		        'options' => $roles, 
+		        'empty' => true
+		    ]
+		);
+            
             echo $this->Form->input('nif');
             echo $this->Form->input('email');
             echo $this->Form->input('password');

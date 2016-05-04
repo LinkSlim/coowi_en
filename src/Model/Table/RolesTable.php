@@ -25,7 +25,7 @@ class RolesTable extends Table
         parent::initialize($config);
 
         $this->table('roles');
-        $this->displayField('id');
+        $this->displayField('rol');
         $this->primaryKey('id');
     }
 

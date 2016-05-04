@@ -68,8 +68,13 @@ class UsersController extends AppController
                 $this->Flash->error(__('The user could not be saved. Please, try again.'));
             }
         }
-        $roles = $this->Users->Roles->find('list', ['limit' => 200]);
-        $this->set(compact('user', 'roles'));
+        //$roles = $this->Users->Roles->find('list', ['fields' => ['id' => 'id', 'rolname' => 'rol']]);
+        $roles = $this->Users->Roles->find('list', [ //Recupero datos de la tabla de datos
+        		'keyField' => 'id',
+        		'valueField' => 'rol'
+        ]);
+        $this->set('roles', $roles); //Almaceno datos recuperados en una variable para usarlos en la vista
+        $this->set(compact('user'));
         $this->set('_serialize', ['user']);
     }
 
