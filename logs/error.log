@@ -5760,3 +5760,95 @@ Stack Trace:
 #15 {main}
 
 
+2016-05-04 14:56:53 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php, line 202]
+Request URL: /coowi_en/users/add/
+Referer URL: http://localhost/coowi_en/users/add/
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-04 14:56:54 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /coowi_en/users/add/
+Referer URL: http://localhost/coowi_en/users/add/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 202)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-04 14:57:11 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php, line 202]
+Request URL: /coowi_en/users/add/
+Referer URL: http://localhost/coowi_en/users/add/
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-04 14:57:12 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /coowi_en/users/add/
+Referer URL: http://localhost/coowi_en/users/add/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 202)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-04 15:02:56 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php, line 232]
+Request URL: /coowi_en/users/add/
+Referer URL: http://localhost/coowi_en/users/add/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\View\Widget\SelectBoxWidget::_renderOptions() - CORE\src\View\Widget\SelectBoxWidget.php, line 232
+Cake\View\Widget\SelectBoxWidget::_renderContent() - CORE\src\View\Widget\SelectBoxWidget.php, line 164
+Cake\View\Widget\SelectBoxWidget::render() - CORE\src\View\Widget\SelectBoxWidget.php, line 116
+Cake\View\Helper\FormHelper::widget() - CORE\src\View\Helper\FormHelper.php, line 2573
+Cake\View\Helper\FormHelper::select() - CORE\src\View\Helper\FormHelper.php, line 1900
+Cake\View\Helper\FormHelper::_getInput() - CORE\src\View\Helper\FormHelper.php, line 1119
+Cake\View\Helper\FormHelper::input() - CORE\src\View\Helper\FormHelper.php, line 1040
+include - APP/Template\Users\add.ctp, line 20
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-04 15:12:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dd' in 'field list'
+Request URL: /coowi_en/users/add/
+Referer URL: http://localhost/coowi_en/users/add/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 [internal function]: Cake\ORM\Query->getIterator()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php(148): iterator_to_array(Object(Cake\ORM\Query))
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php(116): Cake\View\Widget\SelectBoxWidget->_renderContent(Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2573): Cake\View\Widget\SelectBoxWidget->render(Array, Object(Cake\View\Form\EntityContext))
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1900): Cake\View\Helper\FormHelper->widget('select', Array)
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1119): Cake\View\Helper\FormHelper->select('rol_id', Object(Cake\ORM\Query), Array)
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1040): Cake\View\Helper\FormHelper->_getInput('rol_id', Array)
+#16 C:\xampp\htdocs\coowi_en\src\Template\Users\add.ctp(20): Cake\View\Helper\FormHelper->input('rol_id', Array)
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(992): include('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#19 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#20 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#21 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#22 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#23 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#24 {main}
+
+
