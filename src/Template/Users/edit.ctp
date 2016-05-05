@@ -23,7 +23,12 @@
     <fieldset>
         <legend><?= __('Edit User') ?></legend>
         <?php
-            echo $this->Form->input('rol_id', ['options' => $roles]);
+        	if($this->request->session()->read('Auth.User.rol_id') != 3){
+            	echo $this->Form->input('rol_id', ['options' => $roles, 'disabled' => TRUE]);
+            }
+            else{
+            	echo $this->Form->input('rol_id', ['options' => $roles, 'disabled' => FALSE]);
+            }
             echo $this->Form->input('nif');
             echo $this->Form->input('email');
             echo $this->Form->input('password');
@@ -33,8 +38,18 @@
             echo $this->Form->input('location');
             echo $this->Form->input('postal_code');
             echo $this->Form->input('photo');
-            echo $this->Form->input('date');
-            echo $this->Form->input('state');
+            //$this->Form->input('date');            
+            if($this->request->session()->read('Auth.User.rol_id') == 3){
+            	echo $this->Form->input(
+            	'state',
+            	[
+            		'type' => 'select',
+			        'multiple' => false,
+			        'options' => ['activado', 'desactivado'], 
+			        'empty' => false
+            	]);
+            }
+            
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

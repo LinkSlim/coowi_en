@@ -67,7 +67,7 @@
             <td><?= $this->Number->format($user->id) ?></td>
         </tr>
         <tr>
-            <th><?= __('Date') ?></th>
+            <th><?= __('Creation date') ?></th>
             <td><?= h($user->date) ?></td>
         </tr>
     </table>

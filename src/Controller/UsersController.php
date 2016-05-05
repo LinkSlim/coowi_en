@@ -97,7 +97,7 @@ class UsersController extends AppController
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $user = $this->Users->patchEntity($user, $this->request->data);
+            $user = $this->Users->patchEntity($user, $this->request->data);            
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
                 return $this->redirect(['action' => 'view', $id]);
@@ -107,7 +107,7 @@ class UsersController extends AppController
         }
         $roles = $this->Users->Roles->find('list', ['limit' => 200]);
         $this->set(compact('user', 'roles'));
-        $this->set('_serialize', ['user']);
+        $this->set('_serialize', ['user']);       
     }
 
     /**
@@ -181,7 +181,7 @@ class UsersController extends AppController
                 return true;
             }
         }
-
+        
         return parent::isAuthorized($user);
     }
 
