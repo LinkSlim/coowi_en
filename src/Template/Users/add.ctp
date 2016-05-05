@@ -37,7 +37,7 @@
             echo $this->Form->input('location');
             echo $this->Form->input('postal_code');
             echo $this->Form->input('photo');
-            echo $this->Form->input('date');
+            //$this->Form->input('date');
             //$this->Form->input('state');
         ?>
     </fieldset>

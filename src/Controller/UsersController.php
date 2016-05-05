@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\I18n\Time;
 use Cake\Event\Event;
+use Cake\I18n\Date;
 
 /**
  * Users Controller
@@ -61,7 +62,10 @@ class UsersController extends AppController
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
-            // Added this line
+            
+            
+            // Added this line            
+            $user->date = new DateTime();
             $user->state = "activado"; //Establece el estado del usuario creado "activado" por defecto
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
