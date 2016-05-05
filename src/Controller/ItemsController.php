@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use App\Model\Entity\Petition;
 
 /**
  * Items Controller
@@ -115,15 +116,28 @@ class ItemsController extends AppController
     
     public function isAuthorized($user) {
 
-        // All registered users can add petitions
-//        if (($this->request->action === 'add') || ($this->request->action === 'index')) {
-//            return true;
-//        }
+    	$itemId = (int) $this->request->params['pass'][0];
 
-        // The owner of an item can view, edit and delete it
+    	$this->loadModel('Petitions');
+    	$query = $this->Petitions->find('all') ->innerJoin(
+    			['Items' => 'items'],//nombre tabla con la que hace JOIN
+    			[
+    					'Petitions.id = Items.petition_id',	//Condiciones JOIN (se pueden poner varias separandolas por comas)
+    					'Items.id = '.$itemId	//Condiciones JOIN
+    			])->toArray();	    
+	    
+	    
+	    $petitionId = $query[0]->petition_id;
+	    $userIdPetition = $query[0]->user_id;
+
+	    //Un item es accesible por el usuario dueño de la peticion que lo contiene y por el creador de dicho item
         if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
-            $petitionId = (int) $this->request->params['pass'][0];
-            if ($this->Petitions->isOwnedBy($petitionId, $user['id'])) {
+        	//Si es el creador del item
+            if ($this->Items->isOwnedBy($itemId, $user['id'])) {
+                return true;
+            }            
+            //Si es el propietario de la peticion que contiene el item
+            if ($this->Items->itemBelongsToPetitionFromUser($user['id'], $userIdPetition)) {
                 return true;
             }
         }

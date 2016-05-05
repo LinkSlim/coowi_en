@@ -13,7 +13,7 @@ use Cake\I18n\Date;
  */
 class UsersController extends AppController
 {
-    
+   
 //    public function initialize() {
 //        parent::setLayout();        
 //    }
@@ -92,11 +92,13 @@ class UsersController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function edit($id = null)
-    {
+    {    	
         $user = $this->Users->get($id, [
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
+        	//$this->request->session()->write('Auth.User.rol_id',$user->rol_id); //No hace el cambio en la variable de sesion
+        	//$_SESSION['Auth']['User']['rol_id'] = $user->rol_id; //Pongo el id del rol de la sesion del usuario al que el usuario haya marcado en el select (asi el usuario no tiene que reiniciar sesion para que se hagan cambios)
             $user = $this->Users->patchEntity($user, $this->request->data);            
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
@@ -132,6 +134,9 @@ class UsersController extends AppController
     public function login() {
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
+//             if($user->state == "desactivado"){
+//             	$this->logout();
+//             }
             if ($user) {
                 $this->Auth->setUser($user);
                 return $this->redirect(['controller' => 'petitions', 'action' => 'index']);

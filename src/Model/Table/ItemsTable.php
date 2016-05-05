@@ -88,4 +88,19 @@ class ItemsTable extends Table
         $rules->add($rules->existsIn(['petition_id'], 'Petitions'));
         return $rules;
     }
+    
+    //Comprobamos que el usuario con ID 'userId' es propietario del item con ID 'petitionId'
+    //si ambos IDs estan en una misma fila de la tabla 'Petition' de la BBDD
+    public function isOwnedBy($ItemId, $userId) { // Es para usar con el isAuthorized del tutorial del blog
+    	return $this->exists(['id' => $ItemId, 'user_id' => $userId]);
+    }
+    
+    public function itemBelongsToPetitionFromUser($userIdSession, $userIdPetiton) { // Es para usar con el isAuthorized del tutorial del blog
+    	if ($userIdPetiton==$userIdSession){
+    		return true;
+    	}
+    	else{
+    		return false;
+    	}
+    }
 }

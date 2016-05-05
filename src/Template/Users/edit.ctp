@@ -22,8 +22,10 @@
     <?= $this->Form->create($user) ?>
     <fieldset>
         <legend><?= __('Edit User') ?></legend>
+        
         <?php
-        	if($this->request->session()->read('Auth.User.rol_id') != 3){
+                
+        	if($this->request->session()->read('Auth.User.rol_id') != App\Controller\AppController::ADMIN){
             	echo $this->Form->input('rol_id', ['options' => $roles, 'disabled' => TRUE]);
             }
             else{
@@ -45,7 +47,7 @@
             	[
             		'type' => 'select',
 			        'multiple' => false,
-			        'options' => ['activado', 'desactivado'], 
+			        'options' => ['activado' => 'activado', 'desactivado' => 'desactivado'], 
 			        'empty' => false
             	]);
             }

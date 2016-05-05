@@ -20,7 +20,7 @@
     <table class="vertical-table">
         <tr>
             <th><?= __('Role') ?></th>
-            <td><?= $user->has('role') ? $this->Html->link($user->role->rol, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
+            <td><?= h($user->role->rol)//$user->has('role') ? $this->Html->link($user->role->rol, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
         </tr>
         <tr>
             <th><?= __('Nif') ?></th>
