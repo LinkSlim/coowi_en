@@ -54,6 +54,8 @@ class OffersController extends AppController
         $offer = $this->Offers->newEntity();
         if ($this->request->is('post')) {
             $offer = $this->Offers->patchEntity($offer, $this->request->data);
+            $offer->state = "contratada";
+            $offer->date = date("Y-m-d");
             if ($this->Offers->save($offer)) {
                 $this->Flash->success(__('The offer has been saved.'));
                 return $this->redirect(['action' => 'index']);

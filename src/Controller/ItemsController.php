@@ -116,19 +116,22 @@ class ItemsController extends AppController
     
     public function isAuthorized($user) {
 
-    	$itemId = (int) $this->request->params['pass'][0];
+//     	if(isset($this->request->params['pass'][0])){
+//     		$itemId = (int) $this->request->params['pass'][0];
+//     	}
+    	
 
-    	$this->loadModel('Petitions');
-    	$query = $this->Petitions->find('all') ->innerJoin(
-    			['Items' => 'items'],//nombre tabla con la que hace JOIN
-    			[
-    					'Petitions.id = Items.petition_id',	//Condiciones JOIN (se pueden poner varias separandolas por comas)
-    					'Items.id = '.$itemId	//Condiciones JOIN
-    			])->toArray();	    
+//     	$this->loadModel('Petitions');
+//     	$query = $this->Petitions->find('all') ->innerJoin(
+//     			['Items' => 'items'],//nombre tabla con la que hace JOIN
+//     			[
+//     					'Petitions.id = Items.petition_id',	//Condiciones JOIN (se pueden poner varias separandolas por comas)
+//     					'Items.id = '.$itemId	//Condiciones JOIN
+//     			])->toArray();	    
 	    
 	    
-	    $petitionId = $query[0]->petition_id;
-	    $userIdPetition = $query[0]->user_id;
+// 	    $petitionId = $query[0]->petition_id;
+// 	    $userIdPetition = $query[0]->user_id;
 
 	    //Un item es accesible por el usuario dueño de la peticion que lo contiene y por el creador de dicho item
         if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
@@ -137,9 +140,9 @@ class ItemsController extends AppController
                 return true;
             }            
             //Si es el propietario de la peticion que contiene el item
-            if ($this->Items->itemBelongsToPetitionFromUser($user['id'], $userIdPetition)) {
-                return true;
-            }
+//             if ($this->Items->itemBelongsToPetitionFromUser($user['id'], $userIdPetition)) {
+//                 return true;
+//             }
         }
 
         return parent::isAuthorized($user);

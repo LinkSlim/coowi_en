@@ -3,6 +3,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
+use Cake\I18n\Date;
+use Cake\I18n\Time;
 
 /**
  * Petitions Controller
@@ -158,7 +160,7 @@ class PetitionsController extends AppController
         }
 
         // The owner of an petition can view, edit and delete it
-        if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
+        if (in_array($this->request->action, ['edit', 'delete', 'view', 'viewOffers'])) {
             $petitionId = (int) $this->request->params['pass'][0];
             if ($this->Petitions->isOwnedBy($petitionId, $user['id'])) {
                 return true;
@@ -226,5 +228,93 @@ class PetitionsController extends AppController
         
         $this->set(strtolower($this->name), $this->paginate());
         $this->render('results');          
+    }
+    
+    
+    public function viewOffers($id = null)
+    {
+    	$this->loadModel('Offers'); //Cargo el Modelo de Ofertas para poder acceder a los datos de la tabla Ofertas usando los metodos de dicho modelo.
+    	//$ofertas = $this->Offers->find('all', ['conditions' => ['Offers.item_id' => 2]]);
+    
+    	$petition = $this->Petitions->get($id, [
+    			'contain' => ['Users', 'Items']
+    	]);
+    	
+    	//Si viene del formulario para contratar una oferta
+    	if ($this->request->is(['patch', 'post', 'put'])) {    		
+    		    		 
+    		$arrayIdOfertas = $this->extraeIdOfertas($_POST);
+    		$this->contrataOfertas($arrayIdOfertas);
+//     		$petition = $this->Petitions->patchEntity($petition, $this->request->data); //Puede sobrar, las ofertas ya vienen en $_POST
+//     		if ($this->Petitions->save($petition)) {
+//     			$this->Flash->success(__('The petition has been saved.'));
+//     			return $this->redirect(['action' => 'index']);
+//     		} else {
+//     			$this->Flash->error(__('The petition could not be saved. Please, try again.'));
+//     		}
+    	}
+    
+    	$this->set('petition', $petition);
+    	$this->set('_serialize', ['petition']);
+    
+    	$array_ofertas = array();
+    	foreach ($petition->items as $items){
+    		array_push($array_ofertas, $this->Offers->find('all', ['conditions' => ['Offers.item_id' => $items->id]]));
+    	}
+    
+    	$data = array(
+    			//'color' => 'pink',
+    			//'type' => 'sugar',
+    			//'base_price' => 23.95,
+    			//'hay' => true,
+    			'ofertasDeItem' => $array_ofertas//->count()
+    	);
+    	$this->set($data);    
+    }
+    
+    
+    private function extraeIdOfertas($ofertasEnPost){
+    	
+    	if($ofertasEnPost == null){
+    		return null;
+    	}
+    	    	
+    	$i = 0;
+    	$basura = "";
+    	$arrayIdOfertas = array();
+    	
+    	foreach ($ofertasEnPost as $posicion => $valor){
+    		//$j = $ofertasEnPost[$i];
+    		if($i != 0){
+    			array_push($arrayIdOfertas, $valor);
+    		}
+    		else{
+    			$i = 1;
+    		}
+    	}
+    	
+    	return $arrayIdOfertas;    	
+    }
+    
+    private function contrataOfertas($idOfertas = null){
+    	if($idOfertas == null){
+    		return null;
+    	}
+    	
+    	$this->loadModel('Offers'); //Cargo el modelo Offers para poder sacar ofertas de la BBDD
+    	
+    	foreach ($idOfertas as $posicion => $valor){
+    		$oferta = $this->Offers->get($valor, [ //Buscar oferta en la BBDD
+            	'contain' => []
+        	]);
+    		$oferta->state = "contratada"; //Modifico sus valores
+    		$oferta->date = date("Y-m-d"); 
+    		if (!$this->Offers->save($oferta)) { //Grabar la oferta modificada    			
+    			$this->Flash->error(__('The offers could not be hired. Please, try again.'));
+    			return $this->redirect(['action' => 'index']);
+    		}    		
+    	}
+    	$this->Flash->success(__('The offers have been hired.'));
+    	return $this->redirect(['action' => 'index']);
     }
 }

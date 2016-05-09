@@ -40,7 +40,7 @@
                 <td><?= h($petition->photo) ?></td>
                 <td><?= h($petition->state) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $petition->id]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'viewOffers', $petition->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $petition->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $petition->id], ['confirm' => __('Are you sure you want to delete # {0}?', $petition->id)]) ?>
                 </td>
