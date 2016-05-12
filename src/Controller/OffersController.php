@@ -18,6 +18,12 @@ class OffersController extends AppController
      */
     public function index()
     {
+    	// In a controller or table method.
+    	$query = $this->Offers->find('all')->contain(['Users']);
+    	foreach ($query as $o) {
+    		echo $o->user->username;
+    	}
+    	
         $this->paginate = [
             'contain' => ['Items']
         ];
@@ -112,9 +118,66 @@ class OffersController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+           
     
-    public function getOffers($id = null){
-        return $this->Offers->get($id);
-        //return true;
-    }   
+    public function contract()
+    {
+    	//     	$offer = $this->Offers->get($id, [
+    	//     			'contain' => []
+    	//     	]);
+    	$idOfertas = $_REQUEST['idsOfertas']; //Los datos tambien pueden ser enviados por la variable de sesion, puede ser mas recomendable, por GET no es muy seguro
+    	$offers = $this->getOffers($idOfertas);
+    	//TODO Coger nombre del item
+    	//TODO Coger precio de la oferta
+    	//TODO Coger nombre y telefono de dueño de la oferta
+    	$items = $this->Offers->Items->find('list', ['limit' => 200]);
+    	//$this->set(compact('offers', 'items'));
+    	$this->set(compact('offers'));
+    	$this->set('_serialize', ['offers']);
+    }
+    
+    private function getOffer($id = null){
+    	return $this->Offers->get($id);
+    	//return true;
+    }    
+    
+    private function getOffers($arrayIdOfertas){
+    	 
+    	if($arrayIdOfertas == null){
+    		return null;
+    	}
+    
+    	$i = 0;
+    	$basura = "";
+    	$arrayConOfertas = array();
+    	 
+    	foreach ($arrayIdOfertas as $posicion => $valor){
+    		array_push($arrayConOfertas, $this->getOffer($valor));
+    	}
+    	 
+    	return $arrayConOfertas;
+    }
+    
+    
+    
+    public function isAuthorized($user) {
+    
+    	// All registered users can add, index and search petitions
+    	if (($this->request->action === 'add') || ($this->request->action === 'index') || ($this->request->action === 'searchPetitions') || ($this->request->action === 'contract')) {
+    		return true;
+    	}
+    
+    	// The owner of an offer can view, edit and delete it
+    	if (in_array($this->request->action, ['edit', 'delete', 'view', 'viewOffers'])) {
+    		$petitionId = (int) $this->request->params['pass'][0];
+    		if ($this->Offers->isOwnedBy($offerId, $user['id'])) {
+    			return true;
+    		}
+    	}
+    
+    	return parent::isAuthorized($user);
+    }
+    
+    
+    
 }

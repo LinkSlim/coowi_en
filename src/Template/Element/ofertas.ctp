@@ -22,6 +22,7 @@ foreach ($ofertasDeItem as $ofertas) {
                 echo '<th>' . __('Ofertor') . '</th>';
                 echo '<th>' . __('Price') . '</th>';
                 echo '<th>' . __('Comment') . '</th>';
+                echo '<th>' . __('State') . '</th>';
                 echo '<th>' . __('Select one') . '</th>';
                 echo '</tr>';
                 $cabecera = false;
@@ -32,10 +33,12 @@ foreach ($ofertasDeItem as $ofertas) {
             echo '<td>&nbsp</td>';
             echo '<td>&nbsp</td>';
             echo '<td>' . $oferta->id . '</td>';
-            echo '<td>' . $oferta['user_id'] . '</td>';
-            echo '<td>' . $oferta->price . '</td>';
-            echo '<td>' . $oferta['comment'] . '</td>'; //TODO cambiar y controlar el nombre del grupo para posterior tratamiento de los radiobuton
-            echo '<td style="text-align:center"><input type="radio" name="item'.$oferta->item_id.'" value="'.$oferta->id.'"></td>';
+            echo '<td>'. $this->Html->link($oferta->user->name, ['controller' => 'Users', 'action' => 'view', $oferta->user_id]) . '</td>';
+            echo '<td>' . $oferta->price . '&#8364;</td>';
+            
+            echo '<td>' . $oferta['comment'] . '</td>';
+            echo '<td>' . $oferta['state'] . '</td>';
+            echo '<td style="text-align:center"><input type="radio" name="item'.$oferta->item_id.'" value="'.$oferta->id.'" required></td>';
             echo '</tr>';
         }        
     }

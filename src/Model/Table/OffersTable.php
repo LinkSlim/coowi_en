@@ -33,6 +33,11 @@ class OffersTable extends Table
             'foreignKey' => 'item_id',
             'joinType' => 'INNER'
         ]);
+        
+        $this->belongsTo('Users', [
+        		'foreignKey' => 'user_id',
+        		'joinType' => 'INNER'
+        ]);
     }
 
     /**
@@ -79,4 +84,9 @@ class OffersTable extends Table
         $rules->add($rules->existsIn(['item_id'], 'Items'));
         return $rules;
     }
+    
+    public function isOwnedBy($offerId, $userId) { // Es para usar con el isAuthorized del tutorial del blog
+    	return $this->exists(['id' => $offerId, 'user_id' => $userId]);
+    }
+    
 }

@@ -12,7 +12,6 @@
     </ul>
 </nav>
 <div class="petitions view large-9 medium-8 columns content">
-<?= $this->Form->create($petition) ?>
     <h3><?= h($petition->title) ?></h3>
     <table class="vertical-table">
         <tr>
@@ -57,59 +56,26 @@
         </tr>
     </table>
     <div class="related">
-        <h4><?= __('Related Items') ?></h4>
-        <?php if (!empty($petition->items)): ?>
+        <h4 style="color:green"><?= __('Contracted Offers!') ?></h4>
+        
             <table cellpadding="0" cellspacing="0">
                 <tr>
-                    <th><?= __('Id') ?></th>
-                    <th><?= __('Petition') ?></th>
-                    <th><?= __('User Id') ?></th>
-                    <th><?= __('Name') ?></th>
-                    <th><?= __('Date') ?></th>
-                    <th><?= __('Description') ?></th>
-                    <th><?= __('State') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th><?= __('Items') ?></th>
+                    <th><?= __('Prices') ?></th>
+                    <th><?= __('Contacts') ?></th>
                 </tr>
-                <?php foreach ($petition->items as $item): ?>
+                <?php foreach ($offers as $offer): ?>
                     <tr>
-                        <td><b><?= h($item->id) ?></b></td>
-                        <td><b><?= h($petition->title) ?></b></td>
-                        <td><b><?= h($item->user_id) ?></b></td>
-                        <td><b><?= h($item->name) ?></b></td>
-                        <td><b><?= h($item->date) ?></b></td>
-                        <td><b><?= h($item->description) ?></b></td>
-                        <td><b><?= h($item->state) ?></b></td>
-                        <td class="actions">                            
-                            <?= $this->Html->link(__('Edit'), ['controller' => 'Items', 'action' => 'edit', $item->id]) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['controller' => 'Items', 'action' => 'delete', $item->id], ['confirm' => __('Are you sure you want to delete # {0}?', $item->id)]) ?>
-                        </td>
+                        <td><b><?= h($offer->item_id) ?></b></td>
+                        <td><b><?= h($offer->price) ?>&#8364;</b></td>
+                        <td><b><?= $this->Html->link($offer->user_id['name'], ['controller' => 'Users', 'action' => 'view', $offer->user_id['id']])." - ".$offer->user_id['phone'] ?></b></td>
                     </tr>                    
                     <!--Element es para incrustar un trozo de codigo de otro fichero en este. Los Elementos son reutilizables -->
-                     <?= $this->element('ofertas', ["item_id" => $item->id]);   ?> 
+                     <!-- //$this->element('ofertas', ["item_id" => $items->id]);   --> 
                         
 
                 <?php endforeach; ?>
             </table>
-        <?php endif; ?>
+        
     </div>
-    <?php if(empty($ofertasDeItem)) { 
-    		echo '<h4>No offers</h4>';
-    	  }
-    	  else{
-    	  		$noHayOfertas = false;
-    	  	   	foreach($ofertasDeItem as $of){
-    	  	   		if(!empty($of)){
-    	  	   			$noHayOfertas = true;
-    	  	   			break;
-    	  	   		}    	  	   		
-    	  	   	}
-    	  	   	if(!$noHayOfertas){
-    	  	   		echo $this->Form->button(__('Contract'));
-    	  	   	}
-    	  	   	else{
-    	  	   		echo '<h4>No offers</h4>';
-    	  	   	}    	  	
-    	  }
-		?>
-    <?= $this->Form->end() ?>
 </div>

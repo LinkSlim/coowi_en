@@ -43,6 +43,7 @@ class ItemsTable extends Table
             'targetForeignKey' => 'tag_id',
             'joinTable' => 'items_tags'
         ]);
+                
     }
 
     /**
