@@ -138,6 +138,11 @@ class PetitionsController extends AppController
      */
     public function delete($id = null)
     {
+    	//TODO Coger todos los ids de los items de la peticion y para cada uno:
+    	//TODO Eliminar ofertas relacionadas
+    	//TODO Eliminar en la tabla items_tags
+    	//TODO Eliminar el item
+    	
         $this->request->allowMethod(['post', 'delete']);
         $petition = $this->Petitions->get($id);
         if ($this->Petitions->delete($petition)) {
@@ -159,8 +164,22 @@ class PetitionsController extends AppController
 
         // The owner of an petition can view, edit and delete it
         if (in_array($this->request->action, ['edit', 'delete', 'view', 'viewOffers'])) {
-            $petitionId = (int) $this->request->params['pass'][0];
-            if ($this->Petitions->isOwnedBy($petitionId, $user['id'])) {
+        	        
+        	//Pequeño Parche (Mejorar el paso de parametros, en algunos sitios se hace de una forma y en otros de otra)
+        	if(!empty($this->request->params['pass'])){
+        		$petitionId = $this->request->params['pass'][0]; //El id de la peticion es pasado de diferentes formas en varias partes del codigo, por eso lo tenemos asegurarnos y comprobar en todas las posibles variables en las que puede venir dicho id de la peticion
+        	}
+        	else{
+        		$petitionId = null;
+        	}
+            
+            
+            //El id de la peticion es pasado de diferentes formas en varias partes del codigo, por eso lo tenemos asegurarnos y comprobar en todas las posibles variables en las que puede venir dicho id de la peticion
+            if($petitionId == null && $_REQUEST['petition_id'] != null){
+            	$petitionId = $_REQUEST['petition_id'];
+            }
+            
+            if ($this->Petitions->isOwnedBy($petitionId, $user['id']) || $this->Petitions->isOwnedBy($_REQUEST['petition_id'], $user['id'])) {
                 return true;
             }
         }
@@ -233,6 +252,11 @@ class PetitionsController extends AppController
     {
     	$this->loadModel('Offers'); //Cargo el Modelo de Ofertas para poder acceder a los datos de la tabla Ofertas usando los metodos de dicho modelo.    	
     	$this->loadModel('Items');
+    	
+    	//El id de la peticion es pasado de diferentes formas en varias partes del codigo, por eso lo tenemos asegurarnos y comprobar en todas las posibles variables en las que puede venir dicho id de la peticion
+    	if($id == null && $_REQUEST['petition_id'] != null){ 
+    		$id = $_REQUEST['petition_id'];
+    	}
     	
     	$petition = $this->Petitions->get($id, [
     			'contain' => ['Users', 'Items']

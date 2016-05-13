@@ -34,7 +34,8 @@ class PetitionsTable extends Table
             'foreignKey' => 'user_id'
         ]);
         $this->hasMany('Items', [
-            'foreignKey' => 'petition_id'
+            'foreignKey' => 'petition_id',
+        	'cascadeCallbacks' => true
         ]);
     }
 

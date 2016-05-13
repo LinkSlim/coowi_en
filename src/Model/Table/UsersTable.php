@@ -37,13 +37,16 @@ class UsersTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->hasMany('Jobs', [
-            'foreignKey' => 'user_id'
+            'foreignKey' => 'user_id',
+        	'cascadeCallbacks' => true
         ]);
         $this->hasMany('Petitions', [
-            'foreignKey' => 'user_id'
+            'foreignKey' => 'user_id',
+        	'cascadeCallbacks' => true
         ]);
         $this->hasMany('Studies', [
-            'foreignKey' => 'user_id'
+            'foreignKey' => 'user_id',
+        	'cascadeCallbacks' => true
         ]);
     }
 

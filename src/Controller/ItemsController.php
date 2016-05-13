@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use App\Model\Entity\Petition;
+use Cake\Log\Log;
 
 /**
  * Items Controller
@@ -56,6 +57,8 @@ class ItemsController extends AppController
         if ($this->request->is('post')) {
             $item = $this->Items->patchEntity($item, $this->request->data);
             $item->state = "activada";
+            $item->accessible('user_id', true);
+            $item->user_id = $_SESSION['Auth']['User']['id'];
             if ($this->Items->save($item)) {
                 $this->Flash->success(__('The item has been saved.'));
                 return $this->redirect(['action' => 'index']);
@@ -78,19 +81,41 @@ class ItemsController extends AppController
      */
     public function edit($id = null)
     {
-        $item = $this->Items->get($id, [
-            'contain' => ['Tags']
-        ]);
+    	
+    	$item = $this->Items->get($id, [
+    			'contain' => ['Tags']
+    	]);
+    	
+    	if(isset($_POST['cancel'])){
+    		//El admin se redirige a la misma lista de item
+    		if($_SESSION['Auth']['User']['rol_id'] == AppController::ADMIN){
+    			return $this->redirect(['action' => 'index']);
+    		}
+    		else{ //Usuarios con otros roles se redirige a la vista aqui indicada
+    			return $this->redirect(['controller' => 'Petitions', 'action' => 'view-offers', 'petition_id' => $item->petition_id]);
+    		}
+    	}
+    	
+        
         if ($this->request->is(['patch', 'post', 'put'])) {
             $item = $this->Items->patchEntity($item, $this->request->data);
             if ($this->Items->save($item)) {
                 $this->Flash->success(__('The item has been saved.'));
-                return $this->redirect(['action' => 'index']);
+		        
+		        //El admin se redirige a la misma lista de item
+		        if($_SESSION['Auth']['User']['rol_id'] == AppController::ADMIN){
+		        	return $this->redirect(['action' => 'index']);
+		        }
+		        else{ //Usuarios con otros roles se redirige a la vista aqui indicada       	
+		        	return $this->redirect(['controller' => 'Petitions', 'action' => 'view-offers', 'petition_id' => $item->petition_id]);
+		        }
+		        
             } else {
                 $this->Flash->error(__('The item could not be saved. Please, try again.'));
             }
         }
-        $petitions = $this->Items->Petitions->find('list', ['limit' => 200]);
+        
+        $petitions = $this->Items->Petitions->find('list', ['limit' => 200, 'conditions' => ['Petitions.id' => $item->petition_id]]);
         $tags = $this->Items->Tags->find('list', ['limit' => 200]);
         $this->set(compact('item', 'petitions', 'tags'));
         $this->set('_serialize', ['item']);
@@ -105,6 +130,12 @@ class ItemsController extends AppController
      */
     public function delete($id = null)
     {
+    	//TODO Eliminar ofertas relacionadas
+    	//TODO Eliminar en la tabla items_tags
+    	//TODO Eliminar el item
+    	$query = $this->Items->query();
+    	
+    	
         $this->request->allowMethod(['post', 'delete']);
         $item = $this->Items->get($id);
         if ($this->Items->delete($item)) {
@@ -112,14 +143,27 @@ class ItemsController extends AppController
         } else {
             $this->Flash->error(__('The item could not be deleted. Please, try again.'));
         }
-        return $this->redirect(['action' => 'index']);
+        
+        //El admin se redirige a la misma lista de item
+        if($_SESSION['Auth']['User']['rol_id'] == AppController::ADMIN){
+        	return $this->redirect(['action' => 'index']);
+        }
+        else{ //Usuarios con otros roles se redirige a la vista aqui indicada       	
+        	return $this->redirect(['controller' => 'Petitions', 'action' => 'view-offers', 'petition_id' => $item->petition_id]);
+        }
+        
     }
     
     public function isAuthorized($user) {
+    	
+    	if (in_array($this->request->params['action'], ['create'])) {
+    		return true;
+    	}
+    	
 
-//     	if(isset($this->request->params['pass'][0])){
-//     		$itemId = (int) $this->request->params['pass'][0];
-//     	}
+    	if(isset($this->request->params['pass'][0])){
+    		$itemId = (int) $this->request->params['pass'][0];
+    	}
     	
 
 //     	$this->loadModel('Petitions');
@@ -135,7 +179,7 @@ class ItemsController extends AppController
 // 	    $userIdPetition = $query[0]->user_id;
 
 	    //Un item es accesible por el usuario dueño de la peticion que lo contiene y por el creador de dicho item
-        if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
+        if (in_array($this->request->params['action'], ['edit', 'delete', 'view'])) {
         	//Si es el creador del item
             if ($this->Items->isOwnedBy($itemId, $user['id'])) {
                 return true;
@@ -149,5 +193,40 @@ class ItemsController extends AppController
         return parent::isAuthorized($user);
     }
     
+    
+    /**
+     * Create method
+     *
+     * @param int|null $id Petition id.
+     * @return \Cake\Network\Response|null Redirects to create view.    
+     */    
+    public function create($idPetition = null)
+    {
+    	    	
+    	$item = $this->Items->newEntity();
+    	
+    	if ($this->request->is('post')) {
+    		$item = $this->Items->patchEntity($item, $this->request->data);
+    		$item->state = "activada";
+    		$item->date = date("Y-m-d");
+    		$item->accessible('user_id', true);
+    		$item->user_id = $_SESSION['Auth']['User']['id'];
+    		$item->petition_id = $idPetition;
+    		
+    		if ($this->Items->save($item)) {
+    			$this->Flash->success(__('The item has been saved.'));
+    			return $this->redirect(['controller' => 'Petitions', 'action' => 'view-offers', 'petition_id' => $idPetition]);
+    		} else {
+    			$this->Flash->error(__('The item could not be saved. Please, try again.'));
+    			return $this->redirect(['controller' => 'Petitions', 'action' => 'index']);
+    		}
+    	}
+    	
+    	   	
+    	$petitions = $this->Items->Petitions->find('list', ['limit' => 200, 'conditions' => ['Petitions.id' => $idPetition]]);
+    	$tags = $this->Items->Tags->find('list', ['limit' => 200]);
+    	$this->set(compact('item', 'petitions', 'tags'));
+    	$this->set('_serialize', ['item']);
+    }
     
 }

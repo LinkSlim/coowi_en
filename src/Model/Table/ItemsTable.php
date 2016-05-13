@@ -36,7 +36,8 @@ class ItemsTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->hasMany('Offers', [
-            'foreignKey' => 'item_id'
+            'foreignKey' => 'item_id',
+        	'cascadeCallbacks' => true
         ]);
         $this->belongsToMany('Tags', [
             'foreignKey' => 'item_id',

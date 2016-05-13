@@ -8,7 +8,7 @@
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Items'), ['controller' => 'Items', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Item'), ['controller' => 'Items', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('New Item'), ['controller' => 'Items', 'action' => 'create', $petition->id]) ?> </li>        
     </ul>
 </nav>
 <div class="petitions view large-9 medium-8 columns content">
@@ -93,7 +93,7 @@
         <?php endif; ?>
     </div>
     <?php if(empty($ofertasDeItem)) { 
-    		echo '<h4>No offers</h4>';
+    		echo '<h4>You have not created items</h4>';
     	  }
     	  else{
     	  		$noHayOfertas = false;

@@ -21,7 +21,7 @@
             echo $this->Form->input('location');
             echo $this->Form->input('budget');
             echo $this->Form->input('photo');
-            echo $this->Form->input('state', ['value' => 'activado', 'readonly' => true]);
+            echo $this->Form->input('state', ['value' => 'activada', 'readonly' => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
