@@ -138,11 +138,7 @@ class PetitionsController extends AppController
      */
     public function delete($id = null)
     {
-    	//TODO Coger todos los ids de los items de la peticion y para cada uno:
-    	//TODO Eliminar ofertas relacionadas
-    	//TODO Eliminar en la tabla items_tags
-    	//TODO Eliminar el item
-    	
+    	//Gracias al Delete Cascade en la base de datos, al borrar una peticion se borrara todo lo que este por debajo de esta
         $this->request->allowMethod(['post', 'delete']);
         $petition = $this->Petitions->get($id);
         if ($this->Petitions->delete($petition)) {
@@ -179,6 +175,9 @@ class PetitionsController extends AppController
             	$petitionId = $_REQUEST['petition_id'];
             }
             
+            if(!isset($_REQUEST['petition_id'])){  //Parche para que esta variable este establecida en la vista de administrador y no aparezca un pequeño error
+            	$_REQUEST['petition_id'] = -1;
+            }
             if ($this->Petitions->isOwnedBy($petitionId, $user['id']) || $this->Petitions->isOwnedBy($_REQUEST['petition_id'], $user['id'])) {
                 return true;
             }

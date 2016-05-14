@@ -19,11 +19,11 @@
             <tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
                 <th><?= $this->Paginator->sort('rol_id') ?></th>
-                <th><?= $this->Paginator->sort('nif') ?></th>
-                <th><?= $this->Paginator->sort('email') ?></th>
-                <th><?= $this->Paginator->sort('password') ?></th>
                 <th><?= $this->Paginator->sort('name') ?></th>
                 <th><?= $this->Paginator->sort('subname') ?></th>
+                <th><?= $this->Paginator->sort('nif') ?></th>
+                <th><?= $this->Paginator->sort('email') ?></th>
+                <th><?= $this->Paginator->sort('password') ?></th>                
                 <th><?= $this->Paginator->sort('phone') ?></th>
                 <th><?= $this->Paginator->sort('location') ?></th>
                 <th><?= $this->Paginator->sort('postal_code') ?></th>

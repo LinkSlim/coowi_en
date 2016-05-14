@@ -5,6 +5,8 @@ use App\Controller\AppController;
 use Cake\I18n\Time;
 use Cake\Event\Event;
 use Cake\I18n\Date;
+use Cake\Core\Exception;
+
 
 /**
  * Users Controller
@@ -121,14 +123,19 @@ class UsersController extends AppController
      */
     public function delete($id = null)
     {
-        $this->request->allowMethod(['post', 'delete']);
-        $user = $this->Users->get($id);
-        if ($this->Users->delete($user)) {
-            $this->Flash->success(__('The user has been deleted.'));
-        } else {
-            $this->Flash->error(__('The user could not be deleted. Please, try again.'));
-        }
-        return $this->redirect(['action' => 'index']);
+    	try {
+	        $this->request->allowMethod(['post', 'delete']);
+	        $user = $this->Users->get($id);
+	        if ($this->Users->delete($user)) {
+	            $this->Flash->success(__('The user has been deleted.'));
+	        } else {
+	            $this->Flash->error(__('The user could not be deleted. Please, try again.'));
+	        }
+	        return $this->redirect(['action' => 'index']);
+    	}catch (Exception $e){
+    		$this->Flash->error(__('Accion no permitida'));
+    		return $this->redirect(['controller' => 'User', 'action' => 'view']);
+    	}    	
     }
     
     public function login() {

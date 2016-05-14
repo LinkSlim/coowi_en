@@ -81,7 +81,8 @@
                         <td><b><?= h($item->state) ?></b></td>
                         <td class="actions">                            
                             <?= $this->Html->link(__('Edit'), ['controller' => 'Items', 'action' => 'edit', $item->id]) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['controller' => 'Items', 'action' => 'delete', $item->id], ['confirm' => __('Are you sure you want to delete # {0}?', $item->id)]) ?>
+                            <?= $this->Html->link(__('Delete'), ['controller' => 'Items', 'action' => 'delete', $item->id]) ?>
+                            
                         </td>
                     </tr>                    
                     <!--Element es para incrustar un trozo de codigo de otro fichero en este. Los Elementos son reutilizables -->

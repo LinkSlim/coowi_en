@@ -130,13 +130,8 @@ class ItemsController extends AppController
      */
     public function delete($id = null)
     {
-    	//TODO Eliminar ofertas relacionadas
-    	//TODO Eliminar en la tabla items_tags
-    	//TODO Eliminar el item
-    	$query = $this->Items->query();
-    	
-    	
-        $this->request->allowMethod(['post', 'delete']);
+    	//Gracias al Delete Cascade en la base de datos, al borrar un item se borrara todo lo que este por debajo de este
+        $this->request->allowMethod(['post', 'get', 'delete']);
         $item = $this->Items->get($id);
         if ($this->Items->delete($item)) {
             $this->Flash->success(__('The item has been deleted.'));
@@ -166,28 +161,12 @@ class ItemsController extends AppController
     	}
     	
 
-//     	$this->loadModel('Petitions');
-//     	$query = $this->Petitions->find('all') ->innerJoin(
-//     			['Items' => 'items'],//nombre tabla con la que hace JOIN
-//     			[
-//     					'Petitions.id = Items.petition_id',	//Condiciones JOIN (se pueden poner varias separandolas por comas)
-//     					'Items.id = '.$itemId	//Condiciones JOIN
-//     			])->toArray();	    
-	    
-	    
-// 	    $petitionId = $query[0]->petition_id;
-// 	    $userIdPetition = $query[0]->user_id;
-
 	    //Un item es accesible por el usuario dueño de la peticion que lo contiene y por el creador de dicho item
         if (in_array($this->request->params['action'], ['edit', 'delete', 'view'])) {
         	//Si es el creador del item
             if ($this->Items->isOwnedBy($itemId, $user['id'])) {
                 return true;
             }            
-            //Si es el propietario de la peticion que contiene el item
-//             if ($this->Items->itemBelongsToPetitionFromUser($user['id'], $userIdPetition)) {
-//                 return true;
-//             }
         }
 
         return parent::isAuthorized($user);

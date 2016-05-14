@@ -11113,3 +11113,270 @@ Stack Trace:
 #11 {main}
 
 
+2016-05-14 08:18:55 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`coowien`.`offers`, CONSTRAINT `fk_contiene2` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`))
+Request URL: /coowi_en/items/delete/2
+Referer URL: http://localhost/coowi_en/petitions/view-offers/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1725): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1657): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Item), Object(ArrayObject))
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1662): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(141): Cake\ORM\Table->delete(Object(App\Model\Entity\Item))
+#10 [internal function]: App\Controller\ItemsController->delete('2')
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-14 08:32:42 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/items/delete/3
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(139): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\ItemsController->delete('3')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-05-14 08:38:29 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/items/delete/3
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(139): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\ItemsController->delete('3')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-05-14 08:40:45 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/items/delete/3
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(139): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\ItemsController->delete('3')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-05-14 08:50:29 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/items/delete/24
+Referer URL: http://localhost/coowi_en/petitions/view-offers?petition_id=1
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(139): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\ItemsController->delete('24')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-05-14 08:50:37 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/items/delete/24
+Referer URL: http://localhost/coowi_en/petitions/view-offers?petition_id=1
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(139): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\ItemsController->delete('24')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-05-14 08:51:09 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`coowien`.`items`, CONSTRAINT `fk_is_composed` FOREIGN KEY (`petition_id`) REFERENCES `petitions` (`id`))
+Request URL: /coowi_en/petitions/delete/2
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1725): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1657): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Petition), Object(ArrayObject))
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1662): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(148): Cake\ORM\Table->delete(Object(App\Model\Entity\Petition))
+#10 [internal function]: App\Controller\PetitionsController->delete('2')
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-14 08:51:20 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`coowien`.`items`, CONSTRAINT `fk_is_composed` FOREIGN KEY (`petition_id`) REFERENCES `petitions` (`id`))
+Request URL: /coowi_en/petitions/delete/1
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1725): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1657): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Petition), Object(ArrayObject))
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1662): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(148): Cake\ORM\Table->delete(Object(App\Model\Entity\Petition))
+#10 [internal function]: App\Controller\PetitionsController->delete('1')
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-14 08:51:34 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/items/delete/24
+Referer URL: http://localhost/coowi_en/petitions/view-offers/1
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(139): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\ItemsController->delete('24')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-05-14 09:00:08 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`coowien`.`offers`, CONSTRAINT `fk_contiene2` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`))
+Request URL: /coowi_en/items/delete/2
+Referer URL: http://localhost/coowi_en/petitions/view-offers/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1725): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1657): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Item), Object(ArrayObject))
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1662): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(141): Cake\ORM\Table->delete(Object(App\Model\Entity\Item))
+#10 [internal function]: App\Controller\ItemsController->delete('2')
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-14 09:08:16 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`coowien`.`offers`, CONSTRAINT `fk_contiene2` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`))
+Request URL: /coowi_en/items/delete/4
+Referer URL: http://localhost/coowi_en/petitions/view-offers?petition_id=2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1725): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1657): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Item), Object(ArrayObject))
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1662): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(141): Cake\ORM\Table->delete(Object(App\Model\Entity\Item))
+#10 [internal function]: App\Controller\ItemsController->delete('4')
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-14 09:29:47 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/users/delete/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(124): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\UsersController->delete('2')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-05-14 09:34:18 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/users/delete/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(126): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\UsersController->delete('2')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-05-14 09:34:42 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/users/delete/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(126): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\UsersController->delete('2')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-05-14 09:35:26 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/users/delete/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(126): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\UsersController->delete('2')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-05-14 09:37:02 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/users/delete/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(127): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\UsersController->delete('2')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-05-14 09:56:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`coowien`.`rates`, CONSTRAINT `fk_rates` FOREIGN KEY (`user1_id`) REFERENCES `users` (`id`))
+Request URL: /coowi_en/users/delete/1
+Referer URL: http://localhost/coowi_en/users/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1725): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1657): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\User), Object(ArrayObject))
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1662): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(129): Cake\ORM\Table->delete(Object(App\Model\Entity\User))
+#10 [internal function]: App\Controller\UsersController->delete('1')
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
