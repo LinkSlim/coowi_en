@@ -9,7 +9,7 @@ use App\Controller\AppController;
  * @property \App\Model\Table\JobsTable $Jobs
  */
 class JobsController extends AppController
-{
+{	
 
     /**
      * Index method
@@ -54,9 +54,10 @@ class JobsController extends AppController
         $job = $this->Jobs->newEntity();
         if ($this->request->is('post')) {
             $job = $this->Jobs->patchEntity($job, $this->request->data);
+            $job->user_id = $this->Auth->user('id');
             if ($this->Jobs->save($job)) {
                 $this->Flash->success(__('The job has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
             } else {
                 $this->Flash->error(__('The job could not be saved. Please, try again.'));
             }
@@ -80,11 +81,13 @@ class JobsController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $job = $this->Jobs->patchEntity($job, $this->request->data);
+            $job->user_id = $this->Auth->user('id');
             if ($this->Jobs->save($job)) {
                 $this->Flash->success(__('The job has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
             } else {
                 $this->Flash->error(__('The job could not be saved. Please, try again.'));
+                return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
             }
         }
         $users = $this->Jobs->Users->find('list', ['limit' => 200]);
@@ -105,9 +108,48 @@ class JobsController extends AppController
         $job = $this->Jobs->get($id);
         if ($this->Jobs->delete($job)) {
             $this->Flash->success(__('The job has been deleted.'));
+            return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
         } else {
             $this->Flash->error(__('The job could not be deleted. Please, try again.'));
+            return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
         }
         return $this->redirect(['action' => 'index']);
     }
+    
+    
+//     public function beforeFilter(Event $event) {
+//     	parent::beforeFilter($event);
+    
+//     	if(!$this->Auth->user('rol_id')){ //Si no hay usuario logged no se puede hacer nada
+//     		$this->Auth->deny(['add','edit','view','delete','index']);
+//     	}
+//     	else{
+//     		if($this->Auth->user('rol_id') == AppController::ADMIN){ //Si el usuario logged tiene rol de 'Admin', puede hacer de todo
+//     			$this->Auth->allow(['index','add','edit','delete','view']);
+//     		}
+//     		else{ //Si el usuario logged no es 'Admin' no puede hacer add ni index, solo view, edit y delete de su usuario
+//     			$this->Auth->deny(['index']);
+//     			$this->Auth->allow(['add','edit','delete','view']);
+//     		}
+//     	}
+//     }
+    
+    
+    public function isAuthorized($user) {        
+        
+    	if (in_array($this->request->action, ['add'])) {
+    		return true;
+    	}
+
+        // The user can edit, delete or view his own info
+        if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
+            //$userId = (int) $this->request->params['pass'][0];
+	        if ($this->Jobs->isOwnedBy($this->passedArgs[0], $user['id'])) {
+	            return true;
+	        }   
+        }
+        
+        return parent::isAuthorized($user);
+    }
+    
 }

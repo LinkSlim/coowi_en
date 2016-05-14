@@ -77,4 +77,8 @@ class JobsTable extends Table
         $rules->add($rules->existsIn(['user_id'], 'Users'));
         return $rules;
     }
+    
+    public function isOwnedBy($jobId, $userId) { // Es para usar con el isAuthorized del tutorial del blog
+    	return $this->exists(['id' => $jobId, 'user_id' => $userId]);
+    }
 }

@@ -11380,3 +11380,55 @@ Stack Trace:
 #15 {main}
 
 
+2016-05-14 12:17:07 Error: Fatal Error (1): Class 'App\Controller\DateTime' not found in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 70]
+Request URL: /coowi_en/users/add/
+Referer URL: http://localhost/coowi_en/users/add/
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-14 12:17:07 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\DateTime' not found
+Request URL: /coowi_en/users/add/
+Referer URL: http://localhost/coowi_en/users/add/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\xampp\\htdocs...', 70)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-14 12:25:27 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\coowi_en\src\Template\Users\view.ctp, line 4]
+Request URL: /coowi_en/users/view/8
+Referer URL: http://localhost/coowi_en/petitions/
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-14 12:25:28 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /coowi_en/users/view/8
+Referer URL: http://localhost/coowi_en/petitions/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 4)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-14 13:09:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class User could not be found.
+Exception Attributes: array (
+  'class' => 'User',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/user/view/8
+Referer URL: http://localhost/coowi_en/jobs/add
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

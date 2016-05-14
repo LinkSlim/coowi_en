@@ -1,5 +1,5 @@
 <?php
-use App\Controller\AppController;
+	use App\Controller\AppController;
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">

@@ -67,7 +67,7 @@ class UsersController extends AppController
             
             
             // Added this line            
-            $user->date = new DateTime();
+            $user->date = date("Y-m-d");
             $user->state = "activado"; //Establece el estado del usuario creado "activado" por defecto
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
@@ -173,11 +173,7 @@ class UsersController extends AppController
             else{ //Si el usuario logged no es 'Admin' no puede hacer add ni index, solo view, edit y delete de su usuario
                 $this->Auth->deny(['add','index']);                
             }
-        }
-        
-            
-        
-        
+        }        
     }
     
     public function isAuthorized($user) {        

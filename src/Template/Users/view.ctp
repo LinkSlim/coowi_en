@@ -1,18 +1,30 @@
+<?php
+	use App\Controller\AppController;
+?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Roles'), ['controller' => 'Roles', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Role'), ['controller' => 'Roles', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Jobs'), ['controller' => 'Jobs', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Job'), ['controller' => 'Jobs', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Petitions'), ['controller' => 'Petitions', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Petition'), ['controller' => 'Petitions', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Studies'), ['controller' => 'Studies', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Study'), ['controller' => 'Studies', 'action' => 'add']) ?> </li>
+        <?php  if($_SESSION['Auth']['User']['rol_id'] == AppController::ADMIN){ ?>
+			        <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
+			        <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
+			        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
+			        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
+			        <li><?= $this->Html->link(__('List Roles'), ['controller' => 'Roles', 'action' => 'index']) ?> </li>
+			        <li><?= $this->Html->link(__('New Role'), ['controller' => 'Roles', 'action' => 'add']) ?> </li>
+			        <li><?= $this->Html->link(__('List Jobs'), ['controller' => 'Jobs', 'action' => 'index']) ?> </li>
+			        <li><?= $this->Html->link(__('New Job'), ['controller' => 'Jobs', 'action' => 'add']) ?> </li>
+			        <li><?= $this->Html->link(__('List Petitions'), ['controller' => 'Petitions', 'action' => 'index']) ?> </li>
+			        <li><?= $this->Html->link(__('New Petition'), ['controller' => 'Petitions', 'action' => 'add']) ?> </li>
+			        <li><?= $this->Html->link(__('List Studies'), ['controller' => 'Studies', 'action' => 'index']) ?> </li>
+			        <li><?= $this->Html->link(__('New Study'), ['controller' => 'Studies', 'action' => 'add']) ?> </li>
+         <?php  } 
+        	   else{ ?>
+	        	    <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
+			        <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
+			        <li><?= $this->Html->link(__('New Job'), ['controller' => 'Jobs', 'action' => 'add']) ?> </li>
+			        <li><?= $this->Html->link(__('New Study'), ['controller' => 'Studies', 'action' => 'add']) ?> </li>
+			        <li><?= $this->Html->link(__('New Petition'), ['controller' => 'Petitions', 'action' => 'add']) ?> </li>			        			                		
+		<?php }?> 
     </ul>
 </nav>
 <div class="users view large-9 medium-8 columns content">
@@ -92,8 +104,7 @@
                 <td><?= h($jobs->start_date) ?></td>
                 <td><?= h($jobs->ending_date) ?></td>
                 <td><?= h($jobs->position) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Jobs', 'action' => 'view', $jobs->id]) ?>
+                <td class="actions">                    
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Jobs', 'action' => 'edit', $jobs->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'Jobs', 'action' => 'delete', $jobs->id], ['confirm' => __('Are you sure you want to delete # {0}?', $jobs->id)]) ?>
                 </td>
@@ -102,6 +113,38 @@
         </table>
         <?php endif; ?>
     </div>
+    <div class="related">
+        <h4><?= __('Related Studies') ?></h4>
+        <?php if (!empty($user->studies)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th><?= __('Id') ?></th>
+                <th><?= __('User Id') ?></th>
+                <th><?= __('Center') ?></th>
+                <th><?= __('Degree') ?></th>
+                <th><?= __('Start Date') ?></th>
+                <th><?= __('Ending Date') ?></th>
+                <th class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($user->studies as $studies): ?>
+            <tr>
+                <td><?= h($studies->id) ?></td>
+                <td><?= h($studies->user_id) ?></td>
+                <td><?= h($studies->center) ?></td>
+                <td><?= h($studies->degree) ?></td>
+                <td><?= h($studies->start_date) ?></td>
+                <td><?= h($studies->ending_date) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'Studies', 'action' => 'view', $studies->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Studies', 'action' => 'edit', $studies->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Studies', 'action' => 'delete', $studies->id], ['confirm' => __('Are you sure you want to delete # {0}?', $studies->id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    
     <div class="related">
         <h4><?= __('Related Petitions') ?></h4>
         <?php if (!empty($user->petitions)): ?>
@@ -141,35 +184,5 @@
         </table>
         <?php endif; ?>
     </div>
-    <div class="related">
-        <h4><?= __('Related Studies') ?></h4>
-        <?php if (!empty($user->studies)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th><?= __('Id') ?></th>
-                <th><?= __('User Id') ?></th>
-                <th><?= __('Center') ?></th>
-                <th><?= __('Degree') ?></th>
-                <th><?= __('Start Date') ?></th>
-                <th><?= __('Ending Date') ?></th>
-                <th class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($user->studies as $studies): ?>
-            <tr>
-                <td><?= h($studies->id) ?></td>
-                <td><?= h($studies->user_id) ?></td>
-                <td><?= h($studies->center) ?></td>
-                <td><?= h($studies->degree) ?></td>
-                <td><?= h($studies->start_date) ?></td>
-                <td><?= h($studies->ending_date) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Studies', 'action' => 'view', $studies->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Studies', 'action' => 'edit', $studies->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Studies', 'action' => 'delete', $studies->id], ['confirm' => __('Are you sure you want to delete # {0}?', $studies->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
-    </div>
+    
 </div>

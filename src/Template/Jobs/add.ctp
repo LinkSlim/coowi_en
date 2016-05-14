@@ -11,7 +11,8 @@
     <fieldset>
         <legend><?= __('Add Job') ?></legend>
         <?php
-            echo $this->Form->input('user_id', ['options' => $users, 'empty' => true]);
+            echo $this->Form->hidden('user_id');
+            echo $this->Form->input('user_id', ['options' => $users, 'empty' => true, 'type' => 'hidden']);
             echo $this->Form->input('company');
             echo $this->Form->input('start_date');
             echo $this->Form->input('ending_date', ['empty' => true]);
