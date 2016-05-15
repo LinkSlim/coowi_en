@@ -19,6 +19,7 @@
             echo $this->Form->input('position');
         ?>
     </fieldset>
+    <?= $this->Form->button(__('CANCEL'), array('type' => 'cancel', 'name' => 'cancel', 'formnovalidate')); ?>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>

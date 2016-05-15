@@ -84,7 +84,11 @@ class PetitionsController extends AppController
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
     public function add()
-    {
+    {    	
+    	if(isset($_POST['cancel'])){    		
+    		return $this->redirect(['controller' => 'Petitions', 'action' => 'index']);
+    	}
+    	
         $petition = $this->Petitions->newEntity();
         if ($this->request->is('post')) {
             $petition = $this->Petitions->patchEntity($petition, $this->request->data);
@@ -112,6 +116,10 @@ class PetitionsController extends AppController
      */
     public function edit($id = null)
     {
+    	if(isset($_POST['cancel'])){
+    		return $this->redirect(['controller' => 'Petitions', 'action' => 'index']);
+    	}
+    	
         $petition = $this->Petitions->get($id, [
             'contain' => []
         ]);
@@ -249,6 +257,10 @@ class PetitionsController extends AppController
     
     public function viewOffers($id = null)
     {
+    	if(isset($_POST['cancel'])){
+    		return $this->redirect(['controller' => 'Petitions', 'action' => 'index']);
+    	}
+    	
     	$this->loadModel('Offers'); //Cargo el Modelo de Ofertas para poder acceder a los datos de la tabla Ofertas usando los metodos de dicho modelo.    	
     	$this->loadModel('Items');
     	

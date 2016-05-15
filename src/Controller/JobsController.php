@@ -51,6 +51,11 @@ class JobsController extends AppController
      */
     public function add()
     {
+    	if(isset($_POST['cancel'])){
+    		return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
+    	}
+    	
+    	
         $job = $this->Jobs->newEntity();
         if ($this->request->is('post')) {
             $job = $this->Jobs->patchEntity($job, $this->request->data);
@@ -76,9 +81,15 @@ class JobsController extends AppController
      */
     public function edit($id = null)
     {
+    	
         $job = $this->Jobs->get($id, [
             'contain' => []
-        ]);
+        ]);        
+        
+        if(isset($_POST['cancel'])){
+        	return $this->redirect(['controller' => 'Users', 'action' => 'view', $job->user_id]);
+        }
+        
         if ($this->request->is(['patch', 'post', 'put'])) {
             $job = $this->Jobs->patchEntity($job, $this->request->data);
             $job->user_id = $this->Auth->user('id');
