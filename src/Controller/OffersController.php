@@ -55,22 +55,26 @@ class OffersController extends AppController
      *
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function add($item_id = null)
     {
         $offer = $this->Offers->newEntity();
         if ($this->request->is('post')) {
             $offer = $this->Offers->patchEntity($offer, $this->request->data);
-            $offer->state = "contratada";
-            $offer->date = date("Y-m-d");
+            $offer->user_id = $this->Auth->user('id');
+            $offer->item_id = $offer->items;
+            $offer->state = "activada";
+            $offer->date = date("Y-m-d");            
             if ($this->Offers->save($offer)) {
                 $this->Flash->success(__('The offer has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                $this->loadModel('Items');
+                $item = $this->Items->get($offer->item_id);
+                return $this->redirect(['controller' => 'Petitions', 'action' => 'look', $item->petition_id]);
             } else {
                 $this->Flash->error(__('The offer could not be saved. Please, try again.'));
             }
         }
-        $items = $this->Offers->Items->find('list', ['limit' => 200]);
-        $this->set(compact('offer', 'items'));
+		$items = $this->Offers->Items->find('list', ['conditions' => ['id' => $item_id]]);		
+		$this->set(compact('offer','items'));
         $this->set('_serialize', ['offer']);
     }
 

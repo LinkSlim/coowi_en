@@ -11,11 +11,9 @@
     <fieldset>
         <legend><?= __('Add Offer') ?></legend>
         <?php
-            echo $this->Form->input('item_id', ['options' => $items]);
+            echo $this->Form->input('items', ['options' => $items]);
             echo $this->Form->input('price');
-            echo $this->Form->input('date');
-            echo $this->Form->input('comment');
-            echo $this->Form->input('state');
+            echo $this->Form->input('comment');            
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

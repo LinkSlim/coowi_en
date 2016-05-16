@@ -6,13 +6,6 @@ $idGrupoRadioButon = 1;
 foreach ($ofertasDeItem as $ofertas) {
     foreach ($ofertas as $oferta) {
         if ($oferta->item_id == $item_id) {        	
-
-//            echo '<tr>';
-//                echo '<td><h5>'.__('Offers:').'</h5></td>';
-//                echo '<td>&nbsp</td>';
-//                echo '<td>&nbsp</td>';
-//                echo '<td>&nbsp</td>';
-//            echo '</tr>';
             if($cabecera){
                 echo '<tr>';
                 echo '<th><h5>'.__('Offers:').'</h5></th>';
@@ -23,7 +16,7 @@ foreach ($ofertasDeItem as $ofertas) {
                 echo '<th>' . __('Price') . '</th>';
                 echo '<th>' . __('Comment') . '</th>';
                 echo '<th>' . __('State') . '</th>';
-                echo '<th>' . __('Select one') . '</th>';
+                //echo '<th>' . __('Select one') . '</th>';
                 echo '</tr>';
                 $cabecera = false;
             }
@@ -38,7 +31,7 @@ foreach ($ofertasDeItem as $ofertas) {
             
             echo '<td>' . $oferta['comment'] . '</td>';
             echo '<td>' . $oferta['state'] . '</td>';
-            echo '<td style="text-align:center"><input type="radio" name="item'.$oferta->item_id.'" value="'.$oferta->id.'" required></td>';
+            //echo '<td style="text-align:center"><input type="radio" name="item'.$oferta->item_id.'" value="'.$oferta->id.'" required></td>';
             echo '</tr>';
         }        
     }

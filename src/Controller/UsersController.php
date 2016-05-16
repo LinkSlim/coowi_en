@@ -64,10 +64,7 @@ class UsersController extends AppController
     {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
-            $user = $this->Users->patchEntity($user, $this->request->data);
-            
-            
-            // Added this line            
+            $user = $this->Users->patchEntity($user, $this->request->data);                   
             $user->date = date("Y-m-d");
             $user->state = "activado"; //Establece el estado del usuario creado "activado" por defecto
             if ($this->Users->save($user)) {
@@ -99,6 +96,11 @@ class UsersController extends AppController
         $user = $this->Users->get($id, [
             'contain' => []
         ]);
+        
+        if(isset($_POST['cancel'])){
+        	return $this->redirect(['controller' => 'Users', 'action' => 'view', $user->id]);
+        }
+        
         if ($this->request->is(['patch', 'post', 'put'])) {
         	//$this->request->session()->write('Auth.User.rol_id',$user->rol_id); //No hace el cambio en la variable de sesion
         	//$_SESSION['Auth']['User']['rol_id'] = $user->rol_id; //Pongo el id del rol de la sesion del usuario al que el usuario haya marcado en el select (asi el usuario no tiene que reiniciar sesion para que se hagan cambios)

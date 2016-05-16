@@ -92,8 +92,9 @@ class PetitionsController extends AppController
         $petition = $this->Petitions->newEntity();
         if ($this->request->is('post')) {
             $petition = $this->Petitions->patchEntity($petition, $this->request->data);
-            // Added this line
+            // Added this line            
             $petition->user_id = $this->Auth->user('id'); //Establece el id del usuario logueado en el campo user_id de la peticion, para que se guarde que la peticion perteneciendo al usuario logueado
+            $petition->creation_date = date("Y-m-d");
             $petition->state = "activada";
             if ($this->Petitions->save($petition)) {
                 $this->Flash->success(__('The petition has been saved.'));
@@ -162,7 +163,7 @@ class PetitionsController extends AppController
     public function isAuthorized($user) {
 
         // All registered users can add, index and search petitions
-        if (($this->request->action === 'add') || ($this->request->action === 'index') || ($this->request->action === 'searchPetitions') || ($this->request->action === 'contract')) {
+        if (($this->request->action === 'add') || ($this->request->action === 'index') || ($this->request->action === 'searchPetitions') || ($this->request->action === 'contract') || ($this->request->action === 'look')) {
             return true;
         }
 
@@ -221,6 +222,7 @@ class PetitionsController extends AppController
         }
         
         //TODO adaptar para hacer busqueda con varias tags
+        //TODO adaptar para buscar peticiones que no son del usuario que busca
         $query = $this->Petitions->find('all')->innerJoin(
         		['Items' => 'items'],//nombre tabla con la que hace JOIN
         		[
@@ -356,6 +358,35 @@ class PetitionsController extends AppController
     	
     }
     
+    
+    public function look($id = null)
+    {
+    	$this->loadModel('Offers'); //Cargo el Modelo de Ofertas para poder acceder a los datos de la tabla Ofertas usando los metodos de dicho modelo.
+    
+    	$petition = $this->Petitions->get($id, [
+    			'contain' => ['Users', 'Items']
+    	]);
+    
+    	$this->set('petition', $petition);
+    	$this->set('_serialize', ['petition']);
+    
+    	$array_ofertas = array();
+    	foreach ($petition->items as $items){
+    		array_push($array_ofertas, $this->Offers->find('all', ['conditions' => ['Offers.item_id' => $items->id]]));
+    	}
+    
+    	$data = array(
+    			'color' => 'pink',
+    			'type' => 'sugar',
+    			'base_price' => 23.95,
+    			'hay' => true,
+    			'ofertasDeItem' => $array_ofertas//->count()
+    	);
+    	$this->set($data);
+    }
+    
+    
+    
     private function extraeIdOfertas($ofertasEnPost){
     	 
     	if($ofertasEnPost == null){
@@ -459,4 +490,5 @@ class PetitionsController extends AppController
     	}
     	return $arrayConIdsDeOfertas;
     }
+    
 }

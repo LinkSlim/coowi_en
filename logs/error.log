@@ -11432,3 +11432,267 @@ Stack Trace:
 #1 {main}
 
 
+2016-05-16 14:50:21 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\look.ctp, line 82]
+Request URL: /coowi_en/petitions/look/5
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-16 14:50:22 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /coowi_en/petitions/look/5
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 82)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-16 15:10:13 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`coowien`.`offers`, CONSTRAINT `fk_offers` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+Request URL: /coowi_en/offers/add/26
+Referer URL: http://localhost/coowi_en/offers/add/26
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(App\Model\Entity\Offer), Array)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Offer), Object(ArrayObject))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#10 C:\xampp\htdocs\coowi_en\src\Controller\OffersController.php(65): Cake\ORM\Table->save(Object(App\Model\Entity\Offer))
+#11 [internal function]: App\Controller\OffersController->add('26')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\OffersController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-16 16:12:24 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`coowien`.`offers`, CONSTRAINT `fk_contiene2` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE)
+Request URL: /coowi_en/offers/add/26
+Referer URL: http://localhost/coowi_en/offers/add/26
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(App\Model\Entity\Offer), Array)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Offer), Object(ArrayObject))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#10 C:\xampp\htdocs\coowi_en\src\Controller\OffersController.php(66): Cake\ORM\Table->save(Object(App\Model\Entity\Offer))
+#11 [internal function]: App\Controller\OffersController->add('26')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\OffersController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-16 16:15:07 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`coowien`.`offers`, CONSTRAINT `fk_contiene2` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE)
+Request URL: /coowi_en/offers/add/26
+Referer URL: http://localhost/coowi_en/offers/add/26
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(App\Model\Entity\Offer), Array)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Offer), Object(ArrayObject))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#10 C:\xampp\htdocs\coowi_en\src\Controller\OffersController.php(66): Cake\ORM\Table->save(Object(App\Model\Entity\Offer))
+#11 [internal function]: App\Controller\OffersController->add('26')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\OffersController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-16 16:31:09 Warning: Warning (2): PDOStatement::execute(): MySQL server has gone away in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/petitions/look/6
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 270
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 188
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 921
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 871
+Cake\ORM\Query::getIterator() - CORE\src\Datasource\QueryTrait.php, line 131
+include - APP/Template\Element\ofertas.ctp, line 7
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::_renderElement() - CORE\src\View\View.php, line 1329
+Cake\View\View::element() - CORE\src\View\View.php, line 493
+include - APP/Template\Petitions\look.ctp, line 91
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-16 16:31:09 Warning: Warning (2): PDOStatement::execute() [<a href='http://php.net/pdostatement.execute'>pdostatement.execute</a>]: Error reading result set's header in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/petitions/look/6
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 270
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 188
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 921
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 871
+Cake\ORM\Query::getIterator() - CORE\src\Datasource\QueryTrait.php, line 131
+include - APP/Template\Element\ofertas.ctp, line 7
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::_renderElement() - CORE\src\View\View.php, line 1329
+Cake\View\View::element() - CORE\src\View\View.php, line 493
+include - APP/Template\Petitions\look.ctp, line 91
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-16 16:31:11 Error: [PDOException] SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+Request URL: /coowi_en/petitions/look/6
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Template\Element\ofertas.ctp(7): Cake\ORM\Query->getIterator()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(992): include('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(1329): Cake\View\View->_render('C:\\xampp\\htdocs...', Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(493): Cake\View\View->_renderElement('C:\\xampp\\htdocs...', Array, Array)
+#14 C:\xampp\htdocs\coowi_en\src\Template\Petitions\look.ctp(91): Cake\View\View->element('ofertas', Array)
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(992): include('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#19 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#20 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#21 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2016-05-16 16:42:05 Error: [InvalidArgumentException] Petitions is not associated with Offers
+Request URL: /coowi_en/petitions/look/6
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(252): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\PetitionsTable), 'Offers', Array, Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(377): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\PetitionsTable))
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(348): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\PetitionsTable))
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(947): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\PetitionsTable), true)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(901): Cake\ORM\Query->_transformQuery()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(121): Cake\ORM\Query->sql()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(216): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(268): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(395): Cake\ORM\Query->all()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(406): Cake\ORM\Query->first()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1201): Cake\ORM\Query->firstOrFail()
+#15 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(472): Cake\ORM\Table->get('6', Array)
+#16 [internal function]: App\Controller\PetitionsController->look('6')
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#18 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#19 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#20 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 {main}
+
+
+2016-05-16 16:55:08 Error: Fatal Error (1): Call to a member function innerJoin() on integer in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 480]
+Request URL: /coowi_en/petitions/look/6
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-16 16:55:08 Error: [Cake\Error\FatalErrorException] Call to a member function innerJoin() on integer
+Request URL: /coowi_en/petitions/look/6
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 480)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-16 16:57:15 Error: Fatal Error (1): Call to a member function innerJoin() on integer in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 480]
+Request URL: /coowi_en/petitions/look/6
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-16 16:57:16 Error: [Cake\Error\FatalErrorException] Call to a member function innerJoin() on integer
+Request URL: /coowi_en/petitions/look/6
+Referer URL: http://localhost/coowi_en/petitions/search-petitions?inputTags=viaje
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 480)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-16 17:10:33 Error: Fatal Error (1): Call to undefined function App\Controller\loadModel() in [C:\xampp\htdocs\coowi_en\src\Controller\OffersController.php, line 69]
+Request URL: /coowi_en/offers/add/27
+Referer URL: http://localhost/coowi_en/offers/add/27
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-16 17:10:34 Error: [Cake\Error\FatalErrorException] Call to undefined function App\Controller\loadModel()
+Request URL: /coowi_en/offers/add/27
+Referer URL: http://localhost/coowi_en/offers/add/27
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 69)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

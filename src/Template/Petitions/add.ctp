@@ -16,7 +16,7 @@
             //echo $this->Form->input('user_id', ['options' => $users, 'empty' => true]);
             echo $this->Form->input('title');
             echo $this->Form->input('description');
-            echo $this->Form->input('creation_date');
+			//echo $this->Form->input('creation_date');
             echo $this->Form->input('shell_by_date');
             echo $this->Form->input('location');
             echo $this->Form->input('budget');
