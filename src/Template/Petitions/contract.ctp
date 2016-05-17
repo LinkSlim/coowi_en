@@ -68,7 +68,7 @@
                     <tr>
                         <td><b><?= h($offer->item_id) ?></b></td>
                         <td><b><?= h($offer->price) ?>&#8364;</b></td>
-                        <td><b><?= $this->Html->link($offer->user_id['name'], ['controller' => 'Users', 'action' => 'view', $offer->user_id['id']])." - ".$offer->user_id['phone'] ?></b></td>
+                        <td><b><?= $this->Html->link($offer->propietario, ['controller' => 'Users', 'action' => 'view', $offer->user_id['id']])." - ".$offer->telefono ?></b></td>
                     </tr>                    
                     <!--Element es para incrustar un trozo de codigo de otro fichero en este. Los Elementos son reutilizables -->
                      <!-- //$this->element('ofertas', ["item_id" => $items->id]);   --> 

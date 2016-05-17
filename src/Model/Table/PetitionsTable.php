@@ -104,9 +104,5 @@ class PetitionsTable extends Table
     //si ambos IDs estan en una misma fila de la tabla 'Petition' de la BBDD
     public function isOwnedBy($petitionId, $userId) { // Es para usar con el isAuthorized del tutorial del blog
         return $this->exists(['id' => $petitionId, 'user_id' => $userId]);
-    }
-    
-//     public function getPetitionsByTags() { // Try to avoid naming a function as get()
-//         return $this->query("SELECT p.title FROM petitions As p INNER JOIN items ON p.id = items.petition_id INNER JOIN items_tags ON items.id = items_tags.item_id WHERE items_tags.tag_id = '1' GROUP BY p.title ORDER BY p.title;");
-//     }
+    }    
 }

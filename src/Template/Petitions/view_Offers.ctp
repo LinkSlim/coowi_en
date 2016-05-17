@@ -1,3 +1,6 @@
+<?php
+use function Cake\ORM\isEmpty;
+?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -94,22 +97,25 @@
     <?php if(empty($ofertasDeItem)) { 
     		echo '<h4>You have not created items</h4>';
     	  }
-    	  else{
-    	  		$noHayOfertas = false;
+    	  else{ //TODO Controlar que solo salga el boton cuando haya oferta
+    	  		$hayOfertas = false;
     	  	   	foreach($ofertasDeItem as $of){
-    	  	   		if(!empty($of)){
-    	  	   			$noHayOfertas = true;
-    	  	   			break;
-    	  	   		}    	  	   		
+    	  	   		foreach($of as $o){
+    	  	   			if(isset($o)){
+    	  	   				$hayOfertas = true;
+    	  	   				//break;
+    	  	   			}
+    	  	   		}
+    	  	   		   	  	   			  	   	
     	  	   	}
-    	  	   	if(!$noHayOfertas){
-    	  	   		echo $this->Form->button(__('Contract'));
+    	  	   	if($hayOfertas){
+    	  	   		echo $this->Form->button(__('Contract'), ["style" => "margin-left:85%"]);    	  	   		
     	  	   	}
     	  	   	else{
     	  	   		echo '<h4>No offers</h4>';
     	  	   	}    	  	
     	  }
 		?>
-		<?= $this->Form->button(__('BACK'), array('type' => 'cancel', 'name' => 'cancel', 'formnovalidate')); ?>
-    <?= $this->Form->end() ?>
+		
+    <?= $this->Form->end() ?>    
 </div>

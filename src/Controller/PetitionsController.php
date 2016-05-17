@@ -350,7 +350,7 @@ class PetitionsController extends AppController
     			}
     			
     		}    		
-    		$offers = $this->getOffersUsingIdsWithExtraInfo($arrayConIdsDeOfertas);
+    		$offers = $this->getOfertasContratadas($arrayConIdsDeOfertas);
     		$this->set('offers', $offers);
     		$this->set('petition', $petition);
     		$this->set('_serialize', ['petition']);
@@ -435,28 +435,28 @@ class PetitionsController extends AppController
     }
     
     
-    private function getOffersUsingIdsWithExtraInfo($arrayIdOfertas){
+//     private function getOffersUsingIdsWithExtraInfo($arrayIdOfertas){
     	
-    	$this->loadModel('Offers');
-    	$this->loadModel('Items');
-    	$this->loadModel('Users');
-    	if($arrayIdOfertas == null){
-    		return null;
-    	}
+//     	$this->loadModel('Offers');
+//     	$this->loadModel('Items');
+//     	$this->loadModel('Users');
+//     	if($arrayIdOfertas == null){
+//     		return null;
+//     	}
     
-    	$arrayConOfertas = array();
+//     	$arrayConOfertas = array();
     
-    	foreach ($arrayIdOfertas as $posicion => $valor){    		
-    		$of = $this->Offers->get($valor); //Extraigo oferta
-    		$item = $this->Items->get($of->item_id); //Extraigo item con el item_id que contiene la oferta
-    		$of->item_id = $item->name; //En la oferta cambio el valor del campo item_id por el nombre al que hace referencia dicho item_id
-    		$user = $this->Users->get($of->user_id); //Extraigo user con el user_id que contiene la oferta
-    		$of->user_id = ["id" => $of->user_id, "name" => $user->name, "phone" => $user->phone]; //En la oferta cambio el valor del campo user_id por el nombre del usuario al que hace referencia dicho user_id
-    		array_push($arrayConOfertas, $of);
-    	}
+//     	foreach ($arrayIdOfertas as $posicion => $valor){    		
+//     		$of = $this->Offers->get($valor); //Extraigo oferta
+//     		$item = $this->Items->get($of->item_id); //Extraigo item con el item_id que contiene la oferta
+//     		$of->item_id = $item->name; //En la oferta cambio el valor del campo item_id por el nombre al que hace referencia dicho item_id
+//     		$user = $this->Users->get($of->user_id); //Extraigo user con el user_id que contiene la oferta
+//     		$of->user_id = ["id" => $of->user_id, "name" => $user->name, "phone" => $user->phone]; //En la oferta cambio el valor del campo user_id por el nombre del usuario al que hace referencia dicho user_id
+//     		array_push($arrayConOfertas, $of);
+//     	}
     
-    	return $arrayConOfertas;
-    }
+//     	return $arrayConOfertas;
+//     }
 
     private function getOffersUsingArrayOffersWithExtraInfo($arrayOfertas){
     	 
@@ -489,6 +489,32 @@ class PetitionsController extends AppController
     		array_push($arrayConIdsDeOfertas, $oferta->item_id);
     	}
     	return $arrayConIdsDeOfertas;
+    }
+    
+    private function getOfertasContratadas($arrayConIdsDeItemsContratados){
+    	
+    	$this->loadModel("Items");
+    	$this->loadModel("Offers");
+    	foreach($arrayConIdsDeItemsContratados as $idItem){
+    		$item = $this->Items->get($idItem, [ //Recupero un item con sus ofertas
+    				'contain' => ['Offers']
+    		]);
+    		
+    		$arrayOfertas = array();
+    		foreach($item->offers as $oferta){ //Para cada oferta
+    			if($oferta->state == "contratada"){
+    				$oferta2 = $this->Offers->get($oferta->id, [ // Recupero info del usuario propietario de la oferta
+    						'contain' => ['Users']
+    				]);
+    				$oferta->propietario = $oferta2->user->name;
+    				$oferta->telefono = $oferta2->user->phone;
+    				array_push($arrayOfertas, $oferta);
+    			}    			
+    		}
+    	}
+    	
+    	return $arrayOfertas;
+    	
     }
     
 }
