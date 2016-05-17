@@ -333,7 +333,6 @@ class PetitionsController extends AppController
     		$this->set('petition', $petition);
     		$this->set('_serialize', ['petition']);
     		 
-    		 
     		$idOfertas = $_REQUEST['idsOfertas']; //Los datos tambien pueden ser enviados por la variable de sesion, puede ser mas recomendable, por GET no es muy seguro
     		$offers = $this->getOffersUsingIdsWithExtraInfo($idOfertas);
     		$this->set('offers', $offers);
@@ -428,35 +427,34 @@ class PetitionsController extends AppController
     			//return $this->redirect(['action' => 'index']);
     			return false;
     		}    		
-    	}
-    	//$this->Flash->success(__('The offers have been hired.'));
-    	//return $this->redirect(['action' => 'index']);
+    	}    	
+    	$this->grabaRelacionUsuarios($oferta->user_id);
     	return true;
     }
     
     
-//     private function getOffersUsingIdsWithExtraInfo($arrayIdOfertas){
+    private function getOffersUsingIdsWithExtraInfo($arrayIdOfertas){
     	
-//     	$this->loadModel('Offers');
-//     	$this->loadModel('Items');
-//     	$this->loadModel('Users');
-//     	if($arrayIdOfertas == null){
-//     		return null;
-//     	}
+    	$this->loadModel('Offers');
+    	$this->loadModel('Items');
+    	$this->loadModel('Users');
+    	if($arrayIdOfertas == null){
+    		return null;
+    	}
     
-//     	$arrayConOfertas = array();
+    	$arrayConOfertas = array();
     
-//     	foreach ($arrayIdOfertas as $posicion => $valor){    		
-//     		$of = $this->Offers->get($valor); //Extraigo oferta
-//     		$item = $this->Items->get($of->item_id); //Extraigo item con el item_id que contiene la oferta
-//     		$of->item_id = $item->name; //En la oferta cambio el valor del campo item_id por el nombre al que hace referencia dicho item_id
-//     		$user = $this->Users->get($of->user_id); //Extraigo user con el user_id que contiene la oferta
-//     		$of->user_id = ["id" => $of->user_id, "name" => $user->name, "phone" => $user->phone]; //En la oferta cambio el valor del campo user_id por el nombre del usuario al que hace referencia dicho user_id
-//     		array_push($arrayConOfertas, $of);
-//     	}
+    	foreach ($arrayIdOfertas as $posicion => $valor){    		
+    		$of = $this->Offers->get($valor); //Extraigo oferta
+    		$item = $this->Items->get($of->item_id); //Extraigo item con el item_id que contiene la oferta
+    		$of->item_id = $item->name; //En la oferta cambio el valor del campo item_id por el nombre al que hace referencia dicho item_id
+    		$user = $this->Users->get($of->user_id); //Extraigo user con el user_id que contiene la oferta
+    		$of->user_id = ["id" => $of->user_id, "name" => $user->name, "phone" => $user->phone]; //En la oferta cambio el valor del campo user_id por el nombre del usuario al que hace referencia dicho user_id
+    		array_push($arrayConOfertas, $of);
+    	}
     
-//     	return $arrayConOfertas;
-//     }
+    	return $arrayConOfertas;
+    }
 
     private function getOffersUsingArrayOffersWithExtraInfo($arrayOfertas){
     	 
@@ -513,8 +511,25 @@ class PetitionsController extends AppController
     		}
     	}
     	
-    	return $arrayOfertas;
+    	return $arrayOfertas;    	
+    }
+    
+    private function grabaRelacionUsuarios($idUsuarioOfertor){
     	
+    	$this->loadModel("Rates");
+    	$rates = $this->Rates->newEntity();
+    	$rates->user1_id = $this->Auth->user('id');
+    	$rates->user2_id = $idUsuarioOfertor;
+    	$rates->comment = "";
+    	$rates->rate = 0.0;
+    	$rates->date = date("Y-m-d");
+    	$rates->state = "contratada"; 
+    	$rates->date = date("Y-m-d");
+    	if (!$this->Rates->save($rates)) { //Grabar la relacion de contrato entre usuarios, mas adelante se podra calificar y commentar y se cambiaran los campos al respect    	
+    		return false;
+    	}
+    	
+    	return true;
     }
     
 }

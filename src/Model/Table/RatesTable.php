@@ -86,4 +86,9 @@ class RatesTable extends Table
         $rules->add($rules->existsIn(['user2_id'], 'Users'));
         return $rules;
     }
+    
+    
+    public function isOwnedBy($userId1, $userId2) { // Comprobar si un usuario ha contratado una oferta a otro usuario
+    	return $this->exists(['user1_id' => $userId1, 'user2_id' => $userId2]);
+    }
 }

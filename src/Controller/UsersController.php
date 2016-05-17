@@ -187,9 +187,13 @@ class UsersController extends AppController
 
         // The user can edit, delete or view his own info
         if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
-            $userId = (int) $this->request->params['pass'][0];
-            if ($userId == $user['id']) {
+            
+            if ($this->passedArgs[0] == $user['id']) {
                 return true;
+            }
+            $this->loadModel("Rates");
+            if ($this->Rates->isOwnedBy($user['id'], $this->passedArgs[0])) {
+            	return true;
             }
         }
         

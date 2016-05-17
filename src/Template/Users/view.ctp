@@ -1,10 +1,12 @@
 <?php
 	use App\Controller\AppController;
 ?>
+
+
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <?php  if($_SESSION['Auth']['User']['rol_id'] == AppController::ADMIN){ ?>
+        <?php  if($_SESSION['Auth']['User']['rol_id'] == AppController::ADMIN){ //Menu para el Admin?>
 			        <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
 			        <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
 			        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
@@ -18,13 +20,20 @@
 			        <li><?= $this->Html->link(__('List Studies'), ['controller' => 'Studies', 'action' => 'index']) ?> </li>
 			        <li><?= $this->Html->link(__('New Study'), ['controller' => 'Studies', 'action' => 'add']) ?> </li>
          <?php  } 
-        	   else{ ?>
-	        	    <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
-			        <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
-			        <li><?= $this->Html->link(__('New Job'), ['controller' => 'Jobs', 'action' => 'add']) ?> </li>
-			        <li><?= $this->Html->link(__('New Study'), ['controller' => 'Studies', 'action' => 'add']) ?> </li>
-			        <li><?= $this->Html->link(__('New Petition'), ['controller' => 'Petitions', 'action' => 'add']) ?> </li>			        			                		
-		<?php }?> 
+        	   else{ 
+	        	   	if($_SESSION['Auth']['User']['id'] == $user->id){ //Menu para el usuario que visita su perfil
+	        	   	?>
+		        	    <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
+				        <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
+				        <li><?= $this->Html->link(__('New Job'), ['controller' => 'Jobs', 'action' => 'add']) ?> </li>
+				        <li><?= $this->Html->link(__('New Study'), ['controller' => 'Studies', 'action' => 'add']) ?> </li>
+				        <li><?= $this->Html->link(__('New Petition'), ['controller' => 'Petitions', 'action' => 'add']) ?> </li>			        			                		
+			<?php 	}
+					else{?>
+						<li><?= $this->Html->link(__('New Rate'), ['controller' => 'Rates', 'action' => 'add']) ?></li>
+				<?php		
+					}
+        	   }?> 
     </ul>
 </nav>
 <div class="users view large-9 medium-8 columns content">
@@ -186,3 +195,4 @@
     </div>
     
 </div>
+

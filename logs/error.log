@@ -12023,3 +12023,49 @@ Stack Trace:
 #2 {main}
 
 
+2016-05-17 18:29:11 Error: Fatal Error (1): Call to a member function isOwnedBy() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php, line 194]
+Request URL: /coowi_en/users/view/8
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-17 18:29:12 Error: [Cake\Error\FatalErrorException] Call to a member function isOwnedBy() on boolean
+Request URL: /coowi_en/users/view/8
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 194)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-17 18:32:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column '$user1_id' in 'where clause'
+Request URL: /coowi_en/users/view/8
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(288): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1283): Cake\ORM\Query->toArray()
+#10 C:\xampp\htdocs\coowi_en\src\Model\Table\RatesTable.php(92): Cake\ORM\Table->exists(Array)
+#11 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(195): App\Model\Table\RatesTable->isOwnedBy('8', 2)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\UsersController->isAuthorized(Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(494): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(305): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(258): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#18 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#19 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(495): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#20 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#21 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#22 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#23 {main}
+
+
