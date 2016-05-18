@@ -51,12 +51,17 @@ class StudiesController extends AppController
      */
     public function add()
     {
+    	if(isset($_POST['cancel'])){
+    		return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
+    	}
+    	
         $study = $this->Studies->newEntity();
         if ($this->request->is('post')) {
             $study = $this->Studies->patchEntity($study, $this->request->data);
+            $study->user_id = $this->Auth->user('id');
             if ($this->Studies->save($study)) {
                 $this->Flash->success(__('The study has been saved.'));
-                return $this->redirect(['action' => 'index']);
+               return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
             } else {
                 $this->Flash->error(__('The study could not be saved. Please, try again.'));
             }
@@ -78,13 +83,19 @@ class StudiesController extends AppController
         $study = $this->Studies->get($id, [
             'contain' => []
         ]);
+        
+        if(isset($_POST['cancel'])){
+        	return $this->redirect(['controller' => 'Users', 'action' => 'view', $study->user_id]);
+        }
+        
         if ($this->request->is(['patch', 'post', 'put'])) {
             $study = $this->Studies->patchEntity($study, $this->request->data);
             if ($this->Studies->save($study)) {
                 $this->Flash->success(__('The study has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Users', 'action' => 'view', $study->user_id]);
             } else {
                 $this->Flash->error(__('The study could not be saved. Please, try again.'));
+                return $this->redirect(['controller' => 'Users', 'action' => 'view', $study->user_id]);
             }
         }
         $users = $this->Studies->Users->find('list', ['limit' => 200]);
@@ -105,9 +116,27 @@ class StudiesController extends AppController
         $study = $this->Studies->get($id);
         if ($this->Studies->delete($study)) {
             $this->Flash->success(__('The study has been deleted.'));
+            return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
         } else {
             $this->Flash->error(__('The study could not be deleted. Please, try again.'));
+            return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
         }
         return $this->redirect(['action' => 'index']);
+    }
+    
+    
+    public function isAuthorized($user) {
+    
+    	if (in_array($this->request->action, ['add'])) {
+    		return true;
+    	}
+    
+    	if (in_array($this->request->action, ['edit', 'delete', 'view'])) {    
+    		if ($this->Studies->isOwnedBy($this->passedArgs[0], $user['id'])) {
+    			return true;
+    		}
+    	}
+    
+    	return parent::isAuthorized($user);
     }
 }

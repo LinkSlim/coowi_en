@@ -53,8 +53,7 @@ class JobsController extends AppController
     {
     	if(isset($_POST['cancel'])){
     		return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
-    	}
-    	
+    	}    	
     	
         $job = $this->Jobs->newEntity();
         if ($this->request->is('post')) {
@@ -95,10 +94,10 @@ class JobsController extends AppController
             $job->user_id = $this->Auth->user('id');
             if ($this->Jobs->save($job)) {
                 $this->Flash->success(__('The job has been saved.'));
-                return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
+                return $this->redirect(['controller' => 'Users', 'action' => 'view', $job->user_id]);
             } else {
                 $this->Flash->error(__('The job could not be saved. Please, try again.'));
-                return $this->redirect(['controller' => 'Users', 'action' => 'view', $this->Auth->user('id')]);
+                return $this->redirect(['controller' => 'Users', 'action' => 'view', $job->user_id]);
             }
         }
         $users = $this->Jobs->Users->find('list', ['limit' => 200]);

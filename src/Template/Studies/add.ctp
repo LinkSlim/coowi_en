@@ -11,13 +11,15 @@
     <fieldset>
         <legend><?= __('Add Study') ?></legend>
         <?php
-            echo $this->Form->input('user_id', ['options' => $users, 'empty' => true]);
+            echo $this->Form->hidden('user_id');
+            echo $this->Form->input('user_id', ['options' => $users, 'empty' => true, 'type' => 'hidden']);
             echo $this->Form->input('center');
             echo $this->Form->input('degree');
             echo $this->Form->input('start_date');
             echo $this->Form->input('ending_date', ['empty' => true]);
         ?>
     </fieldset>
+    <?= $this->Form->button(__('CANCEL'), array('type' => 'cancel', 'name' => 'cancel', 'formnovalidate')); ?>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>

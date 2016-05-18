@@ -180,12 +180,7 @@ class UsersController extends AppController
     }
     
     public function isAuthorized($user) {        
-        // All registered users can not add user
-//        if (($this->request->action === 'add') || ($this->request->action === 'index')) {
-//            return true;
-//        }
 
-        // The user can edit, delete or view his own info
         if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
             
             if ($this->passedArgs[0] == $user['id']) {

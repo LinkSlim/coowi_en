@@ -78,4 +78,8 @@ class StudiesTable extends Table
         $rules->add($rules->existsIn(['user_id'], 'Users'));
         return $rules;
     }
+    
+    public function isOwnedBy($studieId, $userId) { // Es para usar con el isAuthorized del tutorial del blog
+    	return $this->exists(['id' => $studieId, 'user_id' => $userId]);
+    }
 }

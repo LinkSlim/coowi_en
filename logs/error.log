@@ -12069,3 +12069,64 @@ Stack Trace:
 #23 {main}
 
 
+2016-05-18 14:50:49 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`coowien`.`studies`, CONSTRAINT `fk_studies` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+Request URL: /coowi_en/studies/add
+Referer URL: http://localhost/coowi_en/studies/add
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(App\Model\Entity\Study), Array)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Study), Object(ArrayObject))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#10 C:\xampp\htdocs\coowi_en\src\Controller\StudiesController.php(61): Cake\ORM\Table->save(Object(App\Model\Entity\Study))
+#11 [internal function]: App\Controller\StudiesController->add()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\StudiesController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-18 15:03:35 Error: Fatal Error (1): Call to a member function isOwnedBy() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\StudiesController.php, line 135]
+Request URL: /coowi_en/studies/edit/5
+Referer URL: http://localhost/coowi_en/users/view/8
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-18 15:03:36 Error: [Cake\Error\FatalErrorException] Call to a member function isOwnedBy() on boolean
+Request URL: /coowi_en/studies/edit/5
+Referer URL: http://localhost/coowi_en/users/view/8
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 135)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-18 15:05:13 Error: Fatal Error (1): Call to a member function isOwnedBy() on boolean in [C:\xampp\htdocs\coowi_en\src\Controller\StudiesController.php, line 135]
+Request URL: /coowi_en/studies/edit/5
+Referer URL: http://localhost/coowi_en/users/view/8
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-18 15:05:14 Error: [Cake\Error\FatalErrorException] Call to a member function isOwnedBy() on boolean
+Request URL: /coowi_en/studies/edit/5
+Referer URL: http://localhost/coowi_en/users/view/8
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 135)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

@@ -143,8 +143,7 @@
                 <td><?= h($studies->degree) ?></td>
                 <td><?= h($studies->start_date) ?></td>
                 <td><?= h($studies->ending_date) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Studies', 'action' => 'view', $studies->id]) ?>
+                <td class="actions">                    
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Studies', 'action' => 'edit', $studies->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'Studies', 'action' => 'delete', $studies->id], ['confirm' => __('Are you sure you want to delete # {0}?', $studies->id)]) ?>
                 </td>
