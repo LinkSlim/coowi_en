@@ -15,9 +15,9 @@ foreach ($ofertasDeItem as $ofertas) {
 //            echo '</tr>';
             if($cabecera){
                 echo '<tr>';
+                echo '<th></th>';
+                echo '<th>&nbsp</th>';
                 echo '<th><h5>'.__('Offers:').'</h5></th>';
-                echo '<th>&nbsp</th>';
-                echo '<th>&nbsp</th>';
                 echo '<th>' . __('Offer ID') . '</th>';
                 echo '<th>' . __('Ofertor') . '</th>';
                 echo '<th>' . __('Price') . '</th>';

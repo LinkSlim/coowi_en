@@ -6,9 +6,7 @@ use function Cake\ORM\isEmpty;
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Petition'), ['action' => 'edit', $petition->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Petition'), ['action' => 'delete', $petition->id], ['confirm' => __('Are you sure you want to delete # {0}?', $petition->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Petitions'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Petition'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>        
+        <li><?= $this->Html->link(__('New Petition'), ['action' => 'add']) ?> </li>               
         <li><?= $this->Html->link(__('New Item'), ['controller' => 'Items', 'action' => 'create', $petition->id]) ?> </li>        
     </ul>
 </nav>

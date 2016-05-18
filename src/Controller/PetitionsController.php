@@ -60,6 +60,10 @@ class PetitionsController extends AppController
             'contain' => ['Users', 'Items']
         ]);
         
+        if($petition->state == "contratada"){        	
+        	return $this->redirect(['action' => 'contract', $id]);
+        }
+        
         $this->set('petition', $petition);
         $this->set('_serialize', ['petition']);
         
@@ -124,11 +128,20 @@ class PetitionsController extends AppController
         $petition = $this->Petitions->get($id, [
             'contain' => []
         ]);
+        
+        if($petition->state == "contratada"){
+        	$this->Flash->error(__('The petition can not be edited because it is contracted.'));
+        	return $this->redirect(['action' => 'index']);
+        }
+        
+        
+        
+        
         if ($this->request->is(['patch', 'post', 'put'])) {
             $petition = $this->Petitions->patchEntity($petition, $this->request->data);
             if ($this->Petitions->save($petition)) {
                 $this->Flash->success(__('The petition has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'viewOffers', $id]);
             } else {
                 $this->Flash->error(__('The petition could not be saved. Please, try again.'));
             }
@@ -147,6 +160,16 @@ class PetitionsController extends AppController
      */
     public function delete($id = null)
     {
+    	
+    	$petition = $this->Petitions->get($id, [
+    			'contain' => []
+    	]);
+    	
+    	if($petition->state == "contratada"){
+        	$this->Flash->error(__('The petition can not be deleted because it is contracted.'));
+        	return $this->redirect(['action' => 'index']);
+        }
+    	
     	//Gracias al Delete Cascade en la base de datos, al borrar una peticion se borrara todo lo que este por debajo de esta
         $this->request->allowMethod(['post', 'delete']);
         $petition = $this->Petitions->get($id);
@@ -223,7 +246,7 @@ class PetitionsController extends AppController
         
         //TODO adaptar para hacer busqueda con varias tags
         //TODO adaptar para buscar peticiones que no son del usuario que busca
-        $query = $this->Petitions->find('all')->innerJoin(
+        $query = $this->Petitions->find('all')->innerJoin( //Buscamos peticiones con items que tienen asociado el tag escrito en el campo de busqueda, no contratadas, y las cuales no son del usuario que busca 
         		['Items' => 'items'],//nombre tabla con la que hace JOIN
         		[
         				'Petitions.id = Items.petition_id'	//Condiciones JOIN
@@ -236,7 +259,9 @@ class PetitionsController extends AppController
         						['Tags' => 'tags'],
         						[
         								'Items_tags.tag_id = Tags.id',	//Condiciones JOIN (se pueden poner varias separandolas por comas)
-        								'Tags.name LIKE '."'%$tags[0]%'"
+        								'Tags.name LIKE '."'%$tags[0]%'",
+        								'Petitions.state != "contratada"',
+        								'Petitions.user_id != '.$this->Auth->user('id')
         						]
         						);
         

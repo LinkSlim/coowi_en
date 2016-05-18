@@ -86,6 +86,11 @@ class ItemsController extends AppController
     			'contain' => ['Tags']
     	]);
     	
+    	if($item->state == "contratada"){
+    		$this->Flash->error(__('The item can not be edited because it is contracted.'));
+    		return $this->redirect(['controller' => 'Petitions', 'action' => 'view', $item->petition_id]);
+    	}
+    	
     	if(isset($_POST['cancel'])){
     		//El admin se redirige a la misma lista de item
     		if($_SESSION['Auth']['User']['rol_id'] == AppController::ADMIN){
@@ -130,6 +135,16 @@ class ItemsController extends AppController
      */
     public function delete($id = null)
     {
+    	
+    	$item = $this->Items->get($id, [
+    			'contain' => ['Tags']
+    	]);
+    	
+    	if($item->state == "contratada"){
+    		$this->Flash->error(__('The item can not be deleted because it is contracted.'));
+    		return $this->redirect(['controller' => 'Petitions', 'action' => 'view', $item->petition_id]);
+    	}
+    	
     	//Gracias al Delete Cascade en la base de datos, al borrar un item se borrara todo lo que este por debajo de este
         $this->request->allowMethod(['post', 'get', 'delete']);
         $item = $this->Items->get($id);
@@ -150,7 +165,7 @@ class ItemsController extends AppController
     }
     
     public function isAuthorized($user) {
-    	
+    	//Si un usuario no esta autorizado a algo en esta funcion, se redirigira a la pagina principal de localhost
     	if (in_array($this->request->params['action'], ['create'])) {
     		return true;
     	}
@@ -162,7 +177,7 @@ class ItemsController extends AppController
     	
 
 	    //Un item es accesible por el usuario dueño de la peticion que lo contiene y por el creador de dicho item
-        if (in_array($this->request->params['action'], ['edit', 'delete', 'view'])) {
+        if (in_array($this->request->params['action'], ['edit', 'delete'])) {
         	//Si es el creador del item
             if ($this->Items->isOwnedBy($itemId, $user['id'])) {
                 return true;

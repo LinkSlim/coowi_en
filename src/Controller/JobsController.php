@@ -125,24 +125,7 @@ class JobsController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
-    
-    
-//     public function beforeFilter(Event $event) {
-//     	parent::beforeFilter($event);
-    
-//     	if(!$this->Auth->user('rol_id')){ //Si no hay usuario logged no se puede hacer nada
-//     		$this->Auth->deny(['add','edit','view','delete','index']);
-//     	}
-//     	else{
-//     		if($this->Auth->user('rol_id') == AppController::ADMIN){ //Si el usuario logged tiene rol de 'Admin', puede hacer de todo
-//     			$this->Auth->allow(['index','add','edit','delete','view']);
-//     		}
-//     		else{ //Si el usuario logged no es 'Admin' no puede hacer add ni index, solo view, edit y delete de su usuario
-//     			$this->Auth->deny(['index']);
-//     			$this->Auth->allow(['add','edit','delete','view']);
-//     		}
-//     	}
-//     }
+      
     
     
     public function isAuthorized($user) {        

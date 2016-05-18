@@ -57,6 +57,17 @@ class OffersController extends AppController
      */
     public function add($item_id = null)
     {
+    	$this->loadModel("Items");
+    	$item = $this->Items->get($item_id, [
+    			'contain' => ['Tags']
+    	]);
+    	 
+    	if($item->user_id == $this->Auth->user('id')){ //Si la oferta que se quiere crear es sobre un item que pertenece al propio usuario lo rechaza 
+    		$this->Flash->error(__('You can not make an offer on your item.'));
+    		return $this->redirect(['controller' => 'Petitions', 'action' => 'look', $item->petition_id]);
+    	}
+    	
+    	
         $offer = $this->Offers->newEntity();
         if ($this->request->is('post')) {
             $offer = $this->Offers->patchEntity($offer, $this->request->data);
@@ -87,9 +98,17 @@ class OffersController extends AppController
      */
     public function edit($id = null)
     {
+    	
         $offer = $this->Offers->get($id, [
             'contain' => []
         ]);
+        
+        if($offer->state == "contratada"){
+        	$this->Flash->error(__('The offer can not be edited because it is contracted.'));
+        	return $this->redirect(['controller' => 'Users', 'action' => 'view', $offer->user_id]);
+        }
+        
+        
         if ($this->request->is(['patch', 'post', 'put'])) {
             $offer = $this->Offers->patchEntity($offer, $this->request->data);
             if ($this->Offers->save($offer)) {
@@ -113,6 +132,16 @@ class OffersController extends AppController
      */
     public function delete($id = null)
     {
+    	
+    	$offer = $this->Offers->get($id, [
+    			'contain' => []
+    	]);
+    	
+    	if($offer->state == "contratada"){
+    		$this->Flash->error(__('The offer can not be deleted because it is contracted.'));
+    		return $this->redirect(['controller' => 'Users', 'action' => 'view', $offer->user_id]);
+    	}
+    	
         $this->request->allowMethod(['post', 'delete']);
         $offer = $this->Offers->get($id);
         if ($this->Offers->delete($offer)) {
@@ -173,7 +202,7 @@ class OffersController extends AppController
     
     	// The owner of an offer can view, edit and delete it
     	if (in_array($this->request->action, ['edit', 'delete', 'view', 'viewOffers'])) {
-    		$petitionId = (int) $this->request->params['pass'][0];
+    		$offerId = (int) $this->request->params['pass'][0];
     		if ($this->Offers->isOwnedBy($offerId, $user['id'])) {
     			return true;
     		}
