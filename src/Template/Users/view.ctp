@@ -36,7 +36,10 @@
         	   }?> 
     </ul>
 </nav>
+
+
 <div class="users view large-9 medium-8 columns content">
+<?php if($_SESSION['Auth']['User']['id'] == $user->id){  //Si el perfil del propio usuario se mostraran las cosas relacionadas?>
     <h3><?= h($user->name) ?></h3>
     <table class="vertical-table">
         <tr>
@@ -92,6 +95,8 @@
             <td><?= h($user->date) ?></td>
         </tr>
     </table>
+    
+        
     <div class="related">
         <h4><?= __('Related Jobs') ?></h4>
         <?php if (!empty($user->jobs)): ?>
@@ -183,15 +188,74 @@
                 <td><?= h($petitions->photo) ?></td>
                 <td><?= h($petitions->state) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Petitions', 'action' => 'view', $petitions->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Petitions', 'action' => 'edit', $petitions->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Petitions', 'action' => 'delete', $petitions->id], ['confirm' => __('Are you sure you want to delete # {0}?', $petitions->id)]) ?>
+                    <?= $petitions->state=="contratada" ? $this->Html->link(__('View'), ['controller' => 'Petitions', 'action' => 'contract', $petitions->id]) : $this->Html->link(__('View'), ['controller' => 'Petitions', 'action' => 'viewOffers', $petitions->id]) ?>
+                    <?php 
+                    	if($petitions->state != "contratada"){
+                    		echo $this->Html->link(__('Edit'), ['controller' => 'Petitions', 'action' => 'edit', $petitions->id]);
+                    		echo " ";
+                    		echo $this->Form->postLink(__('Delete'), ['controller' => 'Petitions', 'action' => 'delete', $petitions->id], ['confirm' => __('Are you sure you want to delete # {0}?', $petitions->id)]);
+                    	}
+                    ?>
                 </td>
             </tr>
             <?php endforeach; ?>
         </table>
         <?php endif; ?>
     </div>
+    <?php } 
+    else {?>
     
+        <h3><?= h($user->name) ?></h3>
+    <table class="vertical-table">
+        <tr>
+            <th><?= __('Role') ?></th>
+            <td><?= h($user->role->rol)//$user->has('role') ? $this->Html->link($user->role->rol, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Nif') ?></th>
+            <td><?= h($user->nif) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Email') ?></th>
+            <td><?= h($user->email) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Name') ?></th>
+            <td><?= h($user->name) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Subname') ?></th>
+            <td><?= h($user->subname) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Phone') ?></th>
+            <td><?= h($user->phone) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Location') ?></th>
+            <td><?= h($user->location) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Postal Code') ?></th>
+            <td><?= h($user->postal_code) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Photo') ?></th>
+            <td><?= h($user->photo) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('State') ?></th>
+            <td><?= h($user->state) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Id') ?></th>
+            <td><?= $this->Number->format($user->id) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Creation date') ?></th>
+            <td><?= h($user->date) ?></td>
+        </tr>
+    </table>    
+    <?php }?>
 </div>
 

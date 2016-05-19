@@ -187,7 +187,10 @@ class UsersController extends AppController
                 return true;
             }
             $this->loadModel("Rates");
-            if ($this->Rates->isOwnedBy($user['id'], $this->passedArgs[0])) {
+            $argumento = $this->passedArgs[0];
+            $idd = $user['id'];
+            $entra = $this->Rates->isOwnedBy($idd, $argumento);
+            if ($entra) {
             	return true;
             }
         }
