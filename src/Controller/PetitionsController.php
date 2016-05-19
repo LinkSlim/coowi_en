@@ -102,7 +102,7 @@ class PetitionsController extends AppController
             $petition->state = "activada";
             if ($this->Petitions->save($petition)) {
                 $this->Flash->success(__('The petition has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'viewOffers', $petition->id]);
             } else {
                 $this->Flash->error(__('The petition could not be saved. Please, try again.'));
             }
@@ -191,7 +191,7 @@ class PetitionsController extends AppController
         }
 
         // The owner of an petition can view, edit and delete it
-        if (in_array($this->request->action, ['edit', 'delete', 'view', 'viewOffers'])) {
+        if (in_array($this->request->action, ['edit', 'delete', 'viewOffers'])) {
         	        
         	//Pequeño Parche (Mejorar el paso de parametros, en algunos sitios se hace de una forma y en otros de otra)
         	if(!empty($this->request->params['pass'])){
@@ -359,7 +359,7 @@ class PetitionsController extends AppController
     		$this->set('_serialize', ['petition']);
     		 
     		$idOfertas = $_REQUEST['idsOfertas']; //Los datos tambien pueden ser enviados por la variable de sesion, puede ser mas recomendable, por GET no es muy seguro
-    		$offers = $this->getOffersUsingIdsWithExtraInfo($idOfertas);
+    		$offers = $this->getOfertasContratadas($idOfertas);
     		$this->set('offers', $offers);
     		$this->set('_serialize', ['offers']);
     	}

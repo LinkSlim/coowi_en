@@ -49,7 +49,7 @@ class UsersController extends AppController
     	
         $user = $this->Users->get($id, [
             'contain' => ['Roles', 'Jobs', 'Petitions', 'Studies']
-        ]);
+        ]);        
 
         $this->set('user', $user);
         $this->set('_serialize', ['user']);

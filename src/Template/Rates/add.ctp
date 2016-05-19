@@ -11,7 +11,7 @@
     <fieldset>
         <legend><?= __('Add Rate') ?></legend>
         <?php
-            echo $this->Form->input('user1_id');
+			echo $this->Form->input('user1_id');
             echo $this->Form->input('user2_id', ['options' => $users]);
             echo $this->Form->input('comment');
             echo $this->Form->input('rate');

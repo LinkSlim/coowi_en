@@ -30,7 +30,7 @@
 				        <li><?= $this->Html->link(__('New Petition'), ['controller' => 'Petitions', 'action' => 'add']) ?> </li>			        			                		
 			<?php 	}
 					else{?>
-						<li><?= $this->Html->link(__('New Rate'), ['controller' => 'Rates', 'action' => 'add']) ?></li>
+ 						<li></li> <!--$this->Html->link(__('New Rate'), ['controller' => 'Rates', 'action' => 'edit', $user->id]) -->
 				<?php		
 					}
         	   }?> 

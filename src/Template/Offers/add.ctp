@@ -16,6 +16,7 @@
             echo $this->Form->input('comment');            
         ?>
     </fieldset>
+    <?= $this->Form->button(__('CANCEL'), array('type' => 'cancel', 'name' => 'cancel', 'formnovalidate')); ?>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>

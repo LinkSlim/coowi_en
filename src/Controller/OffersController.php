@@ -57,10 +57,16 @@ class OffersController extends AppController
      */
     public function add($item_id = null)
     {
+    	
     	$this->loadModel("Items");
     	$item = $this->Items->get($item_id, [
     			'contain' => ['Tags']
     	]);
+    	
+    	if(isset($_POST['cancel'])){
+    		return $this->redirect(['controller' => 'Petitions', 'action' => 'look', $item->petition_id]);
+    	}
+    	
     	 
     	if($item->user_id == $this->Auth->user('id')){ //Si la oferta que se quiere crear es sobre un item que pertenece al propio usuario lo rechaza 
     		$this->Flash->error(__('You can not make an offer on your item.'));
