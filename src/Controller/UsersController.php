@@ -57,7 +57,12 @@ class UsersController extends AppController
     		return $this->redirect(['action' => 'view', $this->Auth->user('id')]);
     	}
         
-        $user->averageRate = $this->calcAverageRate($user->rates);
+    	$this->loadModel("Rates");
+    	if ((!$this->Rates->isOwnedBy($this->Auth->user('id'), $id)) && ($this->Auth->user('id')!=$id)) {
+    		$user->phone = "You not have a contract with this user";
+    		$user->email = "You not have a contract with this user";
+    	}
+        $user->averageRate = $this->calcAverageRate($user->rates);        
 
         $this->set('user', $user);
         $this->set('_serialize', ['user']);
@@ -199,11 +204,9 @@ class UsersController extends AppController
             if ($this->passedArgs[0] == $user['id']) {
                 return true;
             }
+            
             $this->loadModel("Rates");
-            $argumento = $this->passedArgs[0];
-            $idd = $user['id'];
-            $entra = $this->Rates->isOwnedBy($idd, $argumento);
-            if ($entra) {
+            if ($this->Rates->isOwnedBy($user['id'], $this->passedArgs[0])) {
             	return true;
             }
         }
