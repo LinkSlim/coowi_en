@@ -63,7 +63,7 @@
                 </tr>
                 <?php foreach ($offers as $offer): ?>
                     <tr>
-                        <td><b><?= h($offer->item_id) ?></b></td>
+                        <td><b><?= h($offer->nombreItem) ?></b></td>
                         <td><b><?= h($offer->price) ?>&#8364;</b></td>
                         <td><b><?= $this->Html->link($offer->propietario, ['controller' => 'Users', 'action' => 'view', $offer->user_id])." - ".$offer->telefono ?></b></td>
                     </tr>                                            

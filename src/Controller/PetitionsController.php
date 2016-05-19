@@ -531,6 +531,7 @@ class PetitionsController extends AppController
     				]);
     				$oferta->propietario = $oferta2->user->name;
     				$oferta->telefono = $oferta2->user->phone;
+    				$oferta->nombreItem = $item->name;
     				array_push($arrayOfertas, $oferta);
     			}    			
     		}

@@ -42,6 +42,10 @@
 <?php if($_SESSION['Auth']['User']['id'] == $user->id){  //Si el perfil del propio usuario se mostraran las cosas relacionadas?>
     <h3><?= h($user->name) ?></h3>
     <table class="vertical-table">
+    	<tr>
+            <th><?= __('Id') ?></th>
+            <td><?= $this->Number->format($user->id) ?></td>
+        </tr>
         <tr>
             <th><?= __('Role') ?></th>
             <td><?= h($user->role->rol)//$user->has('role') ? $this->Html->link($user->role->rol, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
@@ -49,11 +53,7 @@
         <tr>
             <th><?= __('Nif') ?></th>
             <td><?= h($user->nif) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Email') ?></th>
-            <td><?= h($user->email) ?></td>
-        </tr>
+        </tr>        
         <tr>
             <th><?= __('Password') ?></th>
             <td><?= h($user->password) ?></td>
@@ -71,6 +71,10 @@
             <td><?= h($user->phone) ?></td>
         </tr>
         <tr>
+            <th><?= __('Email') ?></th>
+            <td><?= h($user->email) ?></td>
+        </tr>
+        <tr>
             <th><?= __('Location') ?></th>
             <td><?= h($user->location) ?></td>
         </tr>
@@ -85,14 +89,14 @@
         <tr>
             <th><?= __('State') ?></th>
             <td><?= h($user->state) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Id') ?></th>
-            <td><?= $this->Number->format($user->id) ?></td>
-        </tr>
+        </tr>        
         <tr>
             <th><?= __('Creation date') ?></th>
             <td><?= h($user->date) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Average rate') ?></th>
+            <td><?= h($user->averageRate) ?></td>
         </tr>
     </table>
     
@@ -207,6 +211,10 @@
     
         <h3><?= h($user->name) ?></h3>
     <table class="vertical-table">
+    	<tr>
+            <th><?= __('Id') ?></th>
+            <td><?= $this->Number->format($user->id) ?></td>
+        </tr>
         <tr>
             <th><?= __('Role') ?></th>
             <td><?= h($user->role->rol)//$user->has('role') ? $this->Html->link($user->role->rol, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
@@ -214,11 +222,7 @@
         <tr>
             <th><?= __('Nif') ?></th>
             <td><?= h($user->nif) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Email') ?></th>
-            <td><?= h($user->email) ?></td>
-        </tr>
+        </tr>        
         <tr>
             <th><?= __('Name') ?></th>
             <td><?= h($user->name) ?></td>
@@ -230,6 +234,10 @@
         <tr>
             <th><?= __('Phone') ?></th>
             <td><?= h($user->phone) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Email') ?></th>
+            <td><?= h($user->email) ?></td>
         </tr>
         <tr>
             <th><?= __('Location') ?></th>
@@ -246,14 +254,14 @@
         <tr>
             <th><?= __('State') ?></th>
             <td><?= h($user->state) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Id') ?></th>
-            <td><?= $this->Number->format($user->id) ?></td>
-        </tr>
+        </tr>        
         <tr>
             <th><?= __('Creation date') ?></th>
             <td><?= h($user->date) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Average Rate') ?></th>
+            <td><?= h($user->averageRate) ?></td>
         </tr>
     </table>    
     <?php }?>

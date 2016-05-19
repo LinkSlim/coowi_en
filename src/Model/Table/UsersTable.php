@@ -48,6 +48,10 @@ class UsersTable extends Table
             'foreignKey' => 'user_id',
         	'cascadeCallbacks' => true
         ]);
+        $this->hasMany('Rates', [
+        		'foreignKey' => 'user2_id',
+        		'cascadeCallbacks' => true
+        ]);
     }
 
     /**

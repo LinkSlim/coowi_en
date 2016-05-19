@@ -6,6 +6,7 @@ use Cake\I18n\Time;
 use Cake\Event\Event;
 use Cake\I18n\Date;
 use Cake\Core\Exception;
+use Cake\Datasource\Exception\RecordNotFoundException;
 
 
 /**
@@ -47,9 +48,16 @@ class UsersController extends AppController
     public function view($id = null)
     {
     	
-        $user = $this->Users->get($id, [
-            'contain' => ['Roles', 'Jobs', 'Petitions', 'Studies']
-        ]);        
+    	try{
+	        $user = $this->Users->get($id, [
+	            'contain' => ['Roles', 'Jobs', 'Petitions', 'Studies', 'Rates']
+	        ]); 
+    	}catch(RecordNotFoundException $e){
+    		$this->Flash->error(__('The user not exist.'));
+    		return $this->redirect(['action' => 'view', $this->Auth->user('id')]);
+    	}
+        
+        $user->averageRate = $this->calcAverageRate($user->rates);
 
         $this->set('user', $user);
         $this->set('_serialize', ['user']);
@@ -183,6 +191,11 @@ class UsersController extends AppController
 
         if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
             
+        	if($this->request->action == 'view'){ //Todos los usuarios pueden ver el perfil de otros
+        		return true;
+        	}
+        	
+        	
             if ($this->passedArgs[0] == $user['id']) {
                 return true;
             }
@@ -196,6 +209,18 @@ class UsersController extends AppController
         }
         
         return parent::isAuthorized($user);
+    }
+    
+    private function calcAverageRate($rates){
+    	if(empty($rates)){
+    		return "Not rated";
+    	}
+    	
+    	$total = 0;
+    	foreach ($rates as $r){
+    		$total += $r->rate; 
+    	}
+    	return round($total/sizeof($rates), 2)." / 10";
     }
 
 }
