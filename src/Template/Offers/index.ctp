@@ -47,4 +47,8 @@
         </ul>
         <p><?= $this->Paginator->counter() ?></p>
     </div>
+        <?php if(empty($offer)) { 
+    		echo '<h4>You have not done offers. You can search petitions and make your offers</h4>';
+    	  }    	  
+		?>
 </div>

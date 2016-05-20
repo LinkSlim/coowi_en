@@ -54,8 +54,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             
             <ul class="right">
                 <?php echo $this->element('../Element/search');?>
-                <li><a target="_self" href="http://localhost/coowi_en/offers/">Mis Presupuestos</a></li>
-                <li><a target="_self" href="http://localhost/coowi_en/petitions/">Mis Peticiones</a></li>                
+                <li><a target="_self" href="http://localhost/coowi_en/offers/">My Offers</a></li>
+                <li><a target="_self" href="http://localhost/coowi_en/petitions/">My Petitons</a></li>                
                 <li><a target="_self" href="http://localhost/coowi_en/users/view/<?= $this->request->session()->read('Auth.User.id') ?>"><?= $this->request->session()->read('Auth.User.name');?></a></li>                
                 <li><a target="_self" href="http://localhost/coowi_en/users/logout">Logout</a></li>                
             </ul>

@@ -38,6 +38,10 @@ class RatesTable extends Table
             'foreignKey' => 'user2_id',
             'joinType' => 'INNER'
         ]);
+        $this->belongsTo('Offers', [
+        		'foreignKey' => 'offer_id',
+        		'joinType' => 'INNER'
+        ]);
     }
 
     /**
