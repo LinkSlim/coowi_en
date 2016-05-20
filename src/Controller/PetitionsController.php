@@ -246,6 +246,11 @@ class PetitionsController extends AppController
         
         //TODO adaptar para hacer busqueda con varias tags
         //TODO adaptar para buscar peticiones que no son del usuario que busca
+        if($tag == null){
+        	$tags = array();
+        	$tags[0] = "";
+        }
+        
         $query = $this->Petitions->find('all')->innerJoin( //Buscamos peticiones con items que tienen asociado el tag escrito en el campo de busqueda, no contratadas, y las cuales no son del usuario que busca 
         		['Items' => 'items'],//nombre tabla con la que hace JOIN
         		[

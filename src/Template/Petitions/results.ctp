@@ -42,4 +42,8 @@
         </ul>
         <p><?= $this->Paginator->counter() ?></p>
     </div>
+    <?php if(empty($peti)) { 
+    		echo '<h4>No petitions found</h4>';
+    	  }    	  
+		?>
 </div>

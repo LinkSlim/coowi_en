@@ -200,14 +200,23 @@ class ItemsController extends AppController
     	$item = $this->Items->newEntity();
     	
     	if ($this->request->is('post')) {
-    		$item = $this->Items->patchEntity($item, $this->request->data);
+    		
+    		
+    		//$item = $this->Items->patchEntity($item, $this->request->data);
+    		//$item->petition_id = $this->request->data->petition_id;
+    		$item->name = $this->request->data['name'];
+    		$item->description = $this->request->data['description'];
+    		$tags = $this->request->data['tags'];    		
     		$item->state = "activada";
     		$item->date = date("Y-m-d");
-    		$item->accessible('user_id', true);
+    		//$item->accessible('user_id', true);
     		$item->user_id = $_SESSION['Auth']['User']['id'];
     		$item->petition_id = $idPetition;
-    		
+    		    		
     		if ($this->Items->save($item)) {
+    			
+    			$this->saveTagsOfItem($tags, $item->id);    			
+    			
     			$this->Flash->success(__('The item has been saved.'));
     			return $this->redirect(['controller' => 'Petitions', 'action' => 'view-offers', 'petition_id' => $idPetition]);
     		} else {
@@ -221,6 +230,34 @@ class ItemsController extends AppController
     	$tags = $this->Items->Tags->find('list', ['limit' => 200]);
     	$this->set(compact('item', 'petitions', 'tags'));
     	$this->set('_serialize', ['item']);
+    }
+    
+    
+    private function saveTagsOfItem($tags, $idItem){
+    	
+    	$this->loadModel("Tags");
+    	$this->loadModel("ItemsTags");
+    	
+    	$tagsArray = array();
+    	$tagsArray = explode(" ", $tags);    	
+    	
+    	foreach($tagsArray as $tag){
+    		
+    		//TODO Si el el tag no existe, lo añade e inserto itemTag
+    		//TODO Si el el tag existe, cojo su id e inserto itemTag
+    		$tagEntity = $this->Tags->newEntity();
+    		$tagEntity->name = $tag;
+    		$tagEntity->date = date("Y-m-d");
+    		$tagEntity->state = "activada";
+    		$this->Tags->save($tagEntity);    		
+    		
+    		$itemTag = $this->ItemsTags->newEntity();
+    		$itemTag->item_id = $idItem;
+    		$itemTag->tag_id = $tagEntity->id;    		
+    		$this->ItemsTags->save($itemTag);
+    		
+    	}    	
+    	
     }
     
 }

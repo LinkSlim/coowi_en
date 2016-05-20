@@ -16,11 +16,13 @@
         <legend><?= __('Add Item') ?></legend>
         <?php
             echo $this->Form->input('petition_id', ['options' => $petitions, 'readonly' => TRUE]);
-            echo $this->Form->input('name');
+            echo $this->Form->input('name', ['placeholder' => 'Type a name for your item']);
 			//echo $this->Form->input('date', ['readonly' => TRUE]);
-            echo $this->Form->input('description');
+            echo $this->Form->input('description', ['placeholder' => 'You can give more details about your item']);
+            echo $this->Form->label('Tags');
+            echo $this->Form->text('tags', ['placeholder' => 'Add tags']);
             echo $this->Form->input('state', ['value' => "activada", 'disabled' => TRUE, 'readonly' => TRUE]);
-			echo $this->Form->input('tags._ids', ['options' => $tags]);            
+			//echo $this->Form->input('tags._ids', ['options' => $tags]);            
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
