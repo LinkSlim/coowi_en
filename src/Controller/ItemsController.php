@@ -242,19 +242,28 @@ class ItemsController extends AppController
     	$tagsArray = explode(" ", $tags);    	
     	
     	foreach($tagsArray as $tag){
-    		
-    		//TODO Si el el tag no existe, lo añade e inserto itemTag
-    		//TODO Si el el tag existe, cojo su id e inserto itemTag
-    		$tagEntity = $this->Tags->newEntity();
-    		$tagEntity->name = $tag;
-    		$tagEntity->date = date("Y-m-d");
-    		$tagEntity->state = "activada";
-    		$this->Tags->save($tagEntity);    		
+    		//Para cada tag
+			//Si el tag no existe en la BBDD lo crea. Si existe lo busca, coge su id e inserta la relacion itemTag 
+    		if(!$this->Tags->exists(['name' => $tag])){
+    			$tagEntity = $this->Tags->newEntity();
+    			$tagEntity->name = $tag;
+    			$tagEntity->date = date("Y-m-d");
+    			$tagEntity->state = "activada";
+    			$this->Tags->save($tagEntity); 
+    			$idTag = $tagEntity->id;
+    		}
+    		else{
+    			$tagQuery = $this->Tags->find('all', ['conditions' => ['name' => $tag]]);
+    			foreach ($tagQuery as $tq){
+    				$idTag = $tq->id;
+    			}    			
+    		}
     		
     		$itemTag = $this->ItemsTags->newEntity();
     		$itemTag->item_id = $idItem;
-    		$itemTag->tag_id = $tagEntity->id;    		
+    		$itemTag->tag_id = $idTag;
     		$this->ItemsTags->save($itemTag);
+    		
     		
     	}    	
     	

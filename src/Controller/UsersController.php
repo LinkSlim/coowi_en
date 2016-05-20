@@ -161,8 +161,10 @@ class UsersController extends AppController
 //             	$this->logout();
 //             }
             if ($user) {
-                $this->Auth->setUser($user);
-                return $this->redirect(['controller' => 'petitions', 'action' => 'index']);
+            	if($user['state'] == "activado"){
+            		$this->Auth->setUser($user);
+            		return $this->redirect(['controller' => 'petitions', 'action' => 'index']);
+            	}                
             }
             
             //Si el usuario no es identificado

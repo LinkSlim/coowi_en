@@ -22,12 +22,6 @@
                 <th><?= $this->Paginator->sort('name') ?></th>
                 <th><?= $this->Paginator->sort('subname') ?></th>
                 <th><?= $this->Paginator->sort('nif') ?></th>
-                <th><?= $this->Paginator->sort('email') ?></th>
-                <th><?= $this->Paginator->sort('password') ?></th>                
-                <th><?= $this->Paginator->sort('phone') ?></th>
-                <th><?= $this->Paginator->sort('location') ?></th>
-                <th><?= $this->Paginator->sort('postal_code') ?></th>
-                <th><?= $this->Paginator->sort('photo') ?></th>
                 <th><?= $this->Paginator->sort('date') ?></th>
                 <th><?= $this->Paginator->sort('state') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
@@ -38,15 +32,10 @@
             <tr>
                 <td><?= $this->Number->format($user->id) ?></td>
                 <td><?= $user->has('role') ? $this->Html->link($user->role->rol, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
-                <td><?= h($user->nif) ?></td>
-                <td><?= h($user->email) ?></td>
-                <td><?= h($user->password) ?></td>
+                
                 <td><?= h($user->name) ?></td>
                 <td><?= h($user->subname) ?></td>
-                <td><?= h($user->phone) ?></td>
-                <td><?= h($user->location) ?></td>
-                <td><?= h($user->postal_code) ?></td>
-                <td><?= h($user->photo) ?></td>
+                <td><?= h($user->nif) ?></td>
                 <td><?= h($user->date) ?></td>
                 <td><?= h($user->state) ?></td>
                 <td class="actions">
