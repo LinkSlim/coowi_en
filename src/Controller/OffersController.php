@@ -19,15 +19,16 @@ class OffersController extends AppController
     public function index()
     {
     	// In a controller or table method.
-    	$query = $this->Offers->find('all')->contain(['Users']);
-    	foreach ($query as $o) {
+    	$offers = $this->Offers->find('all', ['conditions' => ['Offers.user_id' => $this->Auth->user('id')]])->contain(['Users', 'Items']);
+    	
+    	foreach ($offers as $o) {
     		echo $o->user->username;
     	}
     	
         $this->paginate = [
-            'contain' => ['Items']
+            'contain' => ['Users', 'Items']
         ];
-        $offers = $this->paginate($this->Offers);
+        $offers = $this->paginate($offers);
 
         $this->set(compact('offers'));
         $this->set('_serialize', ['offers']);
@@ -145,6 +146,12 @@ class OffersController extends AppController
     	
     	if($offer->state == "contratada"){
     		$this->Flash->error(__('The offer can not be deleted because it is contracted.'));
+    		return $this->redirect(['controller' => 'Offers', 'action' => 'index']);
+    	}
+    	
+    	
+    	if($offer->state == "contratada"){
+    		$this->Flash->error(__('The offer can not be deleted because it is contracted.'));
     		return $this->redirect(['controller' => 'Users', 'action' => 'view', $offer->user_id]);
     	}
     	
@@ -175,6 +182,26 @@ class OffersController extends AppController
     	$this->set('_serialize', ['offers']);
     }
     
+    
+    public function isAuthorized($user) {
+    
+    	// All registered users can add, index and search petitions
+    	if (($this->request->action === 'add') || ($this->request->action === 'index') || ($this->request->action === 'searchPetitions') || ($this->request->action === 'contract')) {
+    		return true;
+    	}
+    
+    	// The owner of an offer can view, edit and delete it
+    	if (in_array($this->request->action, ['delete', 'view', 'viewOffers'])) {
+    		$offerId = (int) $this->request->params['pass'][0];
+    		if ($this->Offers->isOwnedBy($offerId, $user['id'])) {
+    			return true;
+    		}
+    	}
+    
+    	return parent::isAuthorized($user);
+    }
+    
+    
     private function getOffer($id = null){
     	return $this->Offers->get($id);
     	//return true;
@@ -199,23 +226,7 @@ class OffersController extends AppController
     
     
     
-    public function isAuthorized($user) {
-    
-    	// All registered users can add, index and search petitions
-    	if (($this->request->action === 'add') || ($this->request->action === 'index') || ($this->request->action === 'searchPetitions') || ($this->request->action === 'contract')) {
-    		return true;
-    	}
-    
-    	// The owner of an offer can view, edit and delete it
-    	if (in_array($this->request->action, ['edit', 'delete', 'view', 'viewOffers'])) {
-    		$offerId = (int) $this->request->params['pass'][0];
-    		if ($this->Offers->isOwnedBy($offerId, $user['id'])) {
-    			return true;
-    		}
-    	}
-    
-    	return parent::isAuthorized($user);
-    }
+
     
     
     
