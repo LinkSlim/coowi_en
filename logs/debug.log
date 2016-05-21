@@ -15316,3 +15316,45 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2016-05-21 16:43:48 Notice: Notice (8): Undefined variable: arrayOfertas in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 553]
+Request URL: /coowi_en/petitions/contract/1
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\PetitionsController::getOfertasContratadas() - APP/Controller\PetitionsController.php, line 553
+App\Controller\PetitionsController::contract() - APP/Controller\PetitionsController.php, line 380
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 16:45:19 Notice: Notice (8): Undefined variable: arrayOfertas in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 553]
+Request URL: /coowi_en/petitions/contract/1
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\PetitionsController::getOfertasContratadas() - APP/Controller\PetitionsController.php, line 553
+App\Controller\PetitionsController::contract() - APP/Controller\PetitionsController.php, line 380
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 16:46:00 Notice: Notice (8): Undefined variable: arrayOfertas in [C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php, line 553]
+Request URL: /coowi_en/petitions/contract/1
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\PetitionsController::getOfertasContratadas() - APP/Controller\PetitionsController.php, line 553
+App\Controller\PetitionsController::contract() - APP/Controller\PetitionsController.php, line 380
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+

@@ -207,7 +207,7 @@ class ItemsController extends AppController
     	
 
 	    //Un item es accesible por el usuario dueño de la peticion que lo contiene y por el creador de dicho item
-        if (in_array($this->request->params['action'], ['edit', 'delete'])) {
+        if (in_array($this->request->params['action'], ['view', 'edit', 'delete'])) {
         	//Si es el creador del item
             if ($this->Items->isOwnedBy($itemId, $user['id'])) {
                 return true;

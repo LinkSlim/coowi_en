@@ -340,13 +340,7 @@ class PetitionsController extends AppController
     		array_push($array_query_ofertas, $this->Offers->find('all', ['conditions' => ['Offers.item_id' => $item->id]])->contain(['Users']));
     	}
    
-    	$data = array(
-    			//'color' => 'pink',
-    			//'type' => 'sugar',
-    			//'base_price' => 23.95,
-    			//'hay' => true,
-    			'ofertasDeItem' => $array_query_ofertas//->count()
-    	);
+    	$data = array('ofertasDeItem' => $array_query_ofertas);
     	$this->set($data);    
     	
     	//Si los items de la peticion no tienen ofertas
@@ -358,30 +352,31 @@ class PetitionsController extends AppController
     	//     	$offer = $this->Offers->get($id, [
     	//     			'contain' => []
     	//     	]);
-    	if($id==null){
+    	if($id==null){ //$id==null Cuando viene de la pantalla de contratacion
     		$petition = $this->Petitions->get($_REQUEST['idPeticion'], [
     				'contain' => ['Users', 'Items']
     		]);
     		$this->set('petition', $petition);
     		$this->set('_serialize', ['petition']);
     		 
-    		$idOfertas = $_REQUEST['idsOfertas']; //Los datos tambien pueden ser enviados por la variable de sesion, puede ser mas recomendable, por GET no es muy seguro
+    		$idOfertas = $_REQUEST['idsOfertas']; //Los datos tambien pueden ser enviados por la variable de sesion, puede ser mas recomendable, por GET no es muy seguro    		
     		$offers = $this->getOfertasContratadas($idOfertas);
     		$this->set('offers', $offers);
     		$this->set('_serialize', ['offers']);
     	}
-    	else{
+    	else{ // $id!=null Cuando el usuario pulsa view para ver la toda la info de una peticion ya contratada
     		$petition = $this->Petitions->get($id, [
     				'contain' => ['Users', 'Items']
     		]);
-    		$arrayConIdsDeOfertas = array();
+    		$arrayConIdsDeItemsContratados = array();
     		foreach($petition->items as $item){ 
     			if($item->state == "contratada"){
-    				array_push($arrayConIdsDeOfertas, $item->id);
-    			}
-    			
+    				array_push($arrayConIdsDeItemsContratados, $item->id);
+    			}    			
     		}    		
-    		$offers = $this->getOfertasContratadas($arrayConIdsDeOfertas);
+    		
+    		$arrayConIdsDeOfertasContratadas = $this->getArrayConIdsDeOfertasContratadas($arrayConIdsDeItemsContratados);
+    		$offers = $this->getOfertasContratadas($arrayConIdsDeOfertasContratadas);
     		$this->set('offers', $offers);
     		$this->set('petition', $petition);
     		$this->set('_serialize', ['petition']);
@@ -460,7 +455,7 @@ class PetitionsController extends AppController
     			return false;
     		}    		
     	}    	
-    	$this->grabaRelacionUsuarios($oferta->user_id);
+    	$this->grabaRelacionUsuarios($oferta);
     	return true;
     }
     
@@ -521,38 +516,15 @@ class PetitionsController extends AppController
     	return $arrayConIdsDeOfertas;
     }
     
-    private function getOfertasContratadas($arrayConIdsDeItemsContratados){
-    	
-    	$this->loadModel("Items");
-    	$this->loadModel("Offers");
-    	foreach($arrayConIdsDeItemsContratados as $idItem){
-    		$item = $this->Items->get($idItem, [ //Recupero un item con sus ofertas
-    				'contain' => ['Offers']
-    		]);
-    		
-    		$arrayOfertas = array();
-    		foreach($item->offers as $oferta){ //Para cada oferta
-    			if($oferta->state == "contratada"){
-    				$oferta2 = $this->Offers->get($oferta->id, [ // Recupero info del usuario propietario de la oferta
-    						'contain' => ['Users']
-    				]);
-    				$oferta->propietario = $oferta2->user->name;
-    				$oferta->telefono = $oferta2->user->phone;
-    				$oferta->nombreItem = $item->name;
-    				array_push($arrayOfertas, $oferta);
-    			}    			
-    		}
-    	}
-    	
-    	return $arrayOfertas;    	
-    }
+
     
-    private function grabaRelacionUsuarios($idUsuarioOfertor){
+    private function grabaRelacionUsuarios($oferta){
     	
     	$this->loadModel("Rates");
     	$rates = $this->Rates->newEntity();
     	$rates->user1_id = $this->Auth->user('id');
-    	$rates->user2_id = $idUsuarioOfertor;
+    	$rates->user2_id = $oferta->user_id;
+    	$rates->offer_id = $oferta->id;
     	$rates->comment = "";
     	$rates->rate = 0.0;
     	$rates->date = date("Y-m-d");
@@ -563,6 +535,39 @@ class PetitionsController extends AppController
     	}
     	
     	return true;
+    }
+    
+    
+    private function getOfertasContratadas($arrayIdOfertasContratadas){    	     
+    	$this->loadModel("Offers");
+    	$arrayOfertas = array();
+    	foreach($arrayIdOfertasContratadas as $idOferta){
+    		$oferta = $this->Offers->get($idOferta, [ //Recupero un oferta con el item al que pertence
+    				'contain' => ['Items', 'Users']
+    		]);    
+    		array_push($arrayOfertas, $oferta);
+    	}    	 
+    	return $arrayOfertas;
+    }
+    
+    
+    private function getArrayConIdsDeOfertasContratadas($arrayConIdsDeItemsContratados){
+    	
+    	$this->loadModel("Items");
+    	$arrayIdOfertasContratadas = array();
+    	
+    	foreach($arrayConIdsDeItemsContratados as $idItem){
+    		$item = $this->Items->get($idItem, [ //Recupero un oferta con el item al que pertence
+    				'contain' => ['Offers']
+    		]);
+    		
+    		foreach ($item->offers as $oferta){
+    			if($oferta->state == "contratada"){
+    				array_push($arrayIdOfertasContratadas, $oferta->id);
+    			}    			
+    		}    	
+    	}
+    	return $arrayIdOfertasContratadas;
     }
     
 }
