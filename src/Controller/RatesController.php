@@ -99,8 +99,9 @@ class RatesController extends AppController
     		return $this->redirect(['controller' => 'Petitions', 'action' => 'index']);
     	}
     	
-    	if ($this->request->is(['patch', 'post', 'put'])) {
-	    	$rates = $this->Rates->find('list', ['conditions' => ['user1_id' => $this->Auth->user('id'), 'user2_id' => $id, 'rate' => '0.0']]);    	
+    	
+    	if ($this->request->is(['patch', 'post', 'put'])) { // Si se va a evaluar por primera vez
+	    	$rates = $this->Rates->find('list', ['conditions' => ['user1_id' => $this->Auth->user('id'), 'offer_id' => $id]]);    	
 	    	foreach ($rates as $r){
 	    		$rate = $this->Rates->get($r, [
 	    				'contain' => []
@@ -119,20 +120,18 @@ class RatesController extends AppController
     	}
     	    	
     	
-    	$rates = $this->Rates->find('list', ['conditions' => ['user1_id' => $this->Auth->user('id'), 'user2_id' => $id, 'rate' => '0.0']]);
-    	$r = null;
-    	foreach ($rates as $r){
-    		$rate = $this->Rates->get($r, [
-    				'contain' => []
-    		]);
+    	$rate = null;
+    	$rates = $this->Rates->find('all', ['conditions' => ['offer_id' => $id]])->contain(['Users']);    	
+    	foreach ($rates as $rate){
+	    	if($rate->state == "valorado"){
+	    		$this->Flash->error(__('The user has already been valued by this contract.'));
+	    		return $this->redirect(['controller' => 'Petitions','action' => 'index', $this->Auth->user('id')]);
+	    	}
     	}
     	
-    	if($r == null){
-    		$this->Flash->error(__('The user has already been valued by this contract.'));
-    		return $this->redirect(['controller' => 'Petitions','action' => 'index', $this->Auth->user('id')]);
-    	}
     	
-    	$users = $this->Rates->Users->find('list', ['conditions' => ['id' => $id]]);
+    	
+    	$users = $this->Rates->find('all', ['conditions' => ['offer_id' => $id]]);
     	$this->set(compact('rate', 'users'));
     	$this->set('_serialize', ['rate']);
     }

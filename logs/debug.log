@@ -15358,3 +15358,168 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2016-05-21 17:57:33 Notice: Notice (8): Undefined variable: user in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\contract.ctp, line 70]
+Request URL: /coowi_en/petitions/contract/2
+Referer URL: http://localhost/coowi_en/petitions/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\contract.ctp, line 70
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 17:57:33 Notice: Notice (8): Trying to get property of non-object in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\contract.ctp, line 70]
+Request URL: /coowi_en/petitions/contract/2
+Referer URL: http://localhost/coowi_en/petitions/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\contract.ctp, line 70
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 17:57:34 Notice: Notice (8): Undefined variable: user in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\contract.ctp, line 70]
+Request URL: /coowi_en/petitions/contract/2
+Referer URL: http://localhost/coowi_en/petitions/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\contract.ctp, line 70
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 17:57:34 Notice: Notice (8): Trying to get property of non-object in [C:\xampp\htdocs\coowi_en\src\Template\Petitions\contract.ctp, line 70]
+Request URL: /coowi_en/petitions/contract/2
+Referer URL: http://localhost/coowi_en/petitions/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Petitions\contract.ctp, line 70
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:26:32 Notice: Notice (8): Undefined variable: 3 in [C:\xampp\htdocs\coowi_en\src\Model\Table\RatesTable.php, line 96]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Model\Table\RatesTable::isOwnedBy() - APP/Model\Table\RatesTable.php, line 96
+App\Controller\RatesController::isAuthorized() - APP/Controller\RatesController.php, line 161
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 494
+Cake\Controller\Component\AuthComponent::authCheck() - CORE\src\Controller\Component\AuthComponent.php, line 305
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 258
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 495
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:26:53 Notice: Notice (8): Undefined variable: rate in [C:\xampp\htdocs\coowi_en\src\Template\Rates\edit.ctp, line 8]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Rates\edit.ctp, line 8
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:30:01 Notice: Notice (8): Undefined variable: rate in [C:\xampp\htdocs\coowi_en\src\Template\Rates\edit.ctp, line 8]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Rates\edit.ctp, line 8
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:42:55 Notice: Notice (8): Undefined property: Cake\ORM\Query::$name in [C:\xampp\htdocs\coowi_en\src\Template\Rates\edit.ctp, line 13]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Rates\edit.ctp, line 13
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:46:55 Notice: Notice (8): Undefined property: Cake\ORM\Query::$user2_id in [C:\xampp\htdocs\coowi_en\src\Template\Rates\edit.ctp, line 13]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Rates\edit.ctp, line 13
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:51:23 Notice: Notice (8): Use of undefined constant readonly - assumed 'readonly' in [C:\xampp\htdocs\coowi_en\src\Template\Rates\edit.ctp, line 14]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Rates\edit.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+

@@ -453,9 +453,10 @@ class PetitionsController extends AppController
     			//$this->Flash->error(__('The offers could not be hired. Please, try again.'));
     			//return $this->redirect(['action' => 'index']);
     			return false;
-    		}    		
+    		}
+    		$this->grabaRelacionUsuarios($oferta);
     	}    	
-    	$this->grabaRelacionUsuarios($oferta);
+    	
     	return true;
     }
     

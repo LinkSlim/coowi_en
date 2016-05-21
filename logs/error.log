@@ -14495,3 +14495,346 @@ Stack Trace:
 #18 {main}
 
 
+2016-05-21 18:16:17 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "rates"
+Request URL: /coowi_en/rates/edit/4
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1201): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\coowi_en\src\Controller\RatesController.php(127): Cake\ORM\Table->get('4', Array)
+#2 [internal function]: App\Controller\RatesController->edit('4')
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\RatesController))
+#6 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-05-21 18:16:22 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "rates"
+Request URL: /coowi_en/rates/edit/4
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1201): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\coowi_en\src\Controller\RatesController.php(127): Cake\ORM\Table->get('4', Array)
+#2 [internal function]: App\Controller\RatesController->edit('4')
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\RatesController))
+#6 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-05-21 18:17:58 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "rates"
+Request URL: /coowi_en/rates/edit/4
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1201): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\coowi_en\src\Controller\RatesController.php(127): Cake\ORM\Table->get('4', Array)
+#2 [internal function]: App\Controller\RatesController->edit('4')
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\RatesController))
+#6 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-05-21 18:19:34 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "rates"
+Request URL: /coowi_en/rates/edit/4
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1201): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\coowi_en\src\Controller\RatesController.php(127): Cake\ORM\Table->get(Array, Array)
+#2 [internal function]: App\Controller\RatesController->edit('4')
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\RatesController))
+#6 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-05-21 18:34:57 Warning: Warning (2): PDOStatement::execute(): MySQL server has gone away in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 270
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 188
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 921
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 871
+Cake\ORM\Query::getIterator() - CORE\src\Datasource\QueryTrait.php, line 131
+App\Controller\RatesController::edit() - APP/Controller\RatesController.php, line 124
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:34:57 Warning: Warning (2): PDOStatement::execute() [<a href='http://php.net/pdostatement.execute'>pdostatement.execute</a>]: Error reading result set's header in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 270
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 188
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 921
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 871
+Cake\ORM\Query::getIterator() - CORE\src\Datasource\QueryTrait.php, line 131
+App\Controller\RatesController::edit() - APP/Controller\RatesController.php, line 124
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:34:58 Error: [PDOException] SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\RatesController.php(124): Cake\ORM\Query->getIterator()
+#10 [internal function]: App\Controller\RatesController->edit('3')
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\RatesController))
+#14 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-05-21 18:39:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'offer_id' in 'where clause'
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 [internal function]: Cake\ORM\Query->getIterator()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php(148): iterator_to_array(Object(Cake\ORM\Query))
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php(116): Cake\View\Widget\SelectBoxWidget->_renderContent(Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2573): Cake\View\Widget\SelectBoxWidget->render(Array, Object(Cake\View\Form\EntityContext))
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1900): Cake\View\Helper\FormHelper->widget('select', Array)
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1119): Cake\View\Helper\FormHelper->select('user1_id', Object(Cake\ORM\Query), Array)
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1040): Cake\View\Helper\FormHelper->_getInput('user1_id', Array)
+#16 C:\xampp\htdocs\coowi_en\src\Template\Rates\edit.ctp(13): Cake\View\Helper\FormHelper->input('user1_id', Array)
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(992): include('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#19 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#20 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#21 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#22 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\RatesController))
+#23 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#24 {main}
+
+
+2016-05-21 18:45:26 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php, line 232]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\View\Widget\SelectBoxWidget::_renderOptions() - CORE\src\View\Widget\SelectBoxWidget.php, line 232
+Cake\View\Widget\SelectBoxWidget::_renderContent() - CORE\src\View\Widget\SelectBoxWidget.php, line 164
+Cake\View\Widget\SelectBoxWidget::render() - CORE\src\View\Widget\SelectBoxWidget.php, line 116
+Cake\View\Helper\FormHelper::widget() - CORE\src\View\Helper\FormHelper.php, line 2573
+Cake\View\Helper\FormHelper::select() - CORE\src\View\Helper\FormHelper.php, line 1900
+Cake\View\Helper\FormHelper::_getInput() - CORE\src\View\Helper\FormHelper.php, line 1119
+Cake\View\Helper\FormHelper::input() - CORE\src\View\Helper\FormHelper.php, line 1040
+include - APP/Template\Rates\edit.ctp, line 13
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:46:08 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php, line 232]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\View\Widget\SelectBoxWidget::_renderOptions() - CORE\src\View\Widget\SelectBoxWidget.php, line 232
+Cake\View\Widget\SelectBoxWidget::_renderContent() - CORE\src\View\Widget\SelectBoxWidget.php, line 164
+Cake\View\Widget\SelectBoxWidget::render() - CORE\src\View\Widget\SelectBoxWidget.php, line 116
+Cake\View\Helper\FormHelper::widget() - CORE\src\View\Helper\FormHelper.php, line 2573
+Cake\View\Helper\FormHelper::select() - CORE\src\View\Helper\FormHelper.php, line 1900
+Cake\View\Helper\FormHelper::_getInput() - CORE\src\View\Helper\FormHelper.php, line 1119
+Cake\View\Helper\FormHelper::input() - CORE\src\View\Helper\FormHelper.php, line 1040
+include - APP/Template\Rates\edit.ctp, line 13
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:50:53 Warning: Warning (2): substr() expects parameter 1 to be string, array given in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 2388]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+substr - [internal], line ??
+Cake\View\Helper\FormHelper::_initInputField() - CORE\src\View\Helper\FormHelper.php, line 2388
+Cake\View\Helper\FormHelper::__call() - CORE\src\View\Helper\FormHelper.php, line 1506
+Cake\View\Helper\FormHelper::text() - APP/Template\Rates\edit.ctp, line 14
+include - APP/Template\Rates\edit.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:50:53 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 2392]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+explode - [internal], line ??
+Cake\View\Helper\FormHelper::_initInputField() - CORE\src\View\Helper\FormHelper.php, line 2392
+Cake\View\Helper\FormHelper::__call() - CORE\src\View\Helper\FormHelper.php, line 1506
+Cake\View\Helper\FormHelper::text() - APP/Template\Rates\edit.ctp, line 14
+include - APP/Template\Rates\edit.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:50:53 Warning: Warning (2): array_shift() expects parameter 1 to be array, null given in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 2393]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+array_shift - [internal], line ??
+Cake\View\Helper\FormHelper::_initInputField() - CORE\src\View\Helper\FormHelper.php, line 2393
+Cake\View\Helper\FormHelper::__call() - CORE\src\View\Helper\FormHelper.php, line 1506
+Cake\View\Helper\FormHelper::text() - APP/Template\Rates\edit.ctp, line 14
+include - APP/Template\Rates\edit.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:50:53 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Form\EntityContext.php, line 215]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+explode - [internal], line ??
+Cake\View\Form\EntityContext::val() - CORE\src\View\Form\EntityContext.php, line 215
+Cake\View\Helper\FormHelper::_initInputField() - CORE\src\View\Helper\FormHelper.php, line 2402
+Cake\View\Helper\FormHelper::__call() - CORE\src\View\Helper\FormHelper.php, line 1506
+Cake\View\Helper\FormHelper::text() - APP/Template\Rates\edit.ctp, line 14
+include - APP/Template\Rates\edit.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:50:54 Warning: Warning (2): end() expects parameter 1 to be array, null given in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Form\EntityContext.php, line 218]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+end - [internal], line ??
+Cake\View\Form\EntityContext::val() - CORE\src\View\Form\EntityContext.php, line 218
+Cake\View\Helper\FormHelper::_initInputField() - CORE\src\View\Helper\FormHelper.php, line 2402
+Cake\View\Helper\FormHelper::__call() - CORE\src\View\Helper\FormHelper.php, line 1506
+Cake\View\Helper\FormHelper::text() - APP/Template\Rates\edit.ctp, line 14
+include - APP/Template\Rates\edit.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:50:54 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Form\EntityContext.php, line 223]
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+array_pop - [internal], line ??
+Cake\View\Form\EntityContext::val() - CORE\src\View\Form\EntityContext.php, line 223
+Cake\View\Helper\FormHelper::_initInputField() - CORE\src\View\Helper\FormHelper.php, line 2402
+Cake\View\Helper\FormHelper::__call() - CORE\src\View\Helper\FormHelper.php, line 1506
+Cake\View\Helper\FormHelper::text() - APP/Template\Rates\edit.ctp, line 14
+include - APP/Template\Rates\edit.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 18:50:55 Error: [InvalidArgumentException] Cannot get an empty property
+Request URL: /coowi_en/rates/edit/3
+Referer URL: http://localhost/coowi_en/petitions/contract/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(223): Cake\ORM\Entity->get(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2402): Cake\View\Form\EntityContext->val(Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1506): Cake\View\Helper\FormHelper->_initInputField(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\src\Template\Rates\edit.ctp(14): Cake\View\Helper\FormHelper->__call('text', Array)
+#4 C:\xampp\htdocs\coowi_en\src\Template\Rates\edit.ctp(14): Cake\View\Helper\FormHelper->text(Array)
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(992): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\RatesController))
+#11 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+

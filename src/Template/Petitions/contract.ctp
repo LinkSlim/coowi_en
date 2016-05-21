@@ -60,12 +60,15 @@
                     <th><?= __('Item') ?></th>
                     <th><?= __('Price') ?></th>
                     <th><?= __('Contact') ?></th>
+                    <th><?= __('Actions') ?></th>
                 </tr>
                 <?php foreach ($offers as $offer): ?>
                     <tr>                        
                         <td><b><?= $this->Html->link($offer->item->name, ['controller' => 'Items', 'action' => 'view', $offer->item->id]) ?></b></td>
                         <td><b><?= h($offer->price) ?>&#8364;</b></td>
                         <td><b><?= $this->Html->link($offer->user->name, ['controller' => 'Users', 'action' => 'view', $offer->user_id])." - ".$offer->user->phone ?></b></td>
+                        <td><?= $this->Html->link(__('Rate'), ['controller' => 'Rates', 'action' => 'edit', $offer->id]) ?></td>
+                        
                     </tr>                                            
 
                 <?php endforeach; ?>
