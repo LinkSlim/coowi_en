@@ -103,9 +103,24 @@ class ItemsController extends AppController
     	
         
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $item = $this->Items->patchEntity($item, $this->request->data);
+            //$item = $this->Items->patchEntity($item, $this->request->data);
+            
+        	$item->petition_id = $this->request->data['petition_id'];
+        	$item->name = $this->request->data['name'];
+        	$item->description = $this->request->data['description'];
+        	$tags = $this->request->data['Tags'];
+        	$item->state = "activada";
+        	$item->date = date("Y-m-d");
+        	$item->user_id = $_SESSION['Auth']['User']['id'];
+        	
+        	
+        	
             if ($this->Items->save($item)) {
                 $this->Flash->success(__('The item has been saved.'));
+                
+                $this->deleteTagsOfItem($item->id);
+                $this->saveTagsOfItem($tags, $item->id);
+                
 		        
 		        //El admin se redirige a la misma lista de item
 		        if($_SESSION['Auth']['User']['rol_id'] == AppController::ADMIN){
@@ -120,9 +135,24 @@ class ItemsController extends AppController
             }
         }
         
+        $this->loadModel("Tags");
+        $this->loadModel("ItemsTags");
         $petitions = $this->Items->Petitions->find('list', ['limit' => 200, 'conditions' => ['Petitions.id' => $item->petition_id]]);
-        $tags = $this->Items->Tags->find('list', ['limit' => 200]);
-        $this->set(compact('item', 'petitions', 'tags'));
+        //$tagsQuery = $this->ItemsTags->find('list', ['limit' => 200, 'conditions' => ['ItemsTags.item_id' => $id]]);
+        
+        
+        
+        $tagsQuery = $this->Tags->find('all')->innerJoin( 
+        		['items_tags'],
+        		[
+        				'Tags.id = items_tags.tag_id',	//Condiciones JOIN
+        				'items_tags.item_id = '.$id	
+        		]);
+        
+        
+        $tagsString = $this->convierteTagsEnString($tagsQuery);
+        $this->set(compact('item', 'petitions'));
+        $this->set(['tagsString' => $tagsString]);
         $this->set('_serialize', ['item']);
     }
 
@@ -201,15 +231,11 @@ class ItemsController extends AppController
     	
     	if ($this->request->is('post')) {
     		
-    		
-    		//$item = $this->Items->patchEntity($item, $this->request->data);
-    		//$item->petition_id = $this->request->data->petition_id;
     		$item->name = $this->request->data['name'];
     		$item->description = $this->request->data['description'];
     		$tags = $this->request->data['tags'];    		
     		$item->state = "activada";
-    		$item->date = date("Y-m-d");
-    		//$item->accessible('user_id', true);
+    		$item->date = date("Y-m-d");    		
     		$item->user_id = $_SESSION['Auth']['User']['id'];
     		$item->petition_id = $idPetition;
     		    		
@@ -239,12 +265,23 @@ class ItemsController extends AppController
     	$this->loadModel("ItemsTags");
     	
     	$tagsArray = array();
-    	$tagsArray = explode(" ", $tags);    	
+    	$tagsArraySinEspacios = array();
+    	$tagsArray = explode(" ", $tags);
+    	foreach ($tagsArray as $ta){ //Contro por si meten muchos espaciones entre palabras
+    		if($ta != ""){
+    			array_push($tagsArraySinEspacios, $ta);
+    		}
+    	}
+    	$tagsArray = $tagsArraySinEspacios;
     	
     	foreach($tagsArray as $tag){
+    		if(empty($tag)){
+    			continue;
+    		}
     		//Para cada tag
 			//Si el tag no existe en la BBDD lo crea. Si existe lo busca, coge su id e inserta la relacion itemTag 
     		if(!$this->Tags->exists(['name' => $tag])){
+    			
     			$tagEntity = $this->Tags->newEntity();
     			$tagEntity->name = $tag;
     			$tagEntity->date = date("Y-m-d");
@@ -262,11 +299,31 @@ class ItemsController extends AppController
     		$itemTag = $this->ItemsTags->newEntity();
     		$itemTag->item_id = $idItem;
     		$itemTag->tag_id = $idTag;
-    		$this->ItemsTags->save($itemTag);
-    		
-    		
-    	}    	
-    	
+    		if(!$this->ItemsTags->exists(['item_id' => $idItem, 'tag_id' => $idTag])){
+    			$this->ItemsTags->save($itemTag);
+    		}
+    		    		
+    	}    	    	
+    }
+    
+    
+    private function convierteTagsEnString($tagsQuery){
+    	$string = "";
+    	foreach ($tagsQuery as $tagEntity){
+    		$string .= $tagEntity->name . " ";
+    	}
+    	$string = trim($string);
+    	return $string;
+    }
+    
+    
+    private function deleteTagsOfItem($idItem){
+    	$this->loadModel("ItemsTags");
+    	$query = $this->ItemsTags->query();
+    	//$query = $articles->query();
+    	$query->delete()
+	    	->where(['item_id' => $idItem])
+	    	->execute();
     }
     
 }

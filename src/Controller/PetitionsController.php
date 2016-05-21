@@ -251,7 +251,7 @@ class PetitionsController extends AppController
         	$tags[0] = "";
         }
         
-        $query = $this->Petitions->find('all')->innerJoin( //Buscamos peticiones con items que tienen asociado el tag escrito en el campo de busqueda, no contratadas, y las cuales no son del usuario que busca 
+        $query = $this->Petitions->find('all')->distinct()->innerJoin( //Buscamos peticiones con items que tienen asociado el tag escrito en el campo de busqueda, no contratadas, y las cuales no son del usuario que busca 
         		['Items' => 'items'],//nombre tabla con la que hace JOIN
         		[
         				'Petitions.id = Items.petition_id'	//Condiciones JOIN
@@ -269,6 +269,8 @@ class PetitionsController extends AppController
         								'Petitions.user_id != '.$this->Auth->user('id')
         						]
         						);
+        
+        
         
         // In a controller or table method.
         foreach ($query as $petition) {

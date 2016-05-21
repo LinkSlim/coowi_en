@@ -24,9 +24,10 @@
 			echo $this->Form->input('petition_id', ['options' => $petitions, 'readonly' => TRUE]);
             echo $this->Form->input('name');
 			//echo $this->Form->input('date', ['readonly' => TRUE]);
-            echo $this->Form->input('description');
+            echo $this->Form->input('description');            
+			//echo $this->Form->input('tags._ids', ['options' => $tags]);
+            echo $this->Form->input('Tags', ['value' => $tagsString]);
             echo $this->Form->input('state', ['value' => "activada", 'disabled' => TRUE, 'readonly' => TRUE]);
-			echo $this->Form->input('tags._ids', ['options' => $tags]);
         ?>
     </fieldset>
     

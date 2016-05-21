@@ -13514,3 +13514,463 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2016-05-21 11:04:16 Warning: Warning (2): PDOStatement::execute(): MySQL server has gone away in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/items/edit/16
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 270
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 188
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 921
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 871
+Cake\ORM\Query::toArray() - CORE\src\Datasource\QueryTrait.php, line 288
+Cake\ORM\Marshaller::_loadAssociatedByIds() - CORE\src\ORM\Marshaller.php, line 418
+Cake\ORM\Marshaller::_mergeBelongsToMany() - CORE\src\ORM\Marshaller.php, line 687
+Cake\ORM\Marshaller::_mergeAssociation() - CORE\src\ORM\Marshaller.php, line 664
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 504
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2059
+App\Controller\ItemsController::edit() - APP/Controller\ItemsController.php, line 106
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 11:04:16 Warning: Warning (2): PDOStatement::execute() [<a href='http://php.net/pdostatement.execute'>pdostatement.execute</a>]: Error reading result set's header in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/items/edit/16
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 270
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 188
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 921
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 871
+Cake\ORM\Query::toArray() - CORE\src\Datasource\QueryTrait.php, line 288
+Cake\ORM\Marshaller::_loadAssociatedByIds() - CORE\src\ORM\Marshaller.php, line 418
+Cake\ORM\Marshaller::_mergeBelongsToMany() - CORE\src\ORM\Marshaller.php, line 687
+Cake\ORM\Marshaller::_mergeAssociation() - CORE\src\ORM\Marshaller.php, line 664
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 504
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2059
+App\Controller\ItemsController::edit() - APP/Controller\ItemsController.php, line 106
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 11:04:25 Error: [PDOException] SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/items/edit/16
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(288): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Marshaller.php(418): Cake\ORM\Query->toArray()
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Marshaller.php(687): Cake\ORM\Marshaller->_loadAssociatedByIds(Object(Cake\ORM\Association\BelongsToMany), Array)
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Marshaller.php(664): Cake\ORM\Marshaller->_mergeBelongsToMany(Array, Object(Cake\ORM\Association\BelongsToMany), Array, Array)
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Marshaller.php(504): Cake\ORM\Marshaller->_mergeAssociation(Array, Object(Cake\ORM\Association\BelongsToMany), Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(2059): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\Item), Array, Array)
+#14 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(106): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\Item), Array)
+#15 [internal function]: App\Controller\ItemsController->edit('16')
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#18 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#19 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-05-21 12:08:24 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '17-8' for key 'ak_unique_item_tag'
+Request URL: /coowi_en/items/edit/17
+Referer URL: http://localhost/coowi_en/items/edit/17
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(App\Model\Entity\ItemsTag), Array)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(App\Model\Entity\ItemsTag), Object(ArrayObject))
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#10 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(277): Cake\ORM\Table->save(Object(App\Model\Entity\ItemsTag))
+#11 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(121): App\Controller\ItemsController->saveTagsOfItem('cine cultura ge...', 17)
+#12 [internal function]: App\Controller\ItemsController->edit('17')
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#16 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-05-21 12:34:28 Warning: Warning (2): PDOStatement::execute(): MySQL server has gone away in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/petitions/view-offers?petition_id=1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 270
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 188
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 921
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 871
+Cake\ORM\Query::getIterator() - CORE\src\Datasource\QueryTrait.php, line 131
+App\Controller\ItemsController::convierteTagsEnString() - APP/Controller\ItemsController.php, line 287
+App\Controller\ItemsController::edit() - APP/Controller\ItemsController.php, line 139
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 12:34:28 Warning: Warning (2): PDOStatement::execute() [<a href='http://php.net/pdostatement.execute'>pdostatement.execute</a>]: Error reading result set's header in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/petitions/view-offers?petition_id=1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 270
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 188
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 921
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 871
+Cake\ORM\Query::getIterator() - CORE\src\Datasource\QueryTrait.php, line 131
+App\Controller\ItemsController::convierteTagsEnString() - APP/Controller\ItemsController.php, line 287
+App\Controller\ItemsController::edit() - APP/Controller\ItemsController.php, line 139
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 12:35:35 Error: [PDOException] SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/petitions/view-offers?petition_id=1
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(287): Cake\ORM\Query->getIterator()
+#10 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(139): App\Controller\ItemsController->convierteTagsEnString(Object(Cake\ORM\Query))
+#11 [internal function]: App\Controller\ItemsController->edit('16')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-21 12:35:53 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ItemsTags.item_id' in 'where clause'
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/petitions/view-offers?petition_id=1
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(287): Cake\ORM\Query->getIterator()
+#10 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(139): App\Controller\ItemsController->convierteTagsEnString(Object(Cake\ORM\Query))
+#11 [internal function]: App\Controller\ItemsController->edit('16')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-21 13:19:02 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coowien.itemsTags' doesn't exist
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/petitions/view-offers?petition_id=1
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(301): Cake\ORM\Query->getIterator()
+#10 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(153): App\Controller\ItemsController->convierteTagsEnString(Object(Cake\ORM\Query))
+#11 [internal function]: App\Controller\ItemsController->edit('16')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-21 13:19:45 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coowien.itemsTags' doesn't exist
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/petitions/view-offers?petition_id=1
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(301): Cake\ORM\Query->getIterator()
+#10 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(153): App\Controller\ItemsController->convierteTagsEnString(Object(Cake\ORM\Query))
+#11 [internal function]: App\Controller\ItemsController->edit('16')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-21 13:21:16 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coowien.ItemsTags' doesn't exist
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/petitions/view-offers?petition_id=1
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(301): Cake\ORM\Query->getIterator()
+#10 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(153): App\Controller\ItemsController->convierteTagsEnString(Object(Cake\ORM\Query))
+#11 [internal function]: App\Controller\ItemsController->edit('16')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-21 13:21:57 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coowien.Items_Tags' doesn't exist
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/petitions/view-offers?petition_id=1
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(301): Cake\ORM\Query->getIterator()
+#10 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(153): App\Controller\ItemsController->convierteTagsEnString(Object(Cake\ORM\Query))
+#11 [internal function]: App\Controller\ItemsController->edit('16')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-21 13:38:20 Warning: Warning (2): PDOStatement::execute(): MySQL server has gone away in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/items/edit/16
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 270
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 188
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 921
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 871
+Cake\ORM\Query::toArray() - CORE\src\Datasource\QueryTrait.php, line 288
+Cake\ORM\Table::exists() - CORE\src\ORM\Table.php, line 1283
+App\Controller\ItemsController::saveTagsOfItem() - APP/Controller\ItemsController.php, line 292
+App\Controller\ItemsController::edit() - APP/Controller\ItemsController.php, line 121
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 13:38:21 Warning: Warning (2): PDOStatement::execute() [<a href='http://php.net/pdostatement.execute'>pdostatement.execute</a>]: Error reading result set's header in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/items/edit/16
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 270
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 188
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 921
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 871
+Cake\ORM\Query::toArray() - CORE\src\Datasource\QueryTrait.php, line 288
+Cake\ORM\Table::exists() - CORE\src\ORM\Table.php, line 1283
+App\Controller\ItemsController::saveTagsOfItem() - APP/Controller\ItemsController.php, line 292
+App\Controller\ItemsController::edit() - APP/Controller\ItemsController.php, line 121
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 13:39:28 Error: [PDOException] SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+Request URL: /coowi_en/items/edit/16
+Referer URL: http://localhost/coowi_en/items/edit/16
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(288): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1283): Cake\ORM\Query->toArray()
+#10 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(292): Cake\ORM\Table->exists(Array)
+#11 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(121): App\Controller\ItemsController->saveTagsOfItem('animales', 16)
+#12 [internal function]: App\Controller\ItemsController->edit('16')
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#16 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-05-21 14:29:34 Warning: Warning (2): PDOStatement::execute(): MySQL server has gone away in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/items/edit/7
+Referer URL: http://localhost/coowi_en/items/edit/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 270
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 188
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 921
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 871
+Cake\ORM\Query::toArray() - CORE\src\Datasource\QueryTrait.php, line 288
+Cake\ORM\Table::exists() - CORE\src\ORM\Table.php, line 1283
+App\Controller\ItemsController::saveTagsOfItem() - APP/Controller\ItemsController.php, line 276
+App\Controller\ItemsController::edit() - APP/Controller\ItemsController.php, line 122
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 14:29:34 Warning: Warning (2): PDOStatement::execute() [<a href='http://php.net/pdostatement.execute'>pdostatement.execute</a>]: Error reading result set's header in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/items/edit/7
+Referer URL: http://localhost/coowi_en/items/edit/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 270
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 188
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 921
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 871
+Cake\ORM\Query::toArray() - CORE\src\Datasource\QueryTrait.php, line 288
+Cake\ORM\Table::exists() - CORE\src\ORM\Table.php, line 1283
+App\Controller\ItemsController::saveTagsOfItem() - APP/Controller\ItemsController.php, line 276
+App\Controller\ItemsController::edit() - APP/Controller\ItemsController.php, line 122
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-21 14:29:36 Error: [PDOException] SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+Request URL: /coowi_en/items/edit/7
+Referer URL: http://localhost/coowi_en/items/edit/7
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(288): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1283): Cake\ORM\Query->toArray()
+#10 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(276): Cake\ORM\Table->exists(Array)
+#11 C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php(122): App\Controller\ItemsController->saveTagsOfItem('tele radio', 7)
+#12 [internal function]: App\Controller\ItemsController->edit('7')
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ItemsController))
+#16 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-05-21 14:30:24 Error: Fatal Error (1): Call to undefined method App\Controller\ItemsController::getOffer() in [C:\xampp\htdocs\coowi_en\src\Controller\ItemsController.php, line 272]
+Request URL: /coowi_en/items/edit/7
+Referer URL: http://localhost/coowi_en/items/edit/7
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-21 14:30:25 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\ItemsController::getOffer()
+Request URL: /coowi_en/items/edit/7
+Referer URL: http://localhost/coowi_en/items/edit/7
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 272)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
