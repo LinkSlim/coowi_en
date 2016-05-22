@@ -161,6 +161,9 @@ class RatesController extends AppController
     	if (in_array($this->request->action, ['edit', 'view'])) {
     		if ($this->Rates->isOwnedBy($user['id'], $this->passedArgs[0])) {
     			return true;
+    		}else{
+    			$this->Flash->error(__('The comment has been banned.'));
+    			return  $this->redirect(['controller' => 'Petitions','action' => 'index', $user['id']]);;
     		}
     	}
     

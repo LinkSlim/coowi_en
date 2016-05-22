@@ -42,6 +42,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </li>
         </ul>
         <div class="top-bar-section">
+        
             <ul class="right">
                 <li><a target="_self" href="http://localhost/coowi_en/users/login/">Login</a></li>
                 <li><a target="_self" href="http://localhost/coowi_en/users/add/">Register</a></li>

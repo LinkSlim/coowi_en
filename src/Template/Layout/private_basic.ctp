@@ -12,13 +12,12 @@
  * @since         0.10.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
 $cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript">
+<script type="text/javascript">
 // 		function preventBack(){
 // 			window.history.forward();
 // 		}
@@ -26,44 +25,51 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 // 		window.onunload = function() {null};
 	</script>
 
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
+    <?= $this->Html->charset()?>
+    <meta name="viewport"
+	content="width=device-width, initial-scale=1.0">
+<title>
         
         <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
+        <?= $this->fetch('title')?>
     </title>
-    <?= $this->Html->meta('icon') ?>
+    <?= $this->Html->meta('icon')?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    <?= $this->Html->css('base.css')?>
+    <?= $this->Html->css('cake.css')?>
 
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
+    <?= $this->fetch('meta')?>
+    <?= $this->fetch('css')?>
+    <?= $this->fetch('script')?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">            
-            <ul class="right">
+	<nav class="top-bar expanded" data-topbar role="navigation">
+		<ul class="title-area large-3 medium-4 columns">
+			<li class="name">
+				<h1>
+					<a href=""><?= $this->fetch('title') ?></a>
+				</h1>
+			</li>
+		</ul>
+
+
+		<div class="top-bar-section">
+			<img src="http://coowi.com/images/coowi_logo.jpg"	alt="Coowi" width="90" />								
+			<ul class="right">            	
                 <?php echo $this->element('../Element/search');?>
-                <li><a target="_self" href="http://localhost/coowi_en/petitions/">My Petitons</a></li>             
-                <li><a target="_self" href="http://localhost/coowi_en/users/view/<?= $this->request->session()->read('Auth.User.id') ?>"><?= $this->request->session()->read('Auth.User.name');?></a></li>                
-                <li><a target="_self" href="http://localhost/coowi_en/users/logout">Logout</a></li>                
-            </ul>
-        </div>
-    </nav>
-    <?= $this->Flash->render() ?>
+                <li><a target="_self"
+					href="http://localhost/coowi_en/petitions/">My Petitons</a></li>
+				<li><a target="_self"
+					href="http://localhost/coowi_en/users/view/<?= $this->request->session()->read('Auth.User.id') ?>"><?= $this->request->session()->read('Auth.User.name');?></a></li>
+				<li><a target="_self" href="http://localhost/coowi_en/users/logout">Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+    <?= $this->Flash->render()?>
     <?= $this->Flash->render('auth') ?> <!--Mensaje para avisar al usuario de que no esta autorizado-->
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
+	<div class="container clearfix">
+        <?= $this->fetch('content')?>
     </div>
-    <footer>
-    </footer>
+	<footer> </footer>
 </body>
 </html>

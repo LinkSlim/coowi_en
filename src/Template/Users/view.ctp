@@ -265,5 +265,27 @@
         </tr>
     </table>    
     <?php }?>
+
+
+	<div class="related">
+        <h4><?= __('Comments about this user') ?></h4>
+        <?php if (!empty($user->rates)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th><?= __('Comment') ?></th>
+                <th><?= __('Rate') ?></th>
+                <th><?= __('Date') ?></th>
+            </tr>
+            <?php foreach ($user->rates as $rate): ?>
+            <tr>
+                <td><?= h($rate->comment) ?></td>
+                <td><?= h($rate->rate) ?></td>
+                <td><?= h($rate->date) ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+
 </div>
 

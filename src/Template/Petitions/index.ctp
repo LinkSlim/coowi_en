@@ -16,7 +16,7 @@
 		<?php }?>        		
     </ul>
 </nav>
-<div class="petitions index large-9 medium-8 columns content">
+<div class="petitions index large-9 medium-8 columns content" >
     <h3><?= __('My Petitions') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>

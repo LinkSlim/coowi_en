@@ -25,7 +25,7 @@
             <?php foreach ($rates as $rate): ?>
             <tr>
                 <td><?= $this->Number->format($rate->id) ?></td>
-                <td><?= $this->Number->format($rate->user1_id) ?></td>
+                <td><?= h($rate->user1_id)?></td>
                 <td><?= $rate->has('user') ? $this->Html->link($rate->user->name, ['controller' => 'Users', 'action' => 'view', $rate->user->id]) : '' ?></td>
                 <td><?= h($rate->comment) ?></td>
                 <td><?= $this->Number->format($rate->rate) ?></td>
@@ -33,7 +33,7 @@
                 <td><?= h($rate->state) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $rate->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $rate->id]) ?>
+					<!-- He quitado el edit -->
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $rate->id], ['confirm' => __('Are you sure you want to delete # {0}?', $rate->id)]) ?>
                 </td>
             </tr>

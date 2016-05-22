@@ -116,14 +116,15 @@ class TagsController extends AppController
         if (($this->request->action === 'searchPetitions')) {
             return true;
         }
+                
 
         // The owner of an petition can view, edit and delete it
-        if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
-            $petitionId = (int) $this->request->params['pass'][0];
-            if ($this->Petitions->isOwnedBy($petitionId, $user['id'])) {
-                return true;
-            }
-        }
+//         if (in_array($this->request->action, ['edit', 'delete', 'view'])) {        	
+//             $petitionId = (int) $this->request->params['pass'][0];
+//             if ($this->Petitions->isOwnedBy($petitionId, $user['id'])) {
+//                 return true;
+//             }
+//         }
 
         return parent::isAuthorized($user);
     }
