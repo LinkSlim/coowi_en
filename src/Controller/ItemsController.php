@@ -227,6 +227,18 @@ class ItemsController extends AppController
     public function create($idPetition = null)
     {
     	    	
+    	
+    	if(isset($_POST['cancel'])){
+    		//El admin se redirige a la misma lista de item
+    		if($_SESSION['Auth']['User']['rol_id'] == AppController::ADMIN){
+    			return $this->redirect(['action' => 'index']);
+    		}
+    		else{ //Usuarios con otros roles se redirige a la vista aqui indicada
+    			return $this->redirect(['controller' => 'Petitions', 'action' => 'view-offers', 'petition_id' => $idPetition]);
+    		}
+    	}
+    	
+    	
     	$item = $this->Items->newEntity();
     	
     	if ($this->request->is('post')) {

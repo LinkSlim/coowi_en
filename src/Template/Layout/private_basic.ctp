@@ -54,7 +54,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
 		<div class="top-bar-section">
-			<img src="http://coowi.com/images/coowi_logo.jpg"	alt="Coowi" width="90" />								
+			<img src="http://coowi.com/images/coowi_logo.jpg"	alt="Coowi" width="85" />								
 			<ul class="right">            	
                 <?php echo $this->element('../Element/search');?>
                 <li><a target="_self"

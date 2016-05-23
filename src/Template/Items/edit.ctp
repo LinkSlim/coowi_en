@@ -30,8 +30,7 @@
             echo $this->Form->input('state', ['value' => "activada", 'disabled' => TRUE, 'readonly' => TRUE]);
         ?>
     </fieldset>
-    
-    <?= $this->Form->button('CANCEL', array('type' => 'cancel', 'name' => 'cancel')); ?>
+    <?= $this->Form->button(__('CANCEL'), array('type' => 'cancel', 'name' => 'cancel', 'formnovalidate')); ?>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>
