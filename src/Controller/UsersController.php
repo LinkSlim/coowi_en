@@ -173,21 +173,23 @@ class UsersController extends AppController
     }
     
     public function login() {
-        if ($this->request->is('post')) {
-            $user = $this->Auth->identify();
-//             if($user->state == "desactivado"){
-//             	$this->logout();
-//             }
-            if ($user) {
-            	if($user['state'] == "activado"){
-            		$this->Auth->setUser($user);
-            		return $this->redirect(['controller' => 'petitions', 'action' => 'index']);
-            	}                
-            }
-            
-            //Si el usuario no es identificado
-            $this->Flash->error('Your username or password is incorrect.');
-        }
+    	
+    	if(isset($_SESSION['Auth']['User'])){ //Si ya hay un usuario logueado en el sistema se redirige a su pagina de peticiones
+    		return $this->redirect(['controller' => 'petitions', 'action' => 'index']);
+    	}
+    	
+	        if ($this->request->is('post')) { //Si el usuario ha pulsado el boton de Login en la pantalla principal
+	            $user = $this->Auth->identify();
+	            if ($user) {
+	            	if($user['state'] == "activado"){
+	            		$this->Auth->setUser($user);
+	            		return $this->redirect(['controller' => 'petitions', 'action' => 'index']);
+	            	}                
+	            }
+	            
+	            //Si el usuario no es identificado
+	            $this->Flash->error('Your username or password is incorrect.');
+	        }	    
     }
     
     public function logout() {
