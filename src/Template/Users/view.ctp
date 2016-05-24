@@ -23,11 +23,11 @@
         	   else{ 
 	        	   	if($_SESSION['Auth']['User']['id'] == $user->id){ //Menu para el usuario que visita su perfil
 	        	   	?>
-		        	    <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
-				        <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
+		        	    <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>				        
 				        <li><?= $this->Html->link(__('New Job'), ['controller' => 'Jobs', 'action' => 'add']) ?> </li>
 				        <li><?= $this->Html->link(__('New Study'), ['controller' => 'Studies', 'action' => 'add']) ?> </li>
-				        <li><?= $this->Html->link(__('New Petition'), ['controller' => 'Petitions', 'action' => 'add']) ?> </li>			        			                		
+				        <li><?= $this->Html->link(__('New Petition'), ['controller' => 'Petitions', 'action' => 'add']) ?> </li>
+				        <li><?= $this->Form->postLink('Delete Account', ['controller' => 'Users', 'action' => 'deleteOwnAccount', $user->id], ['confirm' => __('Are you sure you want to delete your account?')]) ?> </li>				        			        			                	
 			<?php 	}
 					else{?>
  						<li></li> <!--$this->Html->link(__('New Rate'), ['controller' => 'Rates', 'action' => 'edit', $user->id]) -->

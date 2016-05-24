@@ -130,4 +130,6 @@ class UsersTable extends Table
         $rules->add($rules->existsIn(['rol_id'], 'Roles'));
         return $rules;
     }   
+    
+        
 }

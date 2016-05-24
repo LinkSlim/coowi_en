@@ -154,6 +154,24 @@ class UsersController extends AppController
     	}    	
     }
     
+    public function deleteOwnAccount($id = null)
+    {
+    	try {
+    		$this->request->allowMethod(['post', 'delete', 'deleteOwnAccount']);
+    		$user = $this->Users->get($id);
+    		$this->logout();
+    		if ($this->Users->delete($user)) {
+    			$this->Flash->success(__('Your account has been deleted.'));
+    		} else {
+    			$this->Flash->error(__('Your account could not be deleted. Please, try again.'));
+    		}
+    		return $this->redirect(['action' => 'login']);
+    	}catch (Exception $e){
+    		$this->Flash->error(__('Accion no permitida'));
+    		return $this->redirect(['controller' => 'User', 'action' => 'view']);
+    	}
+    }
+    
     public function login() {
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
@@ -196,7 +214,7 @@ class UsersController extends AppController
     
     public function isAuthorized($user) {        
 
-        if (in_array($this->request->action, ['edit', 'delete', 'view'])) {
+        if (in_array($this->request->action, ['edit', 'delete', 'view', 'deleteOwnAccount'])) {
             
         	if($this->request->action == 'view'){ //Todos los usuarios pueden ver el perfil de otros
         		return true;

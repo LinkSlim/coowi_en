@@ -15717,3 +15717,29 @@ Stack Trace:
 #1 {main}
 
 
+2016-05-24 15:55:56 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/users/delete-own-account/3
+Referer URL: http://localhost/coowi_en/users/view/3
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(160): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\UsersController->deleteOwnAccount('3')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-05-24 15:56:56 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /coowi_en/users/delete-own-account/3
+Referer URL: http://localhost/coowi_en/users/view/3
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(160): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\UsersController->deleteOwnAccount('3')
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
