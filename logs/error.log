@@ -15760,3 +15760,225 @@ Stack Trace:
 #2 {main}
 
 
+2016-05-24 17:31:35 Warning: Warning (512): Method Cake\View\Helper\FlashHelper::error does not exist in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper.php, line 140]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\View\Helper::__call() - CORE\src\View\Helper.php, line 140
+Cake\View\Helper\FlashHelper::error() - APP/Template\Error\missing_controller.ctp, line 4
+include - APP/Template\Error\missing_controller.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Error\ExceptionRenderer::_outputMessage() - CORE\src\Error\ExceptionRenderer.php, line 320
+Cake\Error\ExceptionRenderer::render() - CORE\src\Error\ExceptionRenderer.php, line 192
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 144
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 179
+Cake\Error\BaseErrorHandler::wrapAndHandleException() - CORE\src\Error\BaseErrorHandler.php, line 163
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:31:35 Error: Fatal Error (1): Call to undefined method App\View\AppView::redirect() in [C:\xampp\htdocs\coowi_en\src\Template\Error\missing_controller.ctp, line 5]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:31:36 Error: [Cake\Error\FatalErrorException] Call to undefined method App\View\AppView::redirect()
+Request URL: /coowi_en/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-24 17:32:19 Warning: Warning (512): Method Cake\View\Helper\FlashHelper::error does not exist in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper.php, line 140]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\View\Helper::__call() - CORE\src\View\Helper.php, line 140
+Cake\View\Helper\FlashHelper::error() - APP/Template\Error\missing_controller.ctp, line 4
+include - APP/Template\Error\missing_controller.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Error\ExceptionRenderer::_outputMessage() - CORE\src\Error\ExceptionRenderer.php, line 320
+Cake\Error\ExceptionRenderer::render() - CORE\src\Error\ExceptionRenderer.php, line 192
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 144
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 179
+Cake\Error\BaseErrorHandler::wrapAndHandleException() - CORE\src\Error\BaseErrorHandler.php, line 163
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:32:19 Error: Fatal Error (1): Call to undefined method App\View\AppView::redirect() in [C:\xampp\htdocs\coowi_en\src\Template\Error\missing_controller.ctp, line 5]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:32:19 Warning: Warning (512): Method Cake\View\Helper\FlashHelper::error does not exist in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper.php, line 140]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\View\Helper::__call() - CORE\src\View\Helper.php, line 140
+Cake\View\Helper\FlashHelper::error() - APP/Template\Error\fatal_error.ctp, line 4
+include - APP/Template\Error\fatal_error.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Error\ExceptionRenderer::_outputMessage() - CORE\src\Error\ExceptionRenderer.php, line 320
+Cake\Error\ExceptionRenderer::render() - CORE\src\Error\ExceptionRenderer.php, line 192
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 144
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 179
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 217
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:33:56 Warning: Warning (512): Method Cake\View\Helper\FlashHelper::error does not exist in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\View\Helper.php, line 140]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\View\Helper::__call() - CORE\src\View\Helper.php, line 140
+Cake\View\Helper\FlashHelper::error() - APP/Template\Error\missing_controller.ctp, line 6
+include - APP/Template\Error\missing_controller.ctp, line 6
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Error\ExceptionRenderer::_outputMessage() - CORE\src\Error\ExceptionRenderer.php, line 320
+Cake\Error\ExceptionRenderer::render() - CORE\src\Error\ExceptionRenderer.php, line 192
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 144
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 179
+Cake\Error\BaseErrorHandler::wrapAndHandleException() - CORE\src\Error\BaseErrorHandler.php, line 163
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:33:56 Error: Fatal Error (1): Call to undefined method App\View\AppView::redirect() in [C:\xampp\htdocs\coowi_en\src\Template\Error\missing_controller.ctp, line 7]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:34:16 Error: Fatal Error (1): Call to undefined method App\View\AppView::redirect() in [C:\xampp\htdocs\coowi_en\src\Template\Error\missing_controller.ctp, line 7]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:35:14 Error: Fatal Error (1): Call to undefined method App\View\AppView::redirect() in [C:\xampp\htdocs\coowi_en\src\Template\Error\missing_controller.ctp, line 14]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:35:30 Warning: Warning (2): The use statement with non-compound name 'App' has no effect in [C:\xampp\htdocs\coowi_en\src\Template\Error\missing_controller.ctp, line 5]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Error\ExceptionRenderer::_outputMessage() - CORE\src\Error\ExceptionRenderer.php, line 320
+Cake\Error\ExceptionRenderer::render() - CORE\src\Error\ExceptionRenderer.php, line 192
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 144
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 179
+Cake\Error\BaseErrorHandler::wrapAndHandleException() - CORE\src\Error\BaseErrorHandler.php, line 163
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:35:30 Warning: Warning (2): The use statement with non-compound name 'Cake' has no effect in [C:\xampp\htdocs\coowi_en\src\Template\Error\missing_controller.ctp, line 1]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Error\ExceptionRenderer::_outputMessage() - CORE\src\Error\ExceptionRenderer.php, line 320
+Cake\Error\ExceptionRenderer::render() - CORE\src\Error\ExceptionRenderer.php, line 192
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 144
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 179
+Cake\Error\BaseErrorHandler::wrapAndHandleException() - CORE\src\Error\BaseErrorHandler.php, line 163
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:35:30 Error: Fatal Error (1): Call to undefined method App\View\AppView::redirect() in [C:\xampp\htdocs\coowi_en\src\Template\Error\missing_controller.ctp, line 5]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:35:55 Error: Fatal Error (1): Call to undefined method App\View\AppView::redirect() in [C:\xampp\htdocs\coowi_en\src\Template\Error\missing_controller.ctp, line 14]
+Request URL: /coowi_en/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-24 17:35:56 Error: [Cake\Error\FatalErrorException] Call to undefined method App\View\AppView::redirect()
+Request URL: /coowi_en/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 14)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-24 17:38:20 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Login could not be found.
+Exception Attributes: array (
+  'class' => 'Login',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/login
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-05-24 17:39:00 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Lo could not be found.
+Exception Attributes: array (
+  'class' => 'Lo',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi_en/lo
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
