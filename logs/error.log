@@ -15982,3 +15982,366 @@ Stack Trace:
 #1 {main}
 
 
+2016-05-24 18:12:45 Error: [Cake\Controller\Exception\MissingActionException] Action PetitionsController::users() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PetitionsController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /coowi_en/petitions/users/view/
+Referer URL: http://localhost/coowi_en/petitions/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#2 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-05-24 18:12:59 Error: [Cake\Controller\Exception\MissingActionException] Action PetitionsController::users() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PetitionsController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /coowi_en/petitions/users/view/
+Referer URL: http://localhost/coowi_en/petitions/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#2 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-05-25 14:07:20 Error: [PDOException] SQLSTATE[HY000] [2002] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+
+Request URL: /coowi_en/petitions/
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(428): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\PetitionsTable))
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\PetitionsTable))
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(166): Cake\ORM\Table->find('all', Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PetitionsTable), Array)
+#14 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(42): Cake\Controller\Controller->paginate(Object(App\Model\Table\PetitionsTable))
+#15 [internal function]: App\Controller\PetitionsController->index()
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#18 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#19 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-05-25 14:07:41 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php, line 48]
+Request URL: /coowi_en/users/view/2
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-25 14:07:43 Error: [Cake\Error\FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /coowi_en/users/view/2
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-25 14:09:03 Warning: Warning (2): PDO::__construct(): MySQL server has gone away in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php, line 48]
+Request URL: /coowi_en/users/view/2
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDO::__construct() - [internal], line ??
+Cake\Database\Driver\Mysql::_connect() - CORE\src\Database\Driver\PDODriverTrait.php, line 48
+Cake\Database\Driver\Mysql::connect() - CORE\src\Database\Driver\Mysql.php, line 90
+Cake\Database\Schema\BaseSchema::__construct() - CORE\src\Database\Schema\BaseSchema.php, line 45
+Cake\Database\Driver\Mysql::schemaDialect() - CORE\src\Database\Dialect\MysqlDialectTrait.php, line 63
+Cake\Database\Schema\Collection::__construct() - CORE\src\Database\Schema\Collection.php, line 52
+Cake\Database\Schema\CachedCollection::__construct() - CORE\src\Database\Schema\CachedCollection.php, line 43
+Cake\Database\Connection::schemaCollection() - CORE\src\Database\Connection.php, line 315
+Cake\ORM\Table::schema() - CORE\src\ORM\Table.php, line 428
+Cake\ORM\Query::addDefaultTypes() - CORE\src\ORM\Query.php, line 211
+Cake\ORM\Query::__construct() - CORE\src\ORM\Query.php, line 169
+Cake\ORM\Table::query() - CORE\src\ORM\Table.php, line 1242
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 945
+Cake\ORM\Table::get() - CORE\src\ORM\Table.php, line 1188
+App\Controller\UsersController::view() - APP/Controller\UsersController.php, line 54
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-25 14:09:04 Error: [PDOException] SQLSTATE[HY000] [2006] MySQL server has gone away
+Request URL: /coowi_en/users/view/2
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(428): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\UsersTable))
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\UsersTable))
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1188): Cake\ORM\Table->find('all', Array)
+#13 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(54): Cake\ORM\Table->get('2', Array)
+#14 [internal function]: App\Controller\UsersController->view('2')
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#18 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2016-05-25 14:11:05 Warning: Warning (2): PDOStatement::execute(): MySQL server has gone away in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/petitions/view-offers/4
+Referer URL: http://localhost/coowi_en/users/view/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::execute() - CORE\src\Database\Connection.php, line 239
+Cake\Database\Schema\Collection::_reflect() - CORE\src\Database\Schema\Collection.php, line 128
+Cake\Database\Schema\Collection::describe() - CORE\src\Database\Schema\Collection.php, line 103
+Cake\Database\Schema\CachedCollection::describe() - CORE\src\Database\Schema\CachedCollection.php, line 64
+Cake\ORM\Table::schema() - CORE\src\ORM\Table.php, line 429
+Cake\ORM\Query::addDefaultTypes() - CORE\src\ORM\Query.php, line 211
+Cake\ORM\Query::_addAssociationsToTypeMap() - CORE\src\ORM\Query.php, line 373
+Cake\ORM\Query::contain() - CORE\src\ORM\Query.php, line 349
+Cake\ORM\Query::applyOptions() - CORE\src\ORM\Query.php, line 673
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1766
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 947
+Cake\ORM\Table::get() - CORE\src\ORM\Table.php, line 1188
+App\Controller\PetitionsController::viewOffers() - APP/Controller\PetitionsController.php, line 308
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-25 14:11:05 Warning: Warning (2): PDOStatement::execute() [<a href='http://php.net/pdostatement.execute'>pdostatement.execute</a>]: Error reading result set's header in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Request URL: /coowi_en/petitions/view-offers/4
+Referer URL: http://localhost/coowi_en/users/view/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Statement\StatementDecorator::execute() - CORE\src\Database\Statement\StatementDecorator.php, line 171
+Cake\Database\Log\LoggingStatement::execute() - CORE\src\Database\Log\LoggingStatement.php, line 56
+Cake\Database\Connection::execute() - CORE\src\Database\Connection.php, line 239
+Cake\Database\Schema\Collection::_reflect() - CORE\src\Database\Schema\Collection.php, line 128
+Cake\Database\Schema\Collection::describe() - CORE\src\Database\Schema\Collection.php, line 103
+Cake\Database\Schema\CachedCollection::describe() - CORE\src\Database\Schema\CachedCollection.php, line 64
+Cake\ORM\Table::schema() - CORE\src\ORM\Table.php, line 429
+Cake\ORM\Query::addDefaultTypes() - CORE\src\ORM\Query.php, line 211
+Cake\ORM\Query::_addAssociationsToTypeMap() - CORE\src\ORM\Query.php, line 373
+Cake\ORM\Query::contain() - CORE\src\ORM\Query.php, line 349
+Cake\ORM\Query::applyOptions() - CORE\src\ORM\Query.php, line 673
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1766
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 947
+Cake\ORM\Table::get() - CORE\src\ORM\Table.php, line 1188
+App\Controller\PetitionsController::viewOffers() - APP/Controller\PetitionsController.php, line 308
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-25 14:11:07 Error: [Cake\Database\Exception] SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+Request URL: /coowi_en/petitions/view-offers/4
+Referer URL: http://localhost/coowi_en/users/view/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(103): Cake\Database\Schema\Collection->_reflect('Options', 'items', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('items', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('items')
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(373): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ItemsTable))
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(349): Cake\ORM\Query->_addAssociationsToTypeMap(Object(App\Model\Table\PetitionsTable), Object(Cake\Database\TypeMap), Array)
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(673): Cake\ORM\Query->contain(Array)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1766): Cake\ORM\Query->applyOptions(Array)
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(947): Cake\ORM\Table->callFinder('all', Object(Cake\ORM\Query), Array)
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1188): Cake\ORM\Table->find('all', Array)
+#10 C:\xampp\htdocs\coowi_en\src\Controller\PetitionsController.php(308): Cake\ORM\Table->get('4', Array)
+#11 [internal function]: App\Controller\PetitionsController->viewOffers('4')
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PetitionsController))
+#15 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-05-25 14:20:18 Error: [PDOException] SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+Request URL: /coowi_en/users/view/2
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(428): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\UsersTable))
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\UsersTable))
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1188): Cake\ORM\Table->find('all', Array)
+#13 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(54): Cake\ORM\Table->get('2', Array)
+#14 [internal function]: App\Controller\UsersController->view('2')
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#18 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2016-05-25 14:22:17 Warning: Warning (2): PDO::__construct(): MySQL server has gone away in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php, line 48]
+Request URL: /coowi_en/users/view/2
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDO::__construct() - [internal], line ??
+Cake\Database\Driver\Mysql::_connect() - CORE\src\Database\Driver\PDODriverTrait.php, line 48
+Cake\Database\Driver\Mysql::connect() - CORE\src\Database\Driver\Mysql.php, line 90
+Cake\Database\Schema\BaseSchema::__construct() - CORE\src\Database\Schema\BaseSchema.php, line 45
+Cake\Database\Driver\Mysql::schemaDialect() - CORE\src\Database\Dialect\MysqlDialectTrait.php, line 63
+Cake\Database\Schema\Collection::__construct() - CORE\src\Database\Schema\Collection.php, line 52
+Cake\Database\Schema\CachedCollection::__construct() - CORE\src\Database\Schema\CachedCollection.php, line 43
+Cake\Database\Connection::schemaCollection() - CORE\src\Database\Connection.php, line 315
+Cake\ORM\Table::schema() - CORE\src\ORM\Table.php, line 428
+Cake\ORM\Query::addDefaultTypes() - CORE\src\ORM\Query.php, line 211
+Cake\ORM\Query::__construct() - CORE\src\ORM\Query.php, line 169
+Cake\ORM\Table::query() - CORE\src\ORM\Table.php, line 1242
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 945
+Cake\ORM\Table::get() - CORE\src\ORM\Table.php, line 1188
+App\Controller\UsersController::view() - APP/Controller\UsersController.php, line 54
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-25 14:22:17 Warning: Warning (2): PDO::__construct() [<a href='http://php.net/pdo.construct'>pdo.construct</a>]: Error while reading greeting packet. PID=7060 in [C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php, line 48]
+Request URL: /coowi_en/users/view/2
+Referer URL: http://localhost/coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDO::__construct() - [internal], line ??
+Cake\Database\Driver\Mysql::_connect() - CORE\src\Database\Driver\PDODriverTrait.php, line 48
+Cake\Database\Driver\Mysql::connect() - CORE\src\Database\Driver\Mysql.php, line 90
+Cake\Database\Schema\BaseSchema::__construct() - CORE\src\Database\Schema\BaseSchema.php, line 45
+Cake\Database\Driver\Mysql::schemaDialect() - CORE\src\Database\Dialect\MysqlDialectTrait.php, line 63
+Cake\Database\Schema\Collection::__construct() - CORE\src\Database\Schema\Collection.php, line 52
+Cake\Database\Schema\CachedCollection::__construct() - CORE\src\Database\Schema\CachedCollection.php, line 43
+Cake\Database\Connection::schemaCollection() - CORE\src\Database\Connection.php, line 315
+Cake\ORM\Table::schema() - CORE\src\ORM\Table.php, line 428
+Cake\ORM\Query::addDefaultTypes() - CORE\src\ORM\Query.php, line 211
+Cake\ORM\Query::__construct() - CORE\src\ORM\Query.php, line 169
+Cake\ORM\Table::query() - CORE\src\ORM\Table.php, line 1242
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 945
+Cake\ORM\Table::get() - CORE\src\ORM\Table.php, line 1188
+App\Controller\UsersController::view() - APP/Controller\UsersController.php, line 54
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-05-25 14:22:18 Error: [PDOException] SQLSTATE[HY000] [2006] MySQL server has gone away
+Request URL: /coowi_en/users/view/2
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(428): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\UsersTable))
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\UsersTable))
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1188): Cake\ORM\Table->find('all', Array)
+#13 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(54): Cake\ORM\Table->get('2', Array)
+#14 [internal function]: App\Controller\UsersController->view('2')
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#18 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2016-05-25 14:24:13 Error: [PDOException] SQLSTATE[HY000] [2002] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+
+Request URL: /coowi_en/users/view/2
+Referer URL: http://localhost/coowi_en/users/view/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(428): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\UsersTable))
+#10 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\UsersTable))
+#11 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#12 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\ORM\Table.php(1188): Cake\ORM\Table->find('all', Array)
+#13 C:\xampp\htdocs\coowi_en\src\Controller\UsersController.php(54): Cake\ORM\Table->get('2', Array)
+#14 [internal function]: App\Controller\UsersController->view('2')
+#15 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#17 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#18 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2016-05-25 14:31:13 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::2() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => '2',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /coowi_en/users/2
+Referer URL: http://localhost/coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 C:\xampp\htdocs\coowi_en\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+

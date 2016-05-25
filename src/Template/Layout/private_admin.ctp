@@ -52,11 +52,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div class="top-bar-section">
         <img src="http://coowi.com/images/coowi_logo.jpg"	alt="Coowi" width="85" />
             <ul class="right">                
-                <li><a target="_self" href="../users/">Gestion Usuarios</a></li>                
-                <li><a target="_self" href="../tags/">Gestion Etiquetas</a></li>                
-                <li><a target="_self" href="../rates/">Gestion Comentarios</a></li>
-                <li><a target="_self" href="../users/view/<?= $this->request->session()->read('Auth.User.id') ?>"><?= $this->request->session()->read('Auth.User.name');?></a></li>                
-                <li><a target="_self" href="../users/logout">Logout</a></li>                
+                <li><a target="_self" href=<?= AppController::LINK_GESTION_USUARIOS; ?>>Gestion Usuarios</a></li>                
+                <li><a target="_self" href=<?= AppController::LINK_GESTION_ETIQUETAS; ?>>Gestion Etiquetas</a></li>                
+                <li><a target="_self" href=<?= AppController::LINK_GESTION_COMENTARIOS; ?>>Gestion Comentarios</a></li>
+                <li><a target="_self" href=<?= AppController::LINK_MY_USER.$this->request->session()->read('Auth.User.id') ?>><?= $this->request->session()->read('Auth.User.name');?></a></li>                
+                <li><a target="_self" href=<?= AppController::LINK_LOGOUT; ?>>Logout</a></li>                
             </ul>
         </div>
     </nav>

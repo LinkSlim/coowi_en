@@ -1,4 +1,6 @@
 <?php
+use App\Controller\AppController;
+
 /**
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -54,10 +56,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <img src="http://coowi.com/images/coowi_logo.jpg"	alt="Coowi" width="85" />
             <ul class="right">
                 <?php echo $this->element('../Element/search');?>
-                <li><a target="_self" href="../offers/">My Offers</a></li>
-                <li><a target="_self" href="../petitions/">My Petitons</a></li>                
-                <li><a target="_self" href="../users/view/<?= $this->request->session()->read('Auth.User.id') ?>"><?= $this->request->session()->read('Auth.User.name');?></a></li>                
-                <li><a target="_self" href="../users/logout">Logout</a></li>                
+                <li><a target="_self" href=<?= AppController::LINK_MY_OFFERS; ?>>My Offers</a></li>
+                <li><a target="_self" href=<?= AppController::LINK_MY_PETITIONS; ?>>My Petitons</a></li>                
+                <li><a target="_self" href=<?= AppController::LINK_MY_USER.$this->request->session()->read('Auth.User.id') ?>><?= $this->request->session()->read('Auth.User.name');?></a></li>                
+                <li><a target="_self" href=<?= AppController::LINK_LOGOUT; ?>>Logout</a></li>                
             </ul>
         </div>
     </nav>

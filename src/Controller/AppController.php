@@ -33,7 +33,15 @@ class AppController extends Controller {
     //Constantes para los roles de usuarios
     const BASICO = 1;
     const PRO = 2;
-    const ADMIN = 3;  
+    const ADMIN = 3;
+    const LINK_MY_OFFERS = "http://localhost/coowi_en/offers/";
+    const LINK_MY_PETITIONS = "http://localhost/coowi_en/petitions/";
+    const LINK_MY_USER = "http://localhost/coowi_en/users/view/";
+    const LINK_LOGOUT = "http://localhost/coowi_en/users/logout";
+    const LINK_GESTION_USUARIOS = "http://localhost/coowi_en/users/";
+    const LINK_GESTION_ETIQUETAS = "http://localhost/coowi_en/tags/";
+    const LINK_GESTION_COMENTARIOS = "http://localhost/coowi_en/rates/";
+    
 
     /**
      * Initialization hook method.
