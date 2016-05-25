@@ -16345,3 +16345,75 @@ Stack Trace:
 #3 {main}
 
 
+2016-05-25 14:44:22 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\coowi_en\src\Template\Layout\private_admin.ctp, line 55]
+Request URL: /coowi_en/petitions
+Referer URL: http://localhost/coowi_en/
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-25 14:44:23 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /coowi_en/petitions
+Referer URL: http://localhost/coowi_en/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 55)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-25 14:44:36 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\coowi_en\src\Template\Layout\private_admin.ctp, line 55]
+Request URL: /coowi_en/petitions
+Referer URL: http://localhost/coowi_en/users/view/2
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-25 14:44:37 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /coowi_en/petitions
+Referer URL: http://localhost/coowi_en/users/view/2
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 55)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-25 14:46:43 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\coowi_en\src\Template\Layout\private_admin.ctp, line 55]
+Request URL: /coowi_en/petitions/index
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-25 14:46:43 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /coowi_en/petitions/index
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 55)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-05-25 14:47:51 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\coowi_en\src\Template\Layout\private_admin.ctp, line 55]
+Request URL: /coowi_en/petitions
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-05-25 14:47:52 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /coowi_en/petitions
+Stack Trace:
+#0 C:\xampp\htdocs\coowi_en\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 55)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

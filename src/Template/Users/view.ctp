@@ -56,7 +56,7 @@
         </tr>        
         <tr>
             <th><?= __('Password') ?></th>
-            <td><?= h($user->password) ?></td>
+            <td>&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;</td>
         </tr>
         <tr>
             <th><?= __('Name') ?></th>
