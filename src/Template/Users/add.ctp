@@ -9,7 +9,7 @@
     <fieldset>
         <legend><?= __('Add User') ?></legend>
         <?php
-            echo $this->Form->input('rol_id', ['options' => $roles]);
+            echo $this->Form->input('rol_id', ['options' => $roles, 'default' => '1']);
             /*$this->Form->input(
 		    'roles', 
 		    [

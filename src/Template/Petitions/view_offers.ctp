@@ -1,6 +1,6 @@
-<?php
-use function Cake\ORM\isEmpty;
-?>
+
+<!--  use function Cake\ORM\isEmpty; -->
+
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
