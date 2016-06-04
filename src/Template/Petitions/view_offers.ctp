@@ -29,11 +29,7 @@
         <tr>
             <th><?= __('Location') ?></th>
             <td><?= h($petition->location) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Photo') ?></th>
-            <td><?= h($petition->photo) ?></td>
-        </tr>
+        </tr>        
         <tr>
             <th><?= __('Status') ?></th>
             <td><?= h($petition->state) ?></td>
@@ -41,7 +37,7 @@
         
         <tr>
             <th><?= __('Budget') ?></th>
-            <td><?= $this->Number->format($petition->budget) ?></td>
+            <td><?= $this->Number->format($petition->budget) ?>&euro;</td>
         </tr>
         <tr>
             <th><?= __('Creation Date') ?></th>
@@ -51,6 +47,10 @@
             <th><?= __('Shell By Date') ?></th>
             <td><?= h($petition->shell_by_date) ?></td>
         </tr>
+        <tr>
+            <th><?= __('Photo') ?></th>
+            <td><?= h($petition->photo) ?></td>
+        </tr>
     </table>
     <div class="related">
         <h4><?= __('Related Items') ?></h4>
@@ -58,7 +58,7 @@
             <table cellpadding="0" cellspacing="0">
                 <tr>
                     
-                    <th><?= __('Petition') ?></th>
+                    
                     
                     <th><?= __('Name') ?></th>
                     <th><?= __('Date') ?></th>
@@ -69,7 +69,7 @@
                 <?php foreach ($petition->items as $item): ?>
                     <tr>
                         
-                        <td><b><?= h($petition->title) ?></b></td>
+                        
                         
                         <td><b><?= h($item->name) ?></b></td>
                         <td><b><?= h($item->date) ?></b></td>
