@@ -42,10 +42,7 @@
 <?php if($_SESSION['Auth']['User']['id'] == $user->id){  //Si el perfil del propio usuario se mostraran las cosas relacionadas?>
     <h3><?= h($user->name) ?></h3>
     <table class="vertical-table">
-    	<tr>
-            <th><?= __('Id') ?></th>
-            <td><?= $this->Number->format($user->id) ?></td>
-        </tr>
+    	
         <tr>
             <th><?= __('Role') ?></th>
             <td><?= h($user->role->rol)//$user->has('role') ? $this->Html->link($user->role->rol, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
@@ -87,7 +84,7 @@
             <td><?= h($user->photo) ?></td>
         </tr>
         <tr>
-            <th><?= __('State') ?></th>
+            <th><?= __('Status') ?></th>
             <td><?= h($user->state) ?></td>
         </tr>        
         <tr>
@@ -106,8 +103,8 @@
         <?php if (!empty($user->jobs)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th><?= __('Id') ?></th>
-                <th><?= __('User Id') ?></th>
+                
+                
                 <th><?= __('Company') ?></th>
                 <th><?= __('Start Date') ?></th>
                 <th><?= __('Ending Date') ?></th>
@@ -116,8 +113,8 @@
             </tr>
             <?php foreach ($user->jobs as $jobs): ?>
             <tr>
-                <td><?= h($jobs->id) ?></td>
-                <td><?= h($jobs->user_id) ?></td>
+                
+                
                 <td><?= h($jobs->company) ?></td>
                 <td><?= h($jobs->start_date) ?></td>
                 <td><?= h($jobs->ending_date) ?></td>
@@ -136,8 +133,8 @@
         <?php if (!empty($user->studies)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th><?= __('Id') ?></th>
-                <th><?= __('User Id') ?></th>
+                
+                
                 <th><?= __('Center') ?></th>
                 <th><?= __('Degree') ?></th>
                 <th><?= __('Start Date') ?></th>
@@ -146,8 +143,8 @@
             </tr>
             <?php foreach ($user->studies as $studies): ?>
             <tr>
-                <td><?= h($studies->id) ?></td>
-                <td><?= h($studies->user_id) ?></td>
+                
+                
                 <td><?= h($studies->center) ?></td>
                 <td><?= h($studies->degree) ?></td>
                 <td><?= h($studies->start_date) ?></td>
@@ -167,8 +164,8 @@
         <?php if (!empty($user->petitions)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th><?= __('Id') ?></th>
-                <th><?= __('User Id') ?></th>
+                
+                
                 <th><?= __('Title') ?></th>
                 <th><?= __('Description') ?></th>
                 <th><?= __('Creation Date') ?></th>
@@ -176,13 +173,13 @@
                 <th><?= __('Location') ?></th>
                 <th><?= __('Budget') ?></th>
                 <th><?= __('Photo') ?></th>
-                <th><?= __('State') ?></th>
+                <th><?= __('Status') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($user->petitions as $petitions): ?>
             <tr>
-                <td><?= h($petitions->id) ?></td>
-                <td><?= h($petitions->user_id) ?></td>
+                
+                
                 <td><?= h($petitions->title) ?></td>
                 <td><?= h($petitions->description) ?></td>
                 <td><?= h($petitions->creation_date) ?></td>
@@ -211,10 +208,7 @@
     
         <h3><?= h($user->name) ?></h3>
     <table class="vertical-table">
-    	<tr>
-            <th><?= __('Id') ?></th>
-            <td><?= $this->Number->format($user->id) ?></td>
-        </tr>
+
         <tr>
             <th><?= __('Role') ?></th>
             <td><?= h($user->role->rol)//$user->has('role') ? $this->Html->link($user->role->rol, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
@@ -252,7 +246,7 @@
             <td><?= h($user->photo) ?></td>
         </tr>
         <tr>
-            <th><?= __('State') ?></th>
+            <th><?= __('Status') ?></th>
             <td><?= h($user->state) ?></td>
         </tr>        
         <tr>

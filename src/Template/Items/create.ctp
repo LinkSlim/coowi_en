@@ -17,7 +17,7 @@
             echo $this->Form->input('description', ['placeholder' => 'You can give more details about your item']);
             echo $this->Form->label('Tags');
             echo $this->Form->text('tags', ['placeholder' => 'Add tags']);
-            echo $this->Form->input('state', ['value' => "activada", 'disabled' => TRUE, 'readonly' => TRUE]);
+            $this->Form->input('state', ['value' => "activada", 'disabled' => TRUE, 'readonly' => TRUE]);
 			//echo $this->Form->input('tags._ids', ['options' => $tags]);            
         ?>
     </fieldset>

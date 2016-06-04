@@ -21,7 +21,7 @@
             <td><?= h($rate->comment) ?></td>
         </tr>
         <tr>
-            <th><?= __('State') ?></th>
+            <th><?= __('Status') ?></th>
             <td><?= h($rate->state) ?></td>
         </tr>
         <tr>

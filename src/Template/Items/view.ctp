@@ -22,7 +22,7 @@
             <td><?= h($item->description) ?></td>
         </tr>
         <tr>
-            <th><?= __('State') ?></th>
+            <th><?= __('Status') ?></th>
             <td><?= h($item->state) ?></td>
         </tr>
         <tr>
@@ -44,7 +44,7 @@
                 <th><?= __('Price') ?></th>
                 <th><?= __('Date') ?></th>
                 <th><?= __('Comment') ?></th>
-                <th><?= __('State') ?></th>
+                <th><?= __('Status') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($item->offers as $offers): ?>

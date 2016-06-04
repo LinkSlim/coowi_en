@@ -31,13 +31,10 @@
             <td><?= h($petition->photo) ?></td>
         </tr>
         <tr>
-            <th><?= __('State') ?></th>
+            <th><?= __('Status') ?></th>
             <td><?= h($petition->state) ?></td>
         </tr>
-        <tr>
-            <th><?= __('Id') ?></th>
-            <td><?= $this->Number->format($petition->id) ?></td>
-        </tr>
+
         <tr>
             <th><?= __('Budget') ?></th>
             <td><?= $this->Number->format($petition->budget) ?></td>
@@ -56,20 +53,17 @@
         <?php if (!empty($petition->items)): ?>
             <table cellpadding="0" cellspacing="0">
                 <tr>
-                    <th><?= __('Id') ?></th>
-                    <th><?= __('Petition Id') ?></th>
-                    <th><?= __('User Id') ?></th>
+                    
+                    
                     <th><?= __('Name') ?></th>
                     <th><?= __('Date') ?></th>
                     <th><?= __('Description') ?></th>
-                    <th><?= __('State') ?></th>
+                    <th><?= __('Status') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
                 <?php foreach ($petition->items as $items): ?>
                     <tr>
-                        <td><b><?= h($items->id) ?></b></td>
-                        <td><b><?= h($items->petition_id) ?></b></td>
-                        <td><b><?= h($items->user_id) ?></b></td>
+                        
                         <td><b><?= h($items->name) ?></b></td>
                         <td><b><?= h($items->date) ?></b></td>
                         <td><b><?= h($items->description) ?></b></td>

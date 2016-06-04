@@ -11,11 +11,11 @@ foreach ($ofertasDeItem as $ofertas) {
                 echo '<th><h5>'.__('Offers:').'</h5></th>';
                 echo '<th>&nbsp</th>';
                 echo '<th>&nbsp</th>';
-                echo '<th>' . __('Offer ID') . '</th>';
-                echo '<th>' . __('Ofertor') . '</th>';
+                 '<th>' . __('Offer ID') . '</th>';
+                 '<th>' . __('Ofertor') . '</th>';
                 echo '<th>' . __('Price') . '</th>';
                 echo '<th>' . __('Comment') . '</th>';
-                echo '<th>' . __('State') . '</th>';
+                echo '<th>' . __('Status') . '</th>';
                 //echo '<th>' . __('Select one') . '</th>';
                 echo '</tr>';
                 $cabecera = false;
@@ -25,8 +25,8 @@ foreach ($ofertasDeItem as $ofertas) {
             echo '<td>&nbsp</td>';
             echo '<td>&nbsp</td>';
             echo '<td>&nbsp</td>';
-            echo '<td>' . $oferta->id . '</td>';
-            echo '<td>'. $this->Html->link($oferta->user_id, ['controller' => 'Users', 'action' => 'view', $oferta->user_id]) . '</td>';
+             '<td>' . $oferta->id . '</td>';
+             '<td>'. $this->Html->link($oferta->user_id, ['controller' => 'Users', 'action' => 'view', $oferta->user_id]) . '</td>';
             echo '<td>' . $oferta->price . '&#8364;</td>';
             
             echo '<td>' . $oferta['comment'] . '</td>';

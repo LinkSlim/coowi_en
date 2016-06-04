@@ -27,7 +27,7 @@
             echo $this->Form->input('description');            
 			//echo $this->Form->input('tags._ids', ['options' => $tags]);
             echo $this->Form->input('Tags', ['value' => $tagsString]);
-            echo $this->Form->input('state', ['value' => "activada", 'disabled' => TRUE, 'readonly' => TRUE]);
+            $this->Form->input('state', ['value' => "activada", 'disabled' => TRUE, 'readonly' => TRUE]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('CANCEL'), array('type' => 'cancel', 'name' => 'cancel', 'formnovalidate')); ?>

@@ -129,7 +129,7 @@ class AppController extends Controller {
         }
     }
     
-    public function beforeFilter(\Cake\Event\Event $event) {
+    public function beforeFilter(Event $event) {
         $this->Auth->allow(['logout', 'login']);
         $this->setLayout();
     }        

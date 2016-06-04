@@ -21,7 +21,7 @@
             echo $this->Form->input('price');
             echo $this->Form->input('date');
             echo $this->Form->input('comment');
-            echo $this->Form->input('state');
+            $this->Form->input('state');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

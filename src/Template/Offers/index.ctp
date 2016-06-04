@@ -16,7 +16,7 @@
                 <th><?= $this->Paginator->sort('price') ?></th>
                 <th><?= $this->Paginator->sort('date') ?></th>
                 <th><?= $this->Paginator->sort('comment') ?></th>
-                <th><?= $this->Paginator->sort('state') ?></th>
+                <th><?= $this->Paginator->sort('status') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>

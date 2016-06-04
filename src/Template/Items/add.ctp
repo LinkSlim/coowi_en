@@ -19,7 +19,7 @@
             echo $this->Form->input('name');
             echo $this->Form->input('date');
             echo $this->Form->input('description');
-            echo $this->Form->input('state');
+            $this->Form->input('state');
             echo $this->Form->input('tags._ids', ['options' => $tags]);
         ?>
     </fieldset>

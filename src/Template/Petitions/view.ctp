@@ -35,7 +35,7 @@
             <td><?= h($petition->photo) ?></td>
         </tr>
         <tr>
-            <th><?= __('State') ?></th>
+            <th><?= __('Status') ?></th>
             <td><?= h($petition->state) ?></td>
         </tr>
         <tr>
@@ -66,7 +66,7 @@
                     <th><?= __('Name') ?></th>
                     <th><?= __('Date') ?></th>
                     <th><?= __('Description') ?></th>
-                    <th><?= __('State') ?></th>
+                    <th><?= __('Status') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
                 <?php foreach ($petition->items as $items): ?>

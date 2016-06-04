@@ -18,7 +18,7 @@
             echo $this->Form->input('location');
             echo $this->Form->input('budget');
             echo $this->Form->input('photo');
-            echo $this->Form->input('state', ['value' => 'activada', 'readonly' => true]);
+            $this->Form->input('state', ['value' => 'activada', 'readonly' => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('CANCEL'), array('type' => 'cancel', 'name' => 'cancel', 'formnovalidate')); ?>     

@@ -17,7 +17,7 @@
             <td><?= h($offer->comment) ?></td>
         </tr>
         <tr>
-            <th><?= __('State') ?></th>
+            <th><?= __('Status') ?></th>
             <td><?= h($offer->state) ?></td>
         </tr>
         <tr>
