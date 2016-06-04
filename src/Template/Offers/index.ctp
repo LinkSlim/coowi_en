@@ -9,10 +9,10 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th><?= $this->Paginator->sort('id') ?></th>
-                <th><?= $this->Paginator->sort('user_id') ?></th>
+                
+                
                 <th><?= $this->Paginator->sort('item_id') ?></th>
-                <th><?= $this->Paginator->sort('Item owner') ?></th>                
+                       
                 <th><?= $this->Paginator->sort('price') ?></th>
                 <th><?= $this->Paginator->sort('date') ?></th>
                 <th><?= $this->Paginator->sort('comment') ?></th>
@@ -23,11 +23,11 @@
         <tbody>
             <?php foreach ($offers as $offer): ?>
             <tr>
-                <td><?= $this->Number->format($offer->id) ?></td>
-                <td><?= h($offer->user->name) ?></td>
-                <td><?= $offer->has('item') ? $this->Html->link($offer->item->name, ['controller' => 'Items', 'action' => 'view', $offer->item->id]) : '' ?></td>
-                <td><?= h($offer->item->user_id) ?></td>                
-                <td><?= $this->Number->format($offer->price) ?></td>
+                
+                
+                <td><?= h($offer->item->name) ?></td>
+                         
+                <td><?= $this->Number->format($offer->price) ?>&euro;</td>
                 <td><?= h($offer->date) ?></td>
                 <td><?= h($offer->comment) ?></td>
                 <td><?= h($offer->state) ?></td>

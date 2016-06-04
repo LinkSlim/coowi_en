@@ -185,7 +185,7 @@
                 <td><?= h($petitions->creation_date) ?></td>
                 <td><?= h($petitions->shell_by_date) ?></td>
                 <td><?= h($petitions->location) ?></td>
-                <td><?= h($petitions->budget) ?></td>
+                <td><?= h($petitions->budget) ?>&euro;</td>
                 <td><?= h($petitions->photo) ?></td>
                 <td><?= h($petitions->state) ?></td>
                 <td class="actions">

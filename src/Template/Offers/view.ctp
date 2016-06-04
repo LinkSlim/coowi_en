@@ -6,11 +6,11 @@
     </ul>
 </nav>
 <div class="offers view large-9 medium-8 columns content">
-    <h3><?= h($offer->id) ?></h3>
+    <h3>Offer Detail</h3>
     <table class="vertical-table">
         <tr>
             <th><?= __('Item') ?></th>
-            <td><?= $offer->has('item') ? $this->Html->link($offer->item->name, ['controller' => 'Items', 'action' => 'view', $offer->item->id]) : '' ?></td>
+            <td><?= h($offer->item->name) ?></td>
         </tr>
         <tr>
             <th><?= __('Comment') ?></th>
@@ -20,13 +20,10 @@
             <th><?= __('Status') ?></th>
             <td><?= h($offer->state) ?></td>
         </tr>
-        <tr>
-            <th><?= __('Id') ?></th>
-            <td><?= $this->Number->format($offer->id) ?></td>
-        </tr>
+
         <tr>
             <th><?= __('Price') ?></th>
-            <td><?= $this->Number->format($offer->price) ?></td>
+            <td><?= $this->Number->format($offer->price) ?>&euro;</td>
         </tr>
         <tr>
             <th><?= __('Date') ?></th>
